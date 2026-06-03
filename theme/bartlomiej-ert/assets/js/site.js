@@ -333,3 +333,61 @@
     playBtn?.addEventListener('click', e => { e.stopPropagation(); loadIframe(); });
   });
 })();
+
+
+
+/* ════════════════════════════════════════════════════════════
+   BROWSER-FRAME-SHOT: handle screenshot load + retry mShots
+═══════════════════════════════════════════════════════════ */
+(() => {
+  'use strict';
+  const shots = document.querySelectorAll('.browser-frame-shot');
+  shots.forEach(frame => {
+    const img = frame.querySelector('.browser-screenshot');
+    if (!img) return;
+
+    let retries = 0;
+    const maxRetries = 4;
+    const originalSrc = img.src;
+
+    const onLoaded = () => {
+      img.classList.add('loaded');
+      frame.classList.add('loaded');
+    };
+
+    const onError = () => {
+      // mShots czasem zwraca 307 redirect lub generuje screenshot - pierwszy raz wolny
+      // Probujemy ponownie po 3s (max 4 razy = ~12s lacznie)
+      if (retries < maxRetries) {
+        retries++;
+        setTimeout(() => {
+          // Force reload with cache-buster
+          const sep = originalSrc.includes('?') ? '&' : '?';
+          img.src = originalSrc + sep + '_r=' + retries;
+        }, 3000);
+      } else {
+        // Po 4 probach pokazuje fallback - i tak jest dostepny przycisk Otworz na zywo
+        onLoaded(); // i tak pokazuje link
+      }
+    };
+
+    if (img.complete && img.naturalHeight > 0) {
+      onLoaded();
+    } else {
+      img.addEventListener('load', () => {
+        // mShots zwraca 1x1 placeholder przy pierwszym requestcie, retry
+        if (img.naturalWidth < 100 && retries < maxRetries) {
+          onError();
+        } else {
+          onLoaded();
+        }
+      });
+      img.addEventListener('error', onError);
+    }
+
+    // Hard timeout fallback
+    setTimeout(() => {
+      if (!frame.classList.contains('loaded')) onLoaded();
+    }, 15000);
+  });
+})();

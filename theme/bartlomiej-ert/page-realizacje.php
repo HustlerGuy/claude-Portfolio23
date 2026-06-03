@@ -160,9 +160,8 @@
         <span class="case-status">Aktywna</span>
       </header>
 
-      <div class="browser-frame"
-           data-url="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/"
-           data-src="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/">
+      <div class="browser-frame browser-frame-shot"
+           data-url="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/">
 
         <div class="browser-bar">
           <div class="browser-dots" aria-hidden="true">
@@ -180,31 +179,21 @@
         </div>
 
         <div class="browser-body">
-          <iframe class="browser-iframe"
-                  data-src="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/"
-                  title="Landing Page - Pranie Tapicerki"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
-
-          <div class="browser-placeholder">
-            <button class="browser-play" type="button" aria-label="Załaduj podgląd">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-            </button>
-            <div class="browser-placeholder-text">
-              Kliknij aby załadować podgląd<br>
-              <span>Landing page załaduje się w tym oknie</span>
+          <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-screenshot-link" aria-label="Otwórz stronę w nowej karcie">
+            <img class="browser-screenshot"
+                 src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwypraneiposprzatane.pl%2Fpranie-kanap-sof-foteli%2F?w=1280&h=800"
+                 alt="Landing Page - Pranie Tapicerki"
+                 loading="lazy">
+            <div class="browser-screenshot-overlay">
+              <div class="browser-screenshot-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>Otwórz na żywo</span>
+              </div>
             </div>
-          </div>
-
-          <div class="browser-fallback">
-            <div class="browser-fallback-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </div>
-            <div class="browser-fallback-title">Strona nie pozwala na osadzenie</div>
-            <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Otwórz w nowej karcie</span><span class="arrow">-></span>
-            </a>
+          </a>
+          <div class="browser-loading">
+            <div class="browser-loading-bar"></div>
+            <div class="browser-loading-text">Pobieranie podglądu...</div>
           </div>
         </div>
       </div>
