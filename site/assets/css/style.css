@@ -44,7 +44,7 @@
 
   /* Type */
   --ff:          'Outfit', 'Inter', system-ui, sans-serif;
-  --ff-display:  'Anton', 'Outfit', sans-serif;
+  --ff-display:  'Barlow Condensed', 'Outfit', sans-serif;
   --ff-serif:    'Fraunces', 'Times New Roman', serif;
   --ff-mono:     'JetBrains Mono', ui-monospace, monospace;
 
@@ -215,8 +215,9 @@ body.c-down .cursor-ring { transform: translate(-50%,-50%) scale(.85); }
 .loader-inner { text-align: center; }
 .loader-mark {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(4rem, 12vw, 9rem);
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
   line-height: 1;
   color: var(--text);
   position: relative;
@@ -310,6 +311,7 @@ body.c-down .cursor-ring { transform: translate(-50%,-50%) scale(.85); }
 .nav-logo:hover .nav-logo-mark::after { transform: translateX(100%); }
 .nav-logo-mark span {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: .82rem;
   letter-spacing: -.02em;
   color: var(--bg-0);
@@ -479,10 +481,10 @@ body.c-down .cursor-ring { transform: translate(-50%,-50%) scale(.85); }
 ──────────────────────────────────────────── */
 .display {
   font-family: var(--ff-display);
-  font-weight: 400;
+  font-weight: 800;
   font-size: clamp(3.5rem, 11vw, 11rem);
   line-height: .92;
-  letter-spacing: -.025em;
+  letter-spacing: -.01em;
   color: var(--text);
   text-transform: uppercase;
 }
@@ -637,9 +639,10 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 
 .hero-title {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(3.5rem, 11vw, 11rem);
   line-height: .92;
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 32px;
@@ -680,6 +683,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 .hero-meta-item {}
 .hero-meta-val {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
   letter-spacing: -.025em;
@@ -746,9 +750,10 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
   white-space: nowrap;
   animation: marquee 38s linear infinite;
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(3.5rem, 9vw, 8rem);
   line-height: 1;
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: var(--text);
   -webkit-text-stroke: 1px transparent;
@@ -928,9 +933,10 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 .stat:hover::before { transform: scaleY(1); }
 .stat-val {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
-  letter-spacing: -.025em;
+  letter-spacing: -.01em;
   color: var(--cyan);
   background: linear-gradient(135deg, var(--cyan), var(--electric));
   -webkit-background-clip: text; background-clip: text;
@@ -1005,9 +1011,10 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 }
 .footer-mark {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(4rem, 14vw, 14rem);
   line-height: .85;
-  letter-spacing: -.04em;
+  letter-spacing: -.02em;
   text-transform: uppercase;
   text-align: center;
   background: linear-gradient(180deg, var(--cyan-20), transparent 80%);
@@ -1069,9 +1076,10 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 
 .page-title {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(3rem, 10vw, 9rem);
   line-height: .92;
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 28px;
@@ -1127,6 +1135,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 .profile > * { position: relative; }
 .profile-mark {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: 7rem;
   line-height: .9;
   letter-spacing: -.05em;
@@ -1170,6 +1179,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 }
 .profile-stat-val {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: 1.6rem;
   line-height: 1;
   color: var(--cyan);
@@ -1301,6 +1311,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 }
 .offer-title {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   line-height: .95;
   letter-spacing: -.025em;
@@ -1357,6 +1368,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 .offer-price strong {
   display: block;
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: 1.4rem;
   line-height: 1;
   color: var(--cyan);
@@ -1446,6 +1458,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 .case-metric { background: var(--bg-2); padding: 18px 20px; }
 .case-metric-val {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: 1.7rem;
   line-height: 1;
   color: var(--cyan);
@@ -1576,6 +1589,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
 }
 .tl-aside-val {
   font-family: var(--ff-display);
+  font-weight: 800;
   font-size: 1.8rem;
   line-height: 1;
   letter-spacing: -.025em;
