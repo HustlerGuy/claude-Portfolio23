@@ -151,54 +151,86 @@
 
     <!-- WEB CASE 1 - Pranie Tapicerki -->
     <article class="case web-case" data-reveal>
-      <header class="case-top">
-        <div>
+      <button class="web-case-header" type="button" aria-expanded="false" aria-controls="web-001-content">
+        <div class="web-case-header-info">
           <div class="case-num">WEB-001</div>
           <div class="case-title">Landing Page - Pranie Tapicerki</div>
           <div class="case-industry">Usługi lokalne · Pranie kanap, sof i foteli · WordPress</div>
         </div>
-        <span class="case-status">Aktywna</span>
-      </header>
-
-      <div class="browser-frame browser-frame-shot"
-           data-url="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/">
-
-        <div class="browser-bar">
-          <div class="browser-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="browser-url">
-            <svg class="browser-lock" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span class="browser-url-text">wypraneiposprzatane.pl/pranie-kanap-sof-foteli/</span>
-          </div>
-          <div class="browser-actions">
-            <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
+        <div class="web-case-header-right">
+          <span class="case-status">Aktywna</span>
+          <span class="web-case-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
         </div>
+      </button>
 
-        <div class="browser-body">
-          <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-screenshot-link" aria-label="Otwórz stronę w nowej karcie">
-            <img class="browser-screenshot"
-                 src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwypraneiposprzatane.pl%2Fpranie-kanap-sof-foteli%2F?w=1280&h=800"
-                 alt="Landing Page - Pranie Tapicerki"
-                 loading="lazy">
-            <div class="browser-screenshot-overlay">
-              <div class="browser-screenshot-cta">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                <span>Otwórz na żywo</span>
+      <div class="web-case-expand" id="web-001-content" hidden>
+
+        <!-- Dual preview: desktop + mobile -->
+        <div class="preview-grid">
+
+          <!-- DESKTOP -->
+          <div class="browser-frame browser-frame-shot" data-url="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/">
+            <div class="browser-bar">
+              <div class="browser-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-url">
+                <svg class="browser-lock" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span class="browser-url-text">wypraneiposprzatane.pl/pranie-kanap-sof-foteli/</span>
+              </div>
+              <div class="browser-actions">
+                <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
               </div>
             </div>
-          </a>
-          <div class="browser-loading">
-            <div class="browser-loading-bar"></div>
-            <div class="browser-loading-text">Pobieranie podglądu...</div>
+            <div class="browser-body">
+              <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-screenshot-link" aria-label="Otwórz stronę w nowej karcie">
+                <img class="browser-screenshot" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwypraneiposprzatane.pl%2Fpranie-kanap-sof-foteli%2F?w=1280&h=820" alt="Landing Page Pranie Tapicerki - desktop" loading="lazy">
+                <div class="browser-screenshot-overlay">
+                  <div class="browser-screenshot-cta">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    <span>Desktop</span>
+                  </div>
+                </div>
+              </a>
+              <div class="browser-loading">
+                <div class="browser-loading-bar"></div>
+                <div class="browser-loading-text">Pobieranie podglądu...</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="web-case-desc" id="webcase-desc-001" hidden>
+          <!-- MOBILE (telefon) -->
+          <div class="phone-frame">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-body">
+              <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="phone-screenshot-link" aria-label="Otwórz stronę w nowej karcie - mobile">
+                <img class="phone-screenshot" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwypraneiposprzatane.pl%2Fpranie-kanap-sof-foteli%2F?w=420&h=900" alt="Landing Page Pranie Tapicerki - mobile" loading="lazy">
+                <div class="phone-screenshot-overlay">
+                  <div class="browser-screenshot-cta">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <span>Mobile</span>
+                  </div>
+                </div>
+              </a>
+              <div class="phone-loading"><div class="browser-loading-bar"></div></div>
+            </div>
+            <div class="phone-home" aria-hidden="true"></div>
+          </div>
+
+        </div>
+
+        <!-- Open in new tab button -->
+        <div class="web-case-cta">
+          <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>Otwórz w nowej karcie</span><span class="arrow">-></span>
+          </a>
+        </div>
+
+        <!-- Description -->
         <div class="web-case-desc-grid">
           <div class="web-case-text">
             <div class="web-case-label">Projekt</div>
@@ -226,65 +258,87 @@
           </div>
         </div>
       </div>
-
-      <button class="web-case-toggle" type="button" aria-expanded="false" aria-controls="webcase-desc-001">
-        <span class="web-case-toggle-text">Zobacz szczegóły projektu</span>
-        <span class="web-case-toggle-icon" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
-      </button>
     </article>
 
-    <!-- WEB CASE 2 -->
+    <!-- WEB CASE 2 - pusty template -->
     <article class="case web-case" data-reveal>
-      <header class="case-top">
-        <div>
+      <button class="web-case-header" type="button" aria-expanded="false" aria-controls="web-002-content">
+        <div class="web-case-header-info">
           <div class="case-num">WEB-002</div>
-          <div class="case-title"></div>
-          <div class="case-industry"></div>
+          <div class="case-title">Tytuł projektu</div>
+          <div class="case-industry">Branża · Stack</div>
         </div>
-        <span class="case-status"></span>
-      </header>
+        <div class="web-case-header-right">
+          <span class="case-status">Status</span>
+          <span class="web-case-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </div>
+      </button>
 
-      <div class="browser-frame" data-url="" data-src="">
-        <div class="browser-bar">
-          <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="browser-url">
-            <svg class="browser-lock" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span class="browser-url-text">domena.pl</span>
-          </div>
-          <div class="browser-actions">
-            <a href="" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="browser-body">
-          <iframe class="browser-iframe" data-src="" title="Podgląd strony" loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
-          <div class="browser-placeholder">
-            <button class="browser-play" type="button" aria-label="Załaduj podgląd">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-            </button>
-            <div class="browser-placeholder-text">Kliknij aby załadować podgląd<br><span>Strona załaduje się w tym oknie</span></div>
-          </div>
-          <div class="browser-fallback">
-            <div class="browser-fallback-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
-            <div class="browser-fallback-title">Strona nie pozwala na osadzenie</div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><span>Otwórz w nowej karcie</span><span class="arrow">-></span></a>
-          </div>
-        </div>
-      </div>
+      <div class="web-case-expand" id="web-002-content" hidden>
 
-      <div class="web-case-desc" id="webcase-desc-002" hidden>
+        <div class="preview-grid">
+          <div class="browser-frame browser-frame-shot" data-url="">
+            <div class="browser-bar">
+              <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="browser-url">
+                <svg class="browser-lock" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span class="browser-url-text">domena.pl</span>
+              </div>
+              <div class="browser-actions">
+                <a href="" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="browser-body">
+              <a href="" target="_blank" rel="noopener noreferrer" class="browser-screenshot-link">
+                <img class="browser-screenshot" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fexample.com?w=1280&h=820" alt="Podgląd desktop" loading="lazy">
+                <div class="browser-screenshot-overlay">
+                  <div class="browser-screenshot-cta">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    <span>Desktop</span>
+                  </div>
+                </div>
+              </a>
+              <div class="browser-loading"><div class="browser-loading-bar"></div><div class="browser-loading-text">Pobieranie podglądu...</div></div>
+            </div>
+          </div>
+
+          <div class="phone-frame">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-body">
+              <a href="" target="_blank" rel="noopener noreferrer" class="phone-screenshot-link">
+                <img class="phone-screenshot" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fexample.com?w=420&h=900" alt="Podgląd mobile" loading="lazy">
+                <div class="phone-screenshot-overlay">
+                  <div class="browser-screenshot-cta">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <span>Mobile</span>
+                  </div>
+                </div>
+              </a>
+              <div class="phone-loading"><div class="browser-loading-bar"></div></div>
+            </div>
+            <div class="phone-home" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="web-case-cta">
+          <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>Otwórz w nowej karcie</span><span class="arrow">-></span>
+          </a>
+        </div>
+
         <div class="web-case-desc-grid">
           <div class="web-case-text">
             <div class="web-case-label">Projekt</div>
-            <p></p>
+            <p>Krótki opis projektu - dla kogo, jaki cel, co zostało dostarczone.</p>
           </div>
           <div class="web-case-side">
             <div class="web-case-side-block">
               <div class="web-case-label">Stack</div>
-              <div class="case-tags"><span class="tag"></span><span class="tag"></span></div>
+              <div class="case-tags"><span class="tag">WordPress</span><span class="tag">SEO</span></div>
             </div>
             <div class="web-case-side-block">
               <div class="web-case-label">Wyniki techniczne</div>
@@ -297,13 +351,6 @@
           </div>
         </div>
       </div>
-
-      <button class="web-case-toggle" type="button" aria-expanded="false" aria-controls="webcase-desc-002">
-        <span class="web-case-toggle-text">Zobacz szczegóły projektu</span>
-        <span class="web-case-toggle-icon" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
-      </button>
     </article>
   </div>
 </section>

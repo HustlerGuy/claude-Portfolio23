@@ -395,12 +395,12 @@
 
 
 /* ════════════════════════════════════════════════════════════
-   WEB-CASE TOGGLE (rozwijanie szczegolow projektu)
+   WEB-CASE TOGGLE (rozwijanie calej karty po klik na header)
 ═══════════════════════════════════════════════════════════ */
 (() => {
   'use strict';
-  const toggles = document.querySelectorAll('.web-case-toggle');
-  toggles.forEach(btn => {
+  const headers = document.querySelectorAll('.web-case-header');
+  headers.forEach(btn => {
     const targetId = btn.getAttribute('aria-controls');
     const target = targetId ? document.getElementById(targetId) : null;
     if (!target) return;
@@ -413,14 +413,71 @@
         target.removeAttribute('hidden');
         // Force reflow to enable transition from max-height: 0
         requestAnimationFrame(() => target.classList.add('expanded'));
+        // Smooth scroll do karty po lekkim opóźnieniu
+        setTimeout(() => {
+          const rect = btn.getBoundingClientRect();
+          if (rect.top < 100) {
+            const offset = window.scrollY + rect.top - 110;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }
+        }, 100);
       } else {
         target.classList.remove('expanded');
-        // Hide po animacji
         setTimeout(() => {
           if (btn.getAttribute('aria-expanded') === 'false') target.setAttribute('hidden', '');
-        }, 600);
+        }, 700);
       }
     });
+  });
+})();
+
+/* ════════════════════════════════════════════════════════════
+   PHONE SCREENSHOT LOADING (mShots mobile - jak desktop)
+═══════════════════════════════════════════════════════════ */
+(() => {
+  'use strict';
+  const phones = document.querySelectorAll('.phone-frame');
+  phones.forEach(frame => {
+    const img = frame.querySelector('.phone-screenshot');
+    if (!img) return;
+
+    let retries = 0;
+    const maxRetries = 4;
+    const originalSrc = img.src;
+
+    const onLoaded = () => {
+      img.classList.add('loaded');
+      frame.classList.add('loaded');
+    };
+
+    const onError = () => {
+      if (retries < maxRetries) {
+        retries++;
+        setTimeout(() => {
+          const sep = originalSrc.includes('?') ? '&' : '?';
+          img.src = originalSrc + sep + '_r=' + retries;
+        }, 3000);
+      } else {
+        onLoaded();
+      }
+    };
+
+    if (img.complete && img.naturalHeight > 0) {
+      onLoaded();
+    } else {
+      img.addEventListener('load', () => {
+        if (img.naturalWidth < 100 && retries < maxRetries) {
+          onError();
+        } else {
+          onLoaded();
+        }
+      });
+      img.addEventListener('error', onError);
+    }
+
+    setTimeout(() => {
+      if (!frame.classList.contains('loaded')) onLoaded();
+    }, 15000);
   });
 })();
 
