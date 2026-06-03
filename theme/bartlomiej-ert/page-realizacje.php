@@ -149,94 +149,77 @@
       <p class="cat-head-desc">Działające strony do kliknięcia. Skroluj wewnątrz okna lub kliknij "Otwórz" żeby zobaczyć w nowej karcie.</p>
     </div>
 
-    <!-- WEB CASE 1 -->
+    <!-- WEB CASE 1 - Pranie Tapicerki -->
     <article class="case web-case" data-reveal>
       <header class="case-top">
         <div>
           <div class="case-num">WEB-001</div>
-          <div class="case-title">Nazwa projektu</div>
-          <div class="case-industry">Branża · Stack technologiczny</div>
+          <div class="case-title">Landing Page - Pranie Tapicerki</div>
+          <div class="case-industry">Usługi lokalne · Pranie kanap, sof i foteli · WordPress</div>
         </div>
         <span class="case-status">Aktywna</span>
       </header>
 
-      <!--
-        ╔═══════════════════════════════════════════════════════╗
-        ║  ŻEBY POKAZAĆ STRONĘ NA ŻYWO:                        ║
-        ║  1. W <iframe> wstaw 'src="https://twojadomena.pl"'  ║
-        ║  2. Do <div class="browser-frame"> dodaj klasę        ║
-        ║     "loaded" - okno załaduje stronę leniwie po       ║
-        ║     wejściu w viewport (oszczędność performance).    ║
-        ║  3. Pasek URL na górze pokazuje data-url.            ║
-        ║  4. Jeśli strona nie pozwala na embed (X-Frame-      ║
-        ║     Options: DENY) - zostanie pokazany fallback ze   ║
-        ║     screenem i przyciskiem "Otwórz w nowej karcie".  ║
-        ╚═══════════════════════════════════════════════════════╝
-      -->
       <div class="browser-frame"
-           data-url="https://www.example.com"
-           data-src="https://www.example.com">
+           data-url="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/"
+           data-src="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/">
 
-        <!-- Pasek przeglądarki -->
         <div class="browser-bar">
           <div class="browser-dots" aria-hidden="true">
             <span></span><span></span><span></span>
           </div>
           <div class="browser-url">
             <svg class="browser-lock" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span class="browser-url-text">example.com</span>
+            <span class="browser-url-text">wypraneiposprzatane.pl/pranie-kanap-sof-foteli/</span>
           </div>
           <div class="browser-actions">
-            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
+            <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="browser-open" aria-label="Otwórz w nowej karcie">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Iframe placeholder + lazy iframe -->
         <div class="browser-body">
           <iframe class="browser-iframe"
-                  data-src=""
-                  title="Podgląd strony"
+                  data-src="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/"
+                  title="Landing Page - Pranie Tapicerki"
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
 
-          <!-- Loading state (przed kliknięciem PLAY) -->
           <div class="browser-placeholder">
             <button class="browser-play" type="button" aria-label="Załaduj podgląd">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
             </button>
             <div class="browser-placeholder-text">
               Kliknij aby załadować podgląd<br>
-              <span>Strona załaduje się w tym oknie</span>
+              <span>Landing page załaduje się w tym oknie</span>
             </div>
           </div>
 
-          <!-- Fallback gdy iframe blokuje (X-Frame-Options DENY) -->
           <div class="browser-fallback">
             <div class="browser-fallback-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </div>
             <div class="browser-fallback-title">Strona nie pozwala na osadzenie</div>
-            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <a href="https://wypraneiposprzatane.pl/pranie-kanap-sof-foteli/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               <span>Otwórz w nowej karcie</span><span class="arrow">-></span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Opis pod iframe -->
       <div class="web-case-desc">
         <div class="web-case-text">
-          <p>Krótki opis projektu - dla kogo, jaki cel, co zostało dostarczone (design, copy, integracje, SEO on-site).</p>
+          <p>Landing page dla lokalnej firmy świadczącej usługi prania tapicerki meblowej (kanapy, sofy, fotele) z dojazdem do klienta. Strona zoptymalizowana pod konwersję - wyraźne CTA, sekcja cennika, zdjęcia "przed/po", formularz kontaktowy i kliknięcie w numer telefonu z mobile.</p>
+          <p>Cel: maksymalizacja zapytań z kampanii Google Ads i Meta Ads kierowanych na lokalne pytania typu "pranie kanap [miasto]".</p>
         </div>
         <div class="web-case-meta">
           <div class="case-tags">
             <span class="tag">WordPress</span>
             <span class="tag">Landing Page</span>
-            <span class="tag">SEO</span>
-            <span class="tag">GA4</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">Conversion-focused</span>
           </div>
           <div class="case-metrics web-case-metrics">
             <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">PageSpeed</div></div>

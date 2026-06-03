@@ -83,27 +83,27 @@
 
   <!-- Big nav links -->
   <nav class="mm-nav">
-    <a href="<?php echo esc_url(home_url('/uslugi/')); ?>" class="mm-link" style="--i:1">
+    <a href="<?php echo esc_url(home_url('/uslugi/')); ?>" class="mm-link<?php echo (is_page('uslugi') ? ' is-active' : ''); ?>" style="--i:1">
       <span class="mm-num">01</span>
       <span class="mm-text"><?php echo esc_html(be_t('nav.uslugi')); ?></span>
       <span class="mm-arrow">-></span>
     </a>
-    <a href="<?php echo esc_url(home_url('/proces/')); ?>" class="mm-link" style="--i:2">
+    <a href="<?php echo esc_url(home_url('/proces/')); ?>" class="mm-link<?php echo (is_page('proces') ? ' is-active' : ''); ?>" style="--i:2">
       <span class="mm-num">02</span>
       <span class="mm-text"><?php echo esc_html(be_t('nav.proces')); ?></span>
       <span class="mm-arrow">-></span>
     </a>
-    <a href="<?php echo esc_url(home_url('/realizacje/')); ?>" class="mm-link" style="--i:3">
+    <a href="<?php echo esc_url(home_url('/realizacje/')); ?>" class="mm-link<?php echo (is_page('realizacje') ? ' is-active' : ''); ?>" style="--i:3">
       <span class="mm-num">03</span>
       <span class="mm-text"><?php echo esc_html(be_t('nav.realizacje')); ?></span>
       <span class="mm-arrow">-></span>
     </a>
-    <a href="<?php echo esc_url(home_url('/o-mnie/')); ?>" class="mm-link" style="--i:4">
+    <a href="<?php echo esc_url(home_url('/o-mnie/')); ?>" class="mm-link<?php echo (is_page('o-mnie') ? ' is-active' : ''); ?>" style="--i:4">
       <span class="mm-num">04</span>
       <span class="mm-text"><?php echo esc_html(be_t('nav.o_mnie')); ?></span>
       <span class="mm-arrow">-></span>
     </a>
-    <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="mm-link mm-link-cta" style="--i:5">
+    <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="mm-link mm-link-cta<?php echo (is_page('kontakt') ? ' is-active' : ''); ?>" style="--i:5">
       <span class="mm-num">05</span>
       <span class="mm-text"><?php echo esc_html(be_t('nav.kontakt')); ?></span>
       <span class="mm-arrow">-></span>

@@ -1319,3 +1319,79 @@ body.menu-open { overflow: hidden; }
 .web-case-metrics {
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE MENU - ACTIVE STATE (subtelne podświetlenie)
+═══════════════════════════════════════════════════════════ */
+.mm-link.is-active {
+  background: linear-gradient(90deg, var(--cyan-08) 0%, transparent 100%);
+}
+.mm-link.is-active::before {
+  transform: scaleY(1);
+  background: var(--cyan);
+}
+.mm-link.is-active .mm-num {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.mm-link.is-active .mm-text {
+  background-position: -100% 0;
+}
+.mm-link.is-active .mm-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--cyan);
+}
+.mm-link.is-active::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 0 var(--cyan-40);
+  animation: mmActiveDot 2s ease infinite;
+}
+@keyframes mmActiveDot {
+  0%, 100% { box-shadow: 0 0 0 0 var(--cyan-40); }
+  50%      { box-shadow: 0 0 0 6px transparent; }
+}
+.mm-link.mm-link-cta.is-active {
+  background: linear-gradient(135deg, var(--cyan-20), var(--magenta-12));
+  border-color: var(--cyan);
+}
+.mm-link.mm-link-cta.is-active::after {
+  display: none; /* ukryj dot bo cala karta jest podswietlona */
+}
+
+/* ════════════════════════════════════════════════════════════
+   FIX: STICKY PROFILE - nie zachodzi na tekst poniżej
+═══════════════════════════════════════════════════════════ */
+/* Na desktopie sticky dziala dobrze (dwukolumnowy grid).
+   Na mobile <980px grid jest 1-kolumnowy => sticky powodowal,
+   ze profil zachodzil na tresc ponizej. */
+@media (max-width: 980px) {
+  .profile {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+/* Dodatkowe zabezpieczenie - na desktopie tez gdy treść jest dłuższa
+   niż wysokość viewport-100px, sticky pozwala na scroll wewnątrz */
+@media (min-width: 981px) {
+  .profile {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-hi) transparent;
+  }
+  .profile::-webkit-scrollbar { width: 4px; }
+  .profile::-webkit-scrollbar-track { background: transparent; }
+  .profile::-webkit-scrollbar-thumb { background: var(--line-hi); border-radius: 2px; }
+}
