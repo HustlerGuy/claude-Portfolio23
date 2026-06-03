@@ -391,3 +391,56 @@
     }, 15000);
   });
 })();
+
+
+
+/* ════════════════════════════════════════════════════════════
+   WEB-CASE TOGGLE (rozwijanie szczegolow projektu)
+═══════════════════════════════════════════════════════════ */
+(() => {
+  'use strict';
+  const toggles = document.querySelectorAll('.web-case-toggle');
+  toggles.forEach(btn => {
+    const targetId = btn.getAttribute('aria-controls');
+    const target = targetId ? document.getElementById(targetId) : null;
+    if (!target) return;
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      btn.setAttribute('aria-expanded', String(next));
+      if (next) {
+        target.removeAttribute('hidden');
+        // Force reflow to enable transition from max-height: 0
+        requestAnimationFrame(() => target.classList.add('expanded'));
+      } else {
+        target.classList.remove('expanded');
+        // Hide po animacji
+        setTimeout(() => {
+          if (btn.getAttribute('aria-expanded') === 'false') target.setAttribute('hidden', '');
+        }, 600);
+      }
+    });
+  });
+})();
+
+/* ════════════════════════════════════════════════════════════
+   ABOUT-BLOCK - dynamiczne tlo gdy w viewport (czytelnosc)
+═══════════════════════════════════════════════════════════ */
+(() => {
+  'use strict';
+  const blocks = document.querySelectorAll('.about-block');
+  if (!blocks.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      // Tlo aktywuje sie gdy element jest >= 30% widoczny
+      en.target.classList.toggle('in-view', en.isIntersecting && en.intersectionRatio >= 0.15);
+    });
+  }, {
+    threshold: [0, 0.15, 0.5, 0.85, 1],
+    rootMargin: '-80px 0px -80px 0px'
+  });
+
+  blocks.forEach(b => io.observe(b));
+})();

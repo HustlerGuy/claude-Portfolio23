@@ -198,25 +198,41 @@
         </div>
       </div>
 
-      <div class="web-case-desc">
-        <div class="web-case-text">
-          <p>Landing page dla lokalnej firmy świadczącej usługi prania tapicerki meblowej (kanapy, sofy, fotele) z dojazdem do klienta. Strona zoptymalizowana pod konwersję - wyraźne CTA, sekcja cennika, zdjęcia "przed/po", formularz kontaktowy i kliknięcie w numer telefonu z mobile.</p>
-          <p>Cel: maksymalizacja zapytań z kampanii Google Ads i Meta Ads kierowanych na lokalne pytania typu "pranie kanap [miasto]".</p>
-        </div>
-        <div class="web-case-meta">
-          <div class="case-tags">
-            <span class="tag">WordPress</span>
-            <span class="tag">Landing Page</span>
-            <span class="tag">Local SEO</span>
-            <span class="tag">Conversion-focused</span>
+      <div class="web-case-desc" id="webcase-desc-001" hidden>
+        <div class="web-case-desc-grid">
+          <div class="web-case-text">
+            <div class="web-case-label">Projekt</div>
+            <p>Landing page dla lokalnej firmy świadczącej usługi prania tapicerki meblowej (kanapy, sofy, fotele) z dojazdem do klienta. Strona zoptymalizowana pod konwersję - wyraźne CTA, sekcja cennika, zdjęcia "przed/po", formularz kontaktowy i kliknięcie w numer telefonu z mobile.</p>
+            <p>Cel: maksymalizacja zapytań z kampanii Google Ads i Meta Ads kierowanych na lokalne pytania typu "pranie kanap [miasto]".</p>
           </div>
-          <div class="case-metrics web-case-metrics">
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">PageSpeed</div></div>
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">CLS</div></div>
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">Konwersja</div></div>
+          <div class="web-case-side">
+            <div class="web-case-side-block">
+              <div class="web-case-label">Stack</div>
+              <div class="case-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">Landing Page</span>
+                <span class="tag">Local SEO</span>
+                <span class="tag">Conversion-focused</span>
+              </div>
+            </div>
+            <div class="web-case-side-block">
+              <div class="web-case-label">Wyniki techniczne</div>
+              <div class="case-metrics web-case-metrics">
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">PageSpeed</div></div>
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">CLS</div></div>
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">Konwersja</div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <button class="web-case-toggle" type="button" aria-expanded="false" aria-controls="webcase-desc-001">
+        <span class="web-case-toggle-text">Zobacz szczegóły projektu</span>
+        <span class="web-case-toggle-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
     </article>
 
     <!-- WEB CASE 2 -->
@@ -259,17 +275,35 @@
         </div>
       </div>
 
-      <div class="web-case-desc">
-        <div class="web-case-text"><p></p></div>
-        <div class="web-case-meta">
-          <div class="case-tags"><span class="tag"></span><span class="tag"></span></div>
-          <div class="case-metrics web-case-metrics">
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">PageSpeed</div></div>
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">CLS</div></div>
-            <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">Konwersja</div></div>
+      <div class="web-case-desc" id="webcase-desc-002" hidden>
+        <div class="web-case-desc-grid">
+          <div class="web-case-text">
+            <div class="web-case-label">Projekt</div>
+            <p></p>
+          </div>
+          <div class="web-case-side">
+            <div class="web-case-side-block">
+              <div class="web-case-label">Stack</div>
+              <div class="case-tags"><span class="tag"></span><span class="tag"></span></div>
+            </div>
+            <div class="web-case-side-block">
+              <div class="web-case-label">Wyniki techniczne</div>
+              <div class="case-metrics web-case-metrics">
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">PageSpeed</div></div>
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">CLS</div></div>
+                <div class="case-metric"><div class="case-metric-val">-</div><div class="case-metric-lbl">Konwersja</div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <button class="web-case-toggle" type="button" aria-expanded="false" aria-controls="webcase-desc-002">
+        <span class="web-case-toggle-text">Zobacz szczegóły projektu</span>
+        <span class="web-case-toggle-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
     </article>
   </div>
 </section>
