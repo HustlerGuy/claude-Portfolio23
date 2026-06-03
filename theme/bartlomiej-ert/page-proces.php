@@ -54,7 +54,7 @@
           <div class="tl-dot"></div>
           <div class="tl-num">Krok 05</div>
           <h3 class="tl-title">Launch kampanii</h3>
-          <p class="tl-desc">Startujemy z kampaniami. Pierwsze 2 tygodnie to faza testowa — testujemy kreacje, grupy docelowe i komunikaty.</p>
+          <p class="tl-desc">Startujemy z kampaniami. Pierwsze 2 tygodnie to faza testowa - testujemy kreacje, grupy docelowe i komunikaty.</p>
           <div class="tl-tags"><span class="tag">Testy A/B</span><span class="tag">Monitoring</span><span class="tag">Dane od dnia 1</span></div>
         </div>
 
@@ -82,7 +82,7 @@
         <div class="tl-aside-card">
           <div class="tl-aside-lbl">Minimalny okres współpracy</div>
           <div class="tl-aside-val">3 miesiące</div>
-          <div class="tl-aside-note">Potrzebujemy czasu na zebranie danych i realną optymalizację — wtedy widać pełny potencjał.</div>
+          <div class="tl-aside-note">Potrzebujemy czasu na zebranie danych i realną optymalizację - wtedy widać pełny potencjał.</div>
         </div>
         <div class="mt-3">
           <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn btn-primary full">
@@ -104,7 +104,7 @@
         <div class="faq-q">Czy muszę mieć gotowe kreacje reklamowe?
           <span class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </div>
-        <div class="faq-a"><div class="faq-a-inner">Nie — mogę przygotować brief dla grafika lub pomóc w stworzeniu kreacji. Jeśli masz własny zespół kreatywny, koordynuję z nim współpracę.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Nie - mogę przygotować brief dla grafika lub pomóc w stworzeniu kreacji. Jeśli masz własny zespół kreatywny, koordynuję z nim współpracę.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Jak szybko zobaczę wyniki?
@@ -128,7 +128,7 @@
         <div class="faq-q">Co się dzieje po zakończeniu umowy?
           <span class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </div>
-        <div class="faq-a"><div class="faq-a-inner">Konta reklamowe, dane i historia kampanii zawsze należą do Ciebie. Przekazuję pełną dokumentację i dostępy — bez żadnych haczyków.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Konta reklamowe, dane i historia kampanii zawsze należą do Ciebie. Przekazuję pełną dokumentację i dostępy - bez żadnych haczyków.</div></div>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
     <div class="cta-banner" data-reveal>
       <div>
         <h3>Masz jeszcze <span class="acc">pytania?</span></h3>
-        <p>Napisz lub zadzwoń — chętnie omówię szczegóły Twojego projektu.</p>
+        <p>Napisz lub zadzwoń - chętnie omówię szczegóły Twojego projektu.</p>
       </div>
       <div class="cta-banner-actions">
         <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn btn-primary">

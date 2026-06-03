@@ -52,21 +52,38 @@
       nav.classList.toggle('hide', y > 200 && y > lastY);
       lastY = y;
     }, { passive: true });
-    const toggle = $('#navToggle'), links = $('#navLinks');
-    if (toggle && links) {
+
+    const toggle = $('#navToggle');
+    const menu   = $('#mobileMenu');
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('menu-open');
+      };
+      const openMenu = () => {
+        menu.classList.add('open');
+        toggle.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('menu-open');
+      };
       toggle.addEventListener('click', () => {
-        const open = links.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
+        menu.classList.contains('open') ? closeMenu() : openMenu();
       });
-      links.addEventListener('click', e => {
-        if (e.target.closest('a')) {
-          links.classList.remove('open');
-          toggle.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+      // Close on internal link click
+      menu.addEventListener('click', e => {
+        const a = e.target.closest('a');
+        if (a && !a.target) {
+          // Krótka pauza dla animacji wyjścia
+          setTimeout(closeMenu, 50);
         }
+      });
+      // ESC closes menu
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
       });
     }
   }
@@ -187,6 +204,8 @@
     const href = a.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
     if (a.target==='_blank' || e.metaKey || e.ctrlKey) return;
+    // Skip lang toggles & menu links (handled separately)
+    if (a.closest('.lang-toggle, .mm-lang, .footer-lang, #mobileMenu')) return;
     try {
       const url = new URL(a.href, location.href);
       if (url.origin !== location.origin) return;

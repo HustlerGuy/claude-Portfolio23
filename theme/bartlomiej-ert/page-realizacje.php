@@ -8,7 +8,7 @@
       <span class="crumb-sep">/</span><span>Realizacje</span>
     </div>
     <h1 class="page-title">Realizacje<br><span class="ital">&amp; wyniki.</span></h1>
-    <p class="page-sub" data-reveal data-delay="2">Realne kampanie, realne liczby — poparte zrzutami ekranu z paneli reklamowych. Zero zmyślonych danych.</p>
+    <p class="page-sub" data-reveal data-delay="2">Realne kampanie, realne liczby - poparte zrzutami ekranu z paneli reklamowych. Zero zmyślonych danych.</p>
   </div>
 </header>
 
@@ -17,10 +17,10 @@
     <div class="eyebrow" data-reveal>Wyniki zbiorcze</div>
     <h2 class="section-title" data-reveal>Liczby mówią <span class="acc">same za siebie</span></h2>
     <div class="stats" data-reveal>
-      <div class="stat"><div class="stat-val muted">—</div><div class="stat-lbl">Najlepszy ROAS</div></div>
-      <div class="stat"><div class="stat-val muted">—</div><div class="stat-lbl">Średnia redukcja CPA</div></div>
-      <div class="stat"><div class="stat-val muted">—</div><div class="stat-lbl">Budżet w zarządzaniu</div></div>
-      <div class="stat"><div class="stat-val muted">—</div><div class="stat-lbl">Projektów łącznie</div></div>
+      <div class="stat"><div class="stat-val muted">-</div><div class="stat-lbl">Najlepszy ROAS</div></div>
+      <div class="stat"><div class="stat-val muted">-</div><div class="stat-lbl">Średnia redukcja CPA</div></div>
+      <div class="stat"><div class="stat-val muted">-</div><div class="stat-lbl">Budżet w zarządzaniu</div></div>
+      <div class="stat"><div class="stat-val muted">-</div><div class="stat-lbl">Projektów łącznie</div></div>
     </div>
   </div>
 </section>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="case-media">
-          <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
+          <div class="media-lbl">Wyniki kampanii - zrzut ekranu</div>
           <div class="shot">
             <!-- Dodaj: src="URL_DO_SCREENSHOTA" i klasę has-img -->
             <img src="" alt="Wyniki kampanii">
@@ -97,7 +97,7 @@
           <div class="case-tags"><span class="tag"></span><span class="tag"></span></div>
         </div>
         <div class="case-media">
-          <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
+          <div class="media-lbl">Wyniki kampanii - zrzut ekranu</div>
           <div class="shot"><img src="" alt=""><div class="shot-text">Screenshot z panelu</div></div>
           <div class="media-lbl">Dodatkowe zrzuty</div>
           <div class="shots-grid">
@@ -130,7 +130,7 @@
           <div class="case-tags"><span class="tag"></span><span class="tag"></span></div>
         </div>
         <div class="case-media">
-          <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
+          <div class="media-lbl">Wyniki kampanii - zrzut ekranu</div>
           <div class="shot"><img src="" alt=""><div class="shot-text">Screenshot z panelu</div></div>
           <div class="media-lbl">Dodatkowe zrzuty</div>
           <div class="shots-grid">
@@ -156,7 +156,7 @@
     <div class="cta-banner" data-reveal>
       <div>
         <h3>Chcesz być <span class="acc">kolejnym case study?</span></h3>
-        <p>Napisz — bezpłatnie omówimy, jak osiągnąć podobne wyniki dla Twojej firmy.</p>
+        <p>Napisz - bezpłatnie omówimy, jak osiągnąć podobne wyniki dla Twojej firmy.</p>
       </div>
       <div class="cta-banner-actions">
         <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn btn-primary">

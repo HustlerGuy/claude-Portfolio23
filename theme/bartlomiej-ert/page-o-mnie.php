@@ -9,7 +9,7 @@
     </div>
     <h1 class="page-title">Bartłomiej<br><span class="ital">Ert.</span></h1>
     <p class="page-sub" data-reveal data-delay="2">
-      Marketing Strategist &amp; Paid Ads Specialist z ponad 8-letnim doświadczeniem
+      Marketing Strategist &amp; Paid Ads Specialist z 2-letnim doświadczeniem
       w budowaniu kampanii, które realnie sprzedają.
     </p>
   </div>
@@ -39,10 +39,10 @@
           </a>
         </div>
         <div class="profile-stats">
-          <div class="profile-stat"><div class="profile-stat-val muted">—</div><div class="profile-stat-lbl">Lat exp.</div></div>
-          <div class="profile-stat"><div class="profile-stat-val muted">—</div><div class="profile-stat-lbl">Projektów</div></div>
-          <div class="profile-stat"><div class="profile-stat-val muted">—</div><div class="profile-stat-lbl">Śr. ROAS</div></div>
-          <div class="profile-stat"><div class="profile-stat-val muted">—</div><div class="profile-stat-lbl">Śr. CPA</div></div>
+          <div class="profile-stat"><div class="profile-stat-val muted">-</div><div class="profile-stat-lbl">Lat exp.</div></div>
+          <div class="profile-stat"><div class="profile-stat-val muted">-</div><div class="profile-stat-lbl">Projektów</div></div>
+          <div class="profile-stat"><div class="profile-stat-val muted">-</div><div class="profile-stat-lbl">Śr. ROAS</div></div>
+          <div class="profile-stat"><div class="profile-stat-val muted">-</div><div class="profile-stat-lbl">Śr. CPA</div></div>
         </div>
       </aside>
 
@@ -50,20 +50,20 @@
       <div>
         <div class="about-block" data-reveal>
           <div class="eyebrow mb-3">Kim jestem</div>
-          <p>Jestem freelancerem specjalizującym się w <strong>płatnych kampaniach reklamowych i marketingu strategicznym</strong>. Od ponad 8 lat pomagam firmom e-commerce, B2B i usługowym przyciągać klientów przez Meta Ads, Google Search i LinkedIn.</p>
-          <p>Zaczynałem w agencjach marketingowych, gdzie zarządzałem kampaniami dla kilkudziesięciu klientów jednocześnie. W 2019 roku zdecydowałem się pracować na własny rachunek — żeby mieć pełny wpływ na wyniki i budować naprawdę partnerskie relacje z klientami.</p>
-          <p>Nie wierzę w szablony. Każda firma ma inne cele, inny rynek i inny budżet — dlatego <strong>każda kampania jest projektowana od zera</strong>, z myślą o konkretnych liczbach do osiągnięcia.</p>
+          <p>Jestem freelancerem specjalizującym się w <strong>płatnych kampaniach reklamowych, GEO i marketingu strategicznym</strong>. Od ponad 2 lat pomagam firmom z usługami lokalnymi (kosmetyka, fitness, medycyna estetyczna, usługi specjalistyczne) przyciągać klientów przez Meta Ads i Google Search.</p>
+          <p>Zacząłem od własnych projektów, gdzie szybko zauważyłem co realnie działa w lokalnym marketingu - a co jest tylko marketingowym hałasem. Dziś pracuję jako freelancer, żeby mieć pełny wpływ na wyniki i budować naprawdę partnerskie relacje z klientami.</p>
+          <p>Nie wierzę w szablony. Każda firma ma inne cele, inny rynek i inny budżet - dlatego <strong>każda kampania jest projektowana od zera</strong>, z myślą o konkretnych liczbach do osiągnięcia.</p>
         </div>
 
         <div class="about-block" data-reveal>
           <div class="eyebrow mb-3">Kompetencje</div>
           <div class="skills">
-            <div class="skill"><span class="skill-name">Meta Ads</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
-            <div class="skill"><span class="skill-name">Google Search Ads</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
-            <div class="skill"><span class="skill-name">LinkedIn Ads</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
-            <div class="skill"><span class="skill-name">Strategia</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
-            <div class="skill"><span class="skill-name">Google Analytics 4</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
-            <div class="skill"><span class="skill-name">Analiza danych</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+            <div class="skill"><span class="skill-name">Meta Ads</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+            <div class="skill"><span class="skill-name">Google Search Ads</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+            <div class="skill"><span class="skill-name">GEO / AI</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+            <div class="skill"><span class="skill-name">Strategia lokalna</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+            <div class="skill"><span class="skill-name">Google Analytics 4</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+            <div class="skill"><span class="skill-name">Analiza danych</span><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
           </div>
         </div>
 
@@ -73,7 +73,7 @@
             <div class="value">
               <div class="value-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
               <div class="value-title">Dane, nie opinie</div>
-              <div class="value-desc">Każda decyzja jest poparta liczbami. Nie zgaduję — testuję, mierzę i optymalizuję na podstawie faktów.</div>
+              <div class="value-desc">Każda decyzja jest poparta liczbami. Nie zgaduję - testuję, mierzę i optymalizuję na podstawie faktów.</div>
             </div>
             <div class="value">
               <div class="value-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
@@ -94,11 +94,11 @@
         </div>
 
         <div data-reveal>
-          <div class="note">
+          <div class="note note-blue">
             <svg class="note-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <div>
-              <div class="note-title">Wykluczenie branżowe</div>
-              <p class="note-text">Nie obsługuję branży gastronomicznej — restauracji, kawiarni, barów i podobnych lokali.</p>
+              <div class="note-title">Gastronomia - ważna informacja</div>
+              <p class="note-text"><strong>Płatne kampanie reklamowe</strong> dla restauracji, kawiarni i barów - nie prowadzę. Natomiast tworzenie stron, ogólny marketing, GEO i strategia dla branży gastronomicznej - jak najbardziej w grę wchodzą.</p>
             </div>
           </div>
         </div>
