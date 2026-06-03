@@ -216,3 +216,120 @@
   });
 
 })();
+
+
+
+/* ════════════════════════════════════════════════════════════
+   REALIZACJE - tabs + browser-frame iframe
+═══════════════════════════════════════════════════════════ */
+(() => {
+  'use strict';
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+  /* TABS NAV - smooth scroll + active state */
+  const tabs = $$('.cat-tab');
+  const sections = $$('.cat-section');
+
+  if (tabs.length && sections.length) {
+    // Click - smooth scroll
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        const id = tab.getAttribute('data-tab');
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const headerOffset = 130;
+        const top = target.getBoundingClientRect().top + scrollY - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    // Active state on scroll
+    const setActive = (id) => {
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+    };
+
+    const onScroll = () => {
+      const triggerY = scrollY + 200;
+      let current = sections[0]?.id;
+      for (const sec of sections) {
+        if (sec.offsetTop <= triggerY) current = sec.id;
+      }
+      if (current) setActive(current);
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Initial active from hash
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      if ($$('#' + CSS.escape(id)).length) {
+        setTimeout(() => {
+          const target = document.getElementById(id);
+          const top = target.getBoundingClientRect().top + scrollY - 130;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 300);
+      }
+    }
+  }
+
+  /* BROWSER FRAME - lazy iframe load with fallback */
+  const frames = $$('.browser-frame');
+  frames.forEach(frame => {
+    const iframe     = frame.querySelector('.browser-iframe');
+    const playBtn    = frame.querySelector('.browser-play');
+    const placeholder = frame.querySelector('.browser-placeholder');
+    const dataSrc    = frame.dataset.src || iframe?.dataset.src || '';
+
+    if (!iframe || !dataSrc) {
+      // Brak src - pokaż fallback od razu jeśli mamy fallback URL
+      const fallbackLink = frame.querySelector('.browser-fallback a[href]');
+      if (fallbackLink && fallbackLink.getAttribute('href')) {
+        // czekamy na klik
+      }
+      return;
+    }
+
+    let loaded = false;
+    let failTimer = null;
+
+    const loadIframe = () => {
+      if (loaded) return;
+      loaded = true;
+
+      iframe.src = dataSrc;
+
+      // Detection X-Frame-Options blockade
+      // Niestety nie da się 100% wykryć (SOP), ale używamy timeoutu:
+      // jeśli iframe nie odpali load eventu w 8s - zakładamy że zablokowany
+      failTimer = setTimeout(() => {
+        if (!frame.classList.contains('loaded')) {
+          frame.classList.add('failed');
+        }
+      }, 8000);
+
+      iframe.addEventListener('load', () => {
+        clearTimeout(failTimer);
+        // Sprawdź czy iframe ma jakąś zawartość (może być about:blank)
+        try {
+          // Próba dostępu do contentWindow.location - jeśli zablokowany, rzuci DOMException
+          // ale to się NIE WYDARZY dla cross-origin, więc tu po prostu uznajemy że załadowane
+          frame.classList.add('loaded');
+        } catch (e) {
+          // Cross-origin - ale to NORMALNE dla cudzych domen, więc też loaded
+          frame.classList.add('loaded');
+        }
+      }, { once: true });
+
+      iframe.addEventListener('error', () => {
+        clearTimeout(failTimer);
+        frame.classList.add('failed');
+      }, { once: true });
+    };
+
+    // Klik na placeholder lub play button
+    placeholder?.addEventListener('click', loadIframe);
+    playBtn?.addEventListener('click', e => { e.stopPropagation(); loadIframe(); });
+  });
+})();
