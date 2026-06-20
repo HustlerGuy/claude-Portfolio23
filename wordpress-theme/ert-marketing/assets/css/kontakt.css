@@ -1,0 +1,54 @@
+.contact-grid { display:grid; grid-template-columns:1fr 420px; gap:72px; align-items:start; }
+
+/* FORM */
+.form-card { background:var(--card); border:1px solid var(--border); padding:48px; position:relative; overflow:hidden; }
+.form-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--cyan),transparent); }
+.form-title { font-size:1.5rem; font-weight:700; color:var(--text); letter-spacing:-0.02em; margin-bottom:8px; }
+.form-sub { font-size:0.88rem; color:var(--muted); line-height:1.6; margin-bottom:36px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-group { margin-bottom:20px; }
+.form-label { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; display:block; }
+.form-input, .form-select, .form-textarea {
+  width:100%; background:var(--bg); border:1px solid var(--border); color:var(--text);
+  font-family:var(--ff); font-size:0.92rem; padding:12px 16px;
+  transition:border-color 0.25s; outline:none;
+  appearance:none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color:var(--cyan); }
+.form-input::placeholder, .form-textarea::placeholder { color:var(--muted2); }
+.form-textarea { resize:vertical; min-height:120px; line-height:1.6; }
+.form-select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a6a8c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; cursor:pointer; }
+.form-select option { background:var(--bg2); }
+.form-check { display:flex; align-items:flex-start; gap:12px; margin-bottom:24px; cursor:pointer; }
+.form-check input { width:16px; height:16px; margin-top:2px; accent-color:var(--cyan); cursor:pointer; flex-shrink:0; }
+.form-check-label { font-size:0.82rem; color:var(--muted); line-height:1.6; }
+.form-submit { width:100%; }
+.form-note { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.12em; color:var(--muted2); text-align:center; margin-top:16px; }
+
+/* SUCCESS */
+.form-success { display:none; text-align:center; padding:40px 0; }
+.success-icon { width:60px; height:60px; background:var(--cyan-dim); border:1px solid var(--border2); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; }
+.success-icon svg { width:28px; height:28px; color:var(--cyan); }
+.success-title { font-size:1.3rem; font-weight:700; color:var(--text); margin-bottom:8px; }
+.success-text { font-size:0.9rem; color:var(--muted); line-height:1.7; }
+
+/* SIDEBAR */
+.contact-sidebar {}
+.contact-info-card { background:var(--card); border:1px solid var(--border); padding:32px; margin-bottom:2px; transition:border-color 0.3s; }
+.contact-info-card:hover { border-color:var(--border2); }
+.ci-icon { width:44px; height:44px; background:var(--cyan-dim); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.ci-icon svg { width:18px; height:18px; color:var(--cyan); }
+.ci-label { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted2); margin-bottom:6px; }
+.ci-val { font-size:1rem; font-weight:600; color:var(--text); text-decoration:none; transition:color 0.25s; display:block; }
+a.ci-val:hover { color:var(--cyan); }
+.ci-note { font-size:0.8rem; color:var(--muted2); margin-top:4px; }
+
+.avail-card { background:var(--bg3); border:1px solid var(--border2); border-left:3px solid var(--cyan); padding:24px 28px; margin-top:2px; }
+.avail-dot { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--cyan); margin-bottom:8px; }
+.avail-dot::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--cyan); animation:blink 2s ease-in-out infinite; }
+.avail-text { font-size:0.88rem; color:var(--muted); line-height:1.6; }
+
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
