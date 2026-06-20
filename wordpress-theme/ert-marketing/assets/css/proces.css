@@ -1,0 +1,21 @@
+.timeline { position: relative; padding-left: 48px; }
+.timeline::before { content:''; position:absolute; left:16px; top:0; bottom:0; width:1px; background:linear-gradient(180deg, var(--cyan), var(--border), transparent); }
+.tl-step { position:relative; margin-bottom:60px; }
+.tl-step:last-child { margin-bottom:0; }
+.tl-dot { position:absolute; left:-40px; top:6px; width:16px; height:16px; background:var(--bg); border:2px solid var(--cyan); border-radius:50%; z-index:2; }
+.tl-dot::after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:6px; height:6px; background:var(--cyan); border-radius:50%; }
+.tl-num { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--cyan); margin-bottom:10px; }
+.tl-title { font-size:1.4rem; font-weight:700; color:var(--text); letter-spacing:-0.02em; margin-bottom:12px; }
+.tl-desc { font-size:0.95rem; line-height:1.8; color:var(--muted); margin-bottom:20px; max-width:560px; }
+.tl-items { display:flex; flex-wrap:wrap; gap:8px; }
+.tl-item { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); border:1px solid var(--border); padding:5px 12px; background:var(--cyan-glow); }
+
+.timeline-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.tl-aside { position:sticky; top:100px; }
+.tl-aside-card { background:var(--card); border:1px solid var(--border); padding:36px; margin-bottom:2px; }
+.tl-aside-card::before { content:''; display:block; width:32px; height:2px; background:var(--cyan); margin-bottom:20px; }
+.tl-aside-label { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted2); margin-bottom:8px; }
+.tl-aside-val { font-size:1.5rem; font-weight:800; color:var(--cyan); letter-spacing:-0.02em; }
+.tl-aside-note { font-size:0.82rem; line-height:1.7; color:var(--muted); margin-top:6px; }
+
+@media(max-width:900px){ .timeline-grid{grid-template-columns:1fr} .tl-aside{position:static} }
