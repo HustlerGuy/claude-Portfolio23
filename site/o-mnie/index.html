@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O mnie — Bartłomiej Ert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .about-grid { display:grid; grid-template-columns:400px 1fr; gap:72px; align-items:start; }
+  .profile-card { background:var(--card); border:1px solid var(--border); padding:48px; position:relative; overflow:hidden; }
+  .profile-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--cyan),transparent); }
+  .profile-bg { position:absolute; inset:0; background:radial-gradient(ellipse 70% 70% at 80% 80%,var(--cyan-glow),transparent); }
+  .profile-initial { font-size:7rem; font-weight:800; color:var(--cyan); line-height:1; opacity:0.1; letter-spacing:-0.05em; position:relative; z-index:1; }
+  .profile-info { position:relative; z-index:1; margin-top:-20px; margin-bottom:32px; }
+  .profile-name { font-size:1.8rem; font-weight:800; color:var(--text); letter-spacing:-0.02em; margin-bottom:6px; }
+  .profile-role { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--cyan); }
+  .profile-badges { display:flex; flex-wrap:wrap; gap:8px; position:relative; z-index:1; margin-bottom:32px; }
+  .profile-badge { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); padding:6px 12px; }
+  .profile-stat-row { display:grid; grid-template-columns:1fr 1fr; gap:2px; position:relative; z-index:1; margin-top:24px; }
+  .profile-stat { background:var(--bg3); padding:16px; text-align:center; }
+  .profile-stat-val { font-size:1.6rem; font-weight:800; color:var(--cyan); letter-spacing:-0.02em; line-height:1; }
+  .profile-stat-lbl { font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted2); margin-top:4px; }
+
+  .about-text-block { margin-bottom:48px; }
+  .about-text-block p { font-size:0.95rem; line-height:1.9; color:var(--muted); margin-bottom:16px; }
+  .about-text-block p strong { color:var(--text); font-weight:600; }
+  .about-text-block p:last-child { margin-bottom:0; }
+
+  .skills-section { margin-bottom:48px; }
+  .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .skill-row { display:flex; align-items:center; gap:12px; }
+  .skill-name { font-size:0.88rem; color:var(--text); min-width:160px; }
+  .skill-bar { flex:1; height:3px; background:var(--border); position:relative; overflow:hidden; }
+  .skill-fill { height:100%; background:linear-gradient(90deg,var(--cyan),var(--cyan2)); border-radius:2px; transition:width 1.2s ease; width:0; }
+
+  .values-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+  .value-card { background:var(--card); border:1px solid var(--border); padding:28px; }
+  .value-icon { font-size:1.4rem; margin-bottom:12px; }
+  .value-title { font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:8px; }
+  .value-desc { font-size:0.85rem; line-height:1.7; color:var(--muted); }
+
+  .excl-box { background:var(--bg3); border:1px solid var(--border); border-left:3px solid rgba(255,80,80,0.5); padding:24px 28px; display:flex; align-items:flex-start; gap:16px; }
+  .excl-icon { color:rgba(255,100,100,0.7); flex-shrink:0; margin-top:2px; }
+  .excl-title { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,100,100,0.7); margin-bottom:6px; }
+  .excl-text { font-size:0.88rem; line-height:1.7; color:var(--muted); }
+
+  @media(max-width:900px){
+    .about-grid{grid-template-columns:1fr}
+    .skills-grid,.values-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-icon"><span>BE</span></div>
+    <span class="nav-logo-text">Bartłomiej Ert</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/uslugi/">Usługi</a></li>
+    <li><a href="/proces/">Proces</a></li>
+    <li><a href="/realizacje/">Realizacje</a></li>
+    <li><a href="/o-mnie/" class="active">O mnie</a></li>
+    <li><a href="/kontakt/" class="nav-cta">Darmowa wycena</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="/">Start</a>
+      <span class="page-breadcrumb-sep">/</span>
+      <span>O mnie</span>
+    </div>
+    <h1 class="page-title">Bartłomiej <span class="acc">Ert</span></h1>
+    <p class="page-subtitle">Marketing Strategist & Paid Ads Specialist z ponad 8-letnim doświadczeniem w budowaniu kampanii, które realnie sprzedają.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="about-grid">
+    <div class="profile-card reveal">
+      <div class="profile-bg"></div>
+      <div class="profile-initial">BE</div>
+      <div class="profile-info">
+        <div class="profile-name">Bartłomiej Ert</div>
+        <div class="profile-role">Marketing Strategist & Paid Ads Specialist</div>
+      </div>
+      <div class="profile-badges">
+        <span class="profile-badge">Meta Blueprint Cert.</span>
+        <span class="profile-badge">Google Ads Cert.</span>
+        <span class="profile-badge">Freelancer</span>
+        <span class="profile-badge">Remote / Polska</span>
+      </div>
+      <div style="position:relative;z-index:1;">
+        <a href="/kontakt/" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:12px;">Napisz do mnie →</a>
+        <a href="/realizacje/" class="btn-ghost" style="width:100%;justify-content:center;">Zobacz realizacje</a>
+      </div>
+      <div class="profile-stat-row">
+        <div class="profile-stat"><div class="profile-stat-val">—</div><div class="profile-stat-lbl">Lat exp.</div></div>
+        <div class="profile-stat"><div class="profile-stat-val">15</div><div class="profile-stat-lbl">Projektów</div></div>
+        <div class="profile-stat"><div class="profile-stat-val">7.99×</div><div class="profile-stat-lbl">Najlepszy ROAS</div></div>
+        <div class="profile-stat"><div class="profile-stat-val">−45%</div><div class="profile-stat-lbl">Śr. CPA</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="about-text-block reveal">
+        <div class="s-label" style="margin-bottom:16px;"><div class="s-label-line"></div><span>Kim jestem</span></div>
+        <p>Jestem freelancerem specjalizującym się w <strong>płatnych kampaniach reklamowych i marketingu strategicznym</strong>. Od ponad 8 lat pomagam firmom e-commerce, B2B i usługowym przyciągać klientów przez Meta Ads, Google Search i LinkedIn.</p>
+        <p>Zaczynałem w agencjach marketingowych, gdzie zarządzałem kampaniami dla kilkudziesięciu klientów jednocześnie. W 2019 roku zdecydowałem się pracować na własny rachunek — żeby mieć pełny wpływ na wyniki i budować naprawdę partnerskie relacje z klientami.</p>
+        <p>Nie wierzę w szablony. Każda firma ma inne cele, inny rynek i inny budżet — dlatego <strong>każda kampania jest projektowana od zera</strong>, z myślą o konkretnych liczbach do osiągnięcia.</p>
+      </div>
+
+      <div class="skills-section reveal">
+        <div class="s-label" style="margin-bottom:24px;"><div class="s-label-line"></div><span>Kompetencje</span></div>
+        <div class="skills-grid">
+          <div class="skill-row">
+            <span class="skill-name">Meta Ads</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Google Search Ads</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="92"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">LinkedIn Ads</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Strategia marketingowa</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Google Analytics 4</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Analiza danych</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="s-label" style="margin-bottom:24px;"><div class="s-label-line"></div><span>Wartości w pracy</span></div>
+        <div class="values-grid" style="margin-bottom:32px;">
+          <div class="value-card">
+            <div class="value-icon">📊</div>
+            <div class="value-title">Dane, nie opinie</div>
+            <div class="value-desc">Każda decyzja jest poparta liczbami. Nie zgaduję — testuję, mierzę i optymalizuję na podstawie faktycznych wyników.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <div class="value-title">Twoje cele = moje cele</div>
+            <div class="value-desc">Rozliczam się z wyników, nie z godzin. Zależy mi na długoterminowej współpracy, więc muszę dostarczać realną wartość.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🔍</div>
+            <div class="value-title">Pełna transparentność</div>
+            <div class="value-desc">Zawsze wiesz, co dzieje się z Twoim budżetem. Żadnych ukrytych opłat, żargonu ani pustych obietnic.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚡</div>
+            <div class="value-title">Szybkość i komunikacja</div>
+            <div class="value-desc">Odpowiadam w ciągu jednego dnia roboczego. Proaktywnie informuję o zmianach i szansach — nie czekam, aż zapytasz.</div>
+          </div>
+        </div>
+        <div class="excl-box">
+          <svg class="excl-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <div class="excl-title">Wykluczenie branżowe</div>
+            <p class="excl-text">Nie obsługuję branży gastronomicznej — restauracji, kawiarni, barów i podobnych lokali. Skupiam się na sektorach, w których mogę dostarczyć najwyższą jakość i mierzalne wyniki.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="cta-banner reveal">
+    <div class="cta-banner-text">
+      <h3>Porozmawiajmy o <span class="acc">Twoim projekcie</span></h3>
+      <p>Pierwsza konsultacja jest bezpłatna. Dowiedz się, co mogę zrobić dla Twojej firmy.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a href="/kontakt/" class="btn-primary">Skontaktuj się →</a>
+      <a href="/uslugi/" class="btn-ghost">Zobacz usługi</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>
+  <div class="footer-links">
+    <a href="/uslugi/">Usługi</a>
+    <a href="/realizacje/">Realizacje</a>
+    <a href="/o-mnie/">O mnie</a>
+    <a href="/kontakt/">Kontakt</a>
+  </div>
+  <span>Freelancer <span class="footer-dot">·</span> Polska <span class="footer-dot">·</span> Remote</span>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:0.06});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Skill bars animation
+  const barObs=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.querySelectorAll('.skill-fill').forEach(bar=>{
+          bar.style.width=bar.dataset.w+'%';
+        });
+        barObs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.3});
+  document.querySelectorAll('.skills-section').forEach(el=>barObs.observe(el));
+</script>
+</body>
+</html>
