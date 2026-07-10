@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usługi — Bartłomiej Ert</title>
+<meta name="description" content="Meta Ads, Google Search Ads, kompleksowe wsparcie marketingowe i tworzenie stron. Głęboka ekspertyza w kanałach, które przynoszą wyniki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .offer { padding: clamp(30px,4vw,52px); margin-bottom: 16px; }
+  .offer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px,4vw,56px); align-items: start; }
+  .offer-num { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 16px; }
+  .offer h2 { font-family: var(--ff-disp); font-weight: 600; font-size: clamp(1.6rem,3vw,2.2rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 16px; }
+  .offer > .offer-grid > div > p.lead { color: var(--muted); line-height: 1.8; margin-bottom: 26px; }
+  .points { list-style: none; display: grid; gap: 12px; }
+  .points li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--text-soft); line-height: 1.55; }
+  .points li svg { width: 18px; height: 18px; color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
+  .aside-lbl { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; }
+  .aside-block { margin-bottom: 26px; }
+  .aside-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+  .price-note { border-top: 1px solid var(--line); padding-top: 20px; margin-bottom: 22px; }
+  .price-note b { font-family: var(--ff-disp); font-weight: 600; font-size: 1.3rem; color: var(--cyan); display: block; }
+
+  .mini-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+  .mini { padding: 30px 28px; }
+  .mini .mini-ic { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 18px; background: var(--azure-06); border: 1px solid var(--line); }
+  .mini .mini-ic svg { width: 22px; height: 22px; color: var(--cyan); }
+  .mini h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.1rem; margin-bottom: 8px; }
+  .mini p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px; }
+
+  .excl { display: flex; gap: 16px; align-items: flex-start; padding: 24px 28px; border-radius: 16px;
+    background: rgba(255,90,90,0.04); border: 1px solid rgba(255,90,90,0.2); border-left: 3px solid rgba(255,110,110,0.6); }
+  .excl svg { color: rgba(255,120,120,0.8); flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
+  .excl .t { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,120,120,0.85); margin-bottom: 6px; }
+  .excl p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+  @media (max-width: 900px){ .offer-grid, .mini-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
+    <nav><ul class="nav-links">
+      <li><a href="../uslugi/" class="active">Usługi</a></li>
+      <li><a href="../proces/">Proces</a></li>
+      <li><a href="../realizacje/">Realizacje</a></li>
+      <li><a href="../o-mnie/">O mnie</a></li>
+    </ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="../kontakt/" data-magnetic>Darmowa wycena
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
+  <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">Usługi</span></div>
+    <h1 class="page-title reveal d1">Nasze <span class="grad">specjalizacje</span></h1>
+    <p class="page-sub reveal d2">Trzy obszary, w których dostarczam mierzalne wyniki. Bez rozproszenia — głęboka ekspertyza tam, gdzie to ma znaczenie.</p>
+  </div>
+</div>
+
+<main>
+  <section class="section" style="padding-top:clamp(48px,7vw,80px)">
+    <div class="wrap">
+
+      <!-- 001 -->
+      <article class="card offer reveal">
+        <div class="offer-grid">
+          <div>
+            <div class="offer-num">001 / Social Media</div>
+            <h2>Promocje reklamowe w <span class="grad">Social Mediach</span></h2>
+            <p class="lead">Kompleksowe kampanie płatne na Facebooku, Instagramie i LinkedIn. Od strategii kreacji, przez precyzyjne targetowanie, aż po codzienną optymalizację i raportowanie wyników.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Konfiguracja i audyt kont Meta Business Suite</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Struktura kampanii: awareness → konwersja → retargeting</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Briefowanie lub tworzenie kreacji reklamowych</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Testy A/B kreacji, copy i grup docelowych</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Cotygodniowe raporty z wnioskami i rekomendacjami</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Integracja z pikselami śledzenia i analityką</li>
+            </ul>
+          </div>
+          <div>
+            <div class="aside-block">
+              <div class="aside-lbl">Platformy</div>
+              <div class="tags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">LinkedIn</span><span class="tag">Meta Pixel</span><span class="tag">Lookalike</span><span class="tag">Retargeting</span></div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-lbl">Dla kogo</div>
+              <p>E-commerce, usługi B2C i B2B, brandy chcące zbudować zasięg lub bezpośrednią sprzedaż przez social media.</p>
+            </div>
+            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Dopasowana do zakresu i budżetu</span></div>
+            <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 002 -->
+      <article class="card offer reveal">
+        <div class="offer-grid">
+          <div>
+            <div class="offer-num">002 / Google Ads</div>
+            <h2>Google <span class="grad">Search Ads</span></h2>
+            <p class="lead">Kampanie w wyszukiwarce Google skierowane do użytkowników aktywnie szukających Twoich usług. Najwyższa intencja zakupowa, mierzalne konwersje, pełna kontrola nad budżetem.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Badanie słów kluczowych i analiza konkurencji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Budowa i konfiguracja kampanii Search</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Pisanie skutecznych reklam tekstowych (RSA)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Optymalizacja stawek, jakości i konwersji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Konfiguracja konwersji w GA4 i Tag Manager</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Miesięczne raporty z planem na kolejny miesiąc</li>
+            </ul>
+          </div>
+          <div>
+            <div class="aside-block">
+              <div class="aside-lbl">Narzędzia</div>
+              <div class="tags"><span class="tag">Google Ads</span><span class="tag">Search</span><span class="tag">PMax</span><span class="tag">GA4</span><span class="tag">Tag Manager</span><span class="tag">Merchant</span></div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-lbl">Dla kogo</div>
+              <p>Usługi lokalne i ogólnopolskie, e-commerce, firmy B2B szukające leadów z wysoką intencją zakupową.</p>
+            </div>
+            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Zależna od konkurencyjności rynku</span></div>
+            <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 003 -->
+      <article class="card offer reveal">
+        <div class="offer-grid">
+          <div>
+            <div class="offer-num">003 / Strony internetowe</div>
+            <h2>Tworzenie <span class="grad">Stron Internetowych</span></h2>
+            <p class="lead">Projektuję i buduję strony, które nie tylko wyglądają nowocześnie — są zoptymalizowane pod konwersję, szybkość i SEO. Strona to fundament każdej skutecznej kampanii.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Projekt i wdrożenie strony firmowej lub landing page'a</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Optymalizacja szybkości i Core Web Vitals</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Integracja z GA4, Meta Pixel i Tag Manager</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Podstawowe SEO on-site: struktura, metatagi, sitemap</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Formularze kontaktowe i połączenie z CRM</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Responsywność — perfekcyjnie na mobile i desktop</li>
+            </ul>
+          </div>
+          <div>
+            <div class="aside-block">
+              <div class="aside-lbl">Technologie</div>
+              <div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">WordPress</span><span class="tag">Landing</span><span class="tag">Web Vitals</span><span class="tag">SEO</span><span class="tag">GA4/Pixel</span></div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-lbl">Dla kogo</div>
+              <p>Firmy bez strony lub z przestarzałą witryną oraz biznesy potrzebujące landing page'y pod kampanie.</p>
+            </div>
+            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Zależna od zakresu projektu</span></div>
+            <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 004 complex -->
+      <div class="mt-l reveal" style="max-width:640px">
+        <div class="kicker"><span>004 / Kompleksowe wsparcie</span></div>
+        <h2 class="h-sec">Zewnętrzny dział <span class="grad">marketingu</span></h2>
+        <p class="sub-sec">Dla firm, które chcą zająć się biznesem — a marketing oddać w sprawdzone ręce.</p>
+      </div>
+      <div class="mini-grid mt-m">
+        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2Zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14"/></svg></div><h3>Strategia &amp; planowanie</h3><p>Analiza rynku, pozycjonowanie, dobór kanałów, budżetowanie i kwartalny roadmap działań.</p><div class="tags"><span class="tag">Strategia</span><span class="tag">KPI</span></div></article>
+        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Prowadzenie kampanii</h3><p>Pełna obsługa kanałów płatnych — Meta, Google, LinkedIn — w ramach jednej umowy.</p><div class="tags"><span class="tag">Multi-channel</span><span class="tag">Optymalizacja</span></div></article>
+        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Raportowanie &amp; analityka</h3><p>Czytelne raporty: co zadziałało, co zoptymalizować i jakie są priorytety na kolejny okres.</p><div class="tags"><span class="tag">Dashboard</span><span class="tag">GA4</span><span class="tag">Looker</span></div></article>
+        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Koordynacja agencji</h3><p>Koordynuję działania agencji kreatywnej lub SEO i dbam o spójność komunikacji.</p><div class="tags"><span class="tag">Nadzór</span><span class="tag">Brief</span></div></article>
+      </div>
+
+      <div class="excl mt-l reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <div class="t">Wykluczenie branżowe</div>
+          <p>Nie obsługuję branży gastronomicznej — restauracji, kawiarni, barów i podobnych lokali. Skupiam się na sektorach, w których mogę zagwarantować najwyższą jakość i realnie mierzalne wyniki.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <div>
+          <div class="kicker"><span>Nie wiesz, co wybrać?</span></div>
+          <h3>Dobierzmy usługę <span class="grad">do Twoich celów</span></h3>
+          <p>Napisz — bezpłatnie omówimy Twoje potrzeby i wskażę optymalne rozwiązanie.</p>
+        </div>
+        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Bezpłatna konsultacja →</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:bartlomiej@ert.pl">bartlomiej@ert.pl</a><a href="../kontakt/">Formularz kontaktowy</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>
+      <span>Freelancer <span class="footer-dot">·</span> Polska <span class="footer-dot">·</span> Remote</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

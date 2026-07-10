@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O mnie — Bartłomiej Ert</title>
+<meta name="description" content="Marketing Strategist i Paid Ads Specialist. Buduję kampanie, które realnie sprzedają — na danych, nie na opiniach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .about-layout { display: grid; grid-template-columns: 380px 1fr; gap: clamp(32px,5vw,64px); align-items: start; }
+  .profile { position: sticky; top: calc(var(--nav-h) + 24px); padding: 40px; overflow: hidden; }
+  .profile-glyph { font-family: var(--ff-disp); font-weight: 700; font-size: 6rem; line-height: 1; letter-spacing: -0.05em; opacity: 0.12; }
+  .profile h2 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.7rem; margin-top: -10px; }
+  .profile .role { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
+  .profile .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0; }
+  .profile .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+  .profile .stats .b { border: 1px solid var(--line); border-radius: 12px; padding: 14px; text-align: center; background: rgba(255,255,255,0.012); }
+  .profile .stats .b .v { font-family: var(--ff-disp); font-weight: 700; font-size: 1.4rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .profile .stats .b .l { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); margin-top: 4px; }
+
+  .block { margin-bottom: 48px; }
+  .block .body p { color: var(--muted); line-height: 1.9; margin-bottom: 16px; }
+  .block .body b { color: var(--text); font-weight: 500; }
+
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 32px; }
+  .skill .top { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--text-soft); margin-bottom: 8px; }
+  .skill .top .pct { font-family: var(--mono); color: var(--cyan); font-size: 0.72rem; }
+  .skill .track { height: 5px; border-radius: 4px; background: var(--line); overflow: hidden; }
+  .skill .fill { height: 100%; width: 0; border-radius: 4px; background: var(--grad-brand); transition: width 1.3s var(--ease); }
+
+  .values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .value { padding: 28px; }
+  .value .ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 16px; background: var(--azure-06); border: 1px solid var(--line); }
+  .value .ic svg { width: 21px; height: 21px; color: var(--cyan); }
+  .value h4 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; }
+  .value p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+  .excl { display: flex; gap: 16px; align-items: flex-start; padding: 24px 28px; border-radius: 16px; margin-top: 32px;
+    background: rgba(255,90,90,0.04); border: 1px solid rgba(255,90,90,0.2); border-left: 3px solid rgba(255,110,110,0.6); }
+  .excl svg { color: rgba(255,120,120,0.8); flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
+  .excl .t { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,120,120,0.85); margin-bottom: 6px; }
+  .excl p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+  @media (max-width: 900px){ .about-layout { grid-template-columns: 1fr; } .profile { position: static; } .skills, .values { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
+    <nav><ul class="nav-links">
+      <li><a href="../uslugi/">Usługi</a></li>
+      <li><a href="../proces/">Proces</a></li>
+      <li><a href="../realizacje/">Realizacje</a></li>
+      <li><a href="../o-mnie/" class="active">O mnie</a></li>
+    </ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="../kontakt/" data-magnetic>Darmowa wycena
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
+  <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">O mnie</span></div>
+    <h1 class="page-title reveal d1">Bartłomiej <span class="grad">Ert</span></h1>
+    <p class="page-sub reveal d2">Marketing Strategist &amp; Paid Ads Specialist. Buduję kampanie, które realnie sprzedają — oparte na danych, nie na opiniach.</p>
+  </div>
+</div>
+
+<main>
+  <section class="section" style="padding-top:clamp(48px,7vw,80px)">
+    <div class="wrap about-layout">
+      <!-- PROFILE -->
+      <div class="card profile reveal">
+        <div class="profile-glyph grad">BE</div>
+        <h2>Bartłomiej Ert</h2>
+        <div class="role">Marketing Strategist &amp; Paid Ads</div>
+        <div class="badges"><span class="tag">Meta Blueprint</span><span class="tag">Google Ads Cert.</span><span class="tag">Freelancer</span><span class="tag">Remote / PL</span></div>
+        <a class="btn btn-primary btn-block" href="../kontakt/">Napisz do mnie →</a>
+        <div class="mt-s"><a class="btn btn-ghost btn-block" href="../realizacje/">Zobacz realizacje</a></div>
+        <div class="stats">
+          <div class="b"><div class="v">Data</div><div class="l">Driven</div></div>
+          <div class="b"><div class="v">24h</div><div class="l">Odpowiedź</div></div>
+          <div class="b"><div class="v">1:1</div><div class="l">Partnerstwo</div></div>
+          <div class="b"><div class="v">100%</div><div class="l">Remote</div></div>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div>
+        <div class="block reveal d1">
+          <div class="kicker"><span>Kim jestem</span></div>
+          <div class="body">
+            <p>Jestem freelancerem specjalizującym się w <b>płatnych kampaniach reklamowych i marketingu strategicznym</b>. Pomagam firmom e-commerce, B2B i usługowym przyciągać klientów przez Meta Ads, Google Search i LinkedIn.</p>
+            <p>Zaczynałem w agencjach marketingowych, zarządzając kampaniami dla kilkudziesięciu klientów jednocześnie. Zdecydowałem się pracować na własny rachunek — żeby mieć pełny wpływ na wyniki i budować naprawdę partnerskie relacje z klientami.</p>
+            <p>Nie wierzę w szablony. Każda firma ma inne cele, rynek i budżet — dlatego <b>każda kampania jest projektowana od zera</b>, z myślą o konkretnych liczbach do osiągnięcia.</p>
+          </div>
+        </div>
+
+        <div class="block reveal">
+          <div class="kicker"><span>Kompetencje</span></div>
+          <div class="skills mt-s">
+            <div class="skill"><div class="top"><span>Meta Ads</span><span class="pct">95%</span></div><div class="track"><div class="fill" data-bar="95"></div></div></div>
+            <div class="skill"><div class="top"><span>Google Search Ads</span><span class="pct">92%</span></div><div class="track"><div class="fill" data-bar="92"></div></div></div>
+            <div class="skill"><div class="top"><span>LinkedIn Ads</span><span class="pct">82%</span></div><div class="track"><div class="fill" data-bar="82"></div></div></div>
+            <div class="skill"><div class="top"><span>Strategia marketingowa</span><span class="pct">90%</span></div><div class="track"><div class="fill" data-bar="90"></div></div></div>
+            <div class="skill"><div class="top"><span>Google Analytics 4</span><span class="pct">88%</span></div><div class="track"><div class="fill" data-bar="88"></div></div></div>
+            <div class="skill"><div class="top"><span>Analiza danych</span><span class="pct">85%</span></div><div class="track"><div class="fill" data-bar="85"></div></div></div>
+          </div>
+        </div>
+
+        <div class="block reveal" style="margin-bottom:0">
+          <div class="kicker"><span>Wartości w pracy</span></div>
+          <div class="values mt-s">
+            <div class="card value"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-5"/></svg></div><h4>Dane, nie opinie</h4><p>Każda decyzja poparta liczbami. Testuję, mierzę i optymalizuję na podstawie faktycznych wyników.</p></div>
+            <div class="card value"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h4>Twoje cele = moje cele</h4><p>Rozliczam się z wyników, nie z godzin. Zależy mi na długoterminowej, wartościowej współpracy.</p></div>
+            <div class="card value"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div><h4>Pełna transparentność</h4><p>Zawsze wiesz, co dzieje się z Twoim budżetem. Żadnych ukrytych opłat, żargonu ani pustych obietnic.</p></div>
+            <div class="card value"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4>Szybkość i komunikacja</h4><p>Odpowiadam w ciągu dnia roboczego. Proaktywnie informuję o zmianach i szansach.</p></div>
+          </div>
+          <div class="excl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div><div class="t">Wykluczenie branżowe</div><p>Nie obsługuję branży gastronomicznej — restauracji, kawiarni, barów i podobnych lokali. Skupiam się na sektorach, w których mogę dostarczyć najwyższą jakość i mierzalne wyniki.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <div><div class="kicker"><span>Zacznijmy</span></div><h3>Porozmawiajmy o <span class="grad">Twoim projekcie</span></h3><p>Pierwsza konsultacja jest bezpłatna. Dowiedz się, co mogę zrobić dla Twojej firmy.</p></div>
+        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Skontaktuj się →</a><a class="btn btn-ghost" href="../uslugi/">Zobacz usługi</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:bartlomiej@ert.pl">bartlomiej@ert.pl</a><a href="../kontakt/">Formularz kontaktowy</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>
+      <span>Freelancer <span class="footer-dot">·</span> Polska <span class="footer-dot">·</span> Remote</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

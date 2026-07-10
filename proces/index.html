@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proces — Bartłomiej Ert</title>
+<meta name="description" content="Przejrzysty, powtarzalny proces współpracy: od bezpłatnej konsultacji, przez audyt i launch, po optymalizację i raportowanie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .proc-layout { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(32px,5vw,72px); align-items: start; }
+  .timeline { position: relative; padding-left: 46px; }
+  .timeline::before { content: ''; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(180deg, var(--azure), var(--cyan), transparent); }
+  .tl { position: relative; margin-bottom: 46px; }
+  .tl:last-child { margin-bottom: 0; }
+  .tl-dot { position: absolute; left: -46px; top: 2px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--bg-2); border: 2px solid var(--azure-22); z-index: 2; transition: border-color .35s, box-shadow .35s; }
+  .tl-dot i { width: 8px; height: 8px; border-radius: 50%; background: var(--grad-brand); }
+  .tl.in .tl-dot { border-color: var(--cyan); box-shadow: 0 0 0 5px var(--azure-06); }
+  .tl-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+  .tl h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.01em; margin-bottom: 10px; }
+  .tl p { color: var(--muted); line-height: 1.8; margin-bottom: 16px; max-width: 56ch; }
+
+  .aside-sticky { position: sticky; top: calc(var(--nav-h) + 24px); display: grid; gap: 12px; }
+  .fact { padding: 26px 28px; }
+  .fact .bar { width: 30px; height: 2px; background: var(--grad-line); margin-bottom: 16px; }
+  .fact .lbl { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 8px; }
+  .fact .val { font-family: var(--ff-disp); font-weight: 600; font-size: 1.7rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .fact .note { font-size: 0.84rem; color: var(--muted); line-height: 1.65; margin-top: 8px; }
+
+  @media (max-width: 960px){ .proc-layout { grid-template-columns: 1fr; } .aside-sticky { position: static; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
+    <nav><ul class="nav-links">
+      <li><a href="../uslugi/">Usługi</a></li>
+      <li><a href="../proces/" class="active">Proces</a></li>
+      <li><a href="../realizacje/">Realizacje</a></li>
+      <li><a href="../o-mnie/">O mnie</a></li>
+    </ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="../kontakt/" data-magnetic>Darmowa wycena
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
+  <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">Proces</span></div>
+    <h1 class="page-title reveal d1">Jak <span class="grad">pracuję</span></h1>
+    <p class="page-sub reveal d2">Przejrzysty, powtarzalny proces bez niespodzianek. Na każdym etapie wiesz, co się dzieje, dlaczego i jakie są kolejne kroki.</p>
+  </div>
+</div>
+
+<main>
+  <section class="section" style="padding-top:clamp(48px,7vw,80px)">
+    <div class="wrap proc-layout">
+      <div class="timeline">
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 01</div><h3>Bezpłatna konsultacja</h3><p>Zaczynamy od 30–60 minutowej rozmowy (zdalnie lub telefonicznie). Poznaję Twój biznes, obecne działania, cele i budżet. Zadaję dużo pytań — im więcej wiem na starcie, tym lepsze wyniki.</p><div class="tags"><span class="tag">30–60 min</span><span class="tag">Zoom / telefon</span><span class="tag">Bezpłatnie</span></div></div>
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 02</div><h3>Audyt &amp; analiza</h3><p>Sprawdzam obecne konta reklamowe, analitykę, stronę i komunikację. Analizuję konkurencję i szanse na rynku. Identyfikuję największe dźwignie wzrostu i punkty do naprawy.</p><div class="tags"><span class="tag">2–5 dni</span><span class="tag">Raport audytu</span><span class="tag">Benchmarking</span></div></div>
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 03</div><h3>Propozycja &amp; wycena</h3><p>Przygotowuję spersonalizowaną propozycję współpracy: zakres działań, harmonogram, KPI i budżet. Omawiamy szczegóły, wprowadzamy zmiany i podpisujemy umowę.</p><div class="tags"><span class="tag">Zakres</span><span class="tag">KPI</span><span class="tag">Umowa</span></div></div>
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 04</div><h3>Onboarding &amp; setup</h3><p>Dostaję dostępy do kont reklamowych i narzędzi. Konfigurujemy śledzenie konwersji, piksele i integracje. Tworzymy lub przebudowujemy strukturę kont.</p><div class="tags"><span class="tag">Dostępy</span><span class="tag">Meta Pixel</span><span class="tag">GA4 / GTM</span><span class="tag">Konwersje</span></div></div>
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 05</div><h3>Launch kampanii</h3><p>Startujemy według ustalonej strategii. Pierwsze 2 tygodnie to faza testowa — testujemy kreacje, grupy docelowe i komunikaty, zbierając dane do optymalizacji.</p><div class="tags"><span class="tag">Testy A/B</span><span class="tag">Monitoring</span><span class="tag">Dane od dnia 1</span></div></div>
+        <div class="tl reveal"><div class="tl-dot"><i></i></div><div class="tl-num">Krok 06</div><h3>Optymalizacja &amp; raporty</h3><p>Cotygodniowa optymalizacja i miesięczne raporty z wynikami, wnioskami i planem na kolejny miesiąc. Regularne spotkania statusowe — zawsze wiesz, co się dzieje z budżetem.</p><div class="tags"><span class="tag">Raport / mies.</span><span class="tag">Optymalizacja / tydz.</span><span class="tag">Statusy</span></div></div>
+      </div>
+
+      <aside class="aside-sticky reveal d2">
+        <div class="card fact"><div class="bar"></div><div class="lbl">Czas do pierwszych wyników</div><div class="val">2–4 tyg.</div><div class="note">Od podpisania umowy do pierwszych danych. Stabilne wyniki zwykle po 6–8 tygodniach.</div></div>
+        <div class="card fact"><div class="bar"></div><div class="lbl">Minimalny budżet reklamowy</div><div class="val">2 000 zł</div><div class="note">Poniżej trudno zebrać dane do skutecznej optymalizacji. Rekomendowany start to 3 000–5 000 zł / mies.</div></div>
+        <div class="card fact"><div class="bar"></div><div class="lbl">Minimalny okres współpracy</div><div class="val">3 miesiące</div><div class="note">Marketing to nie sprint. Potrzebujemy czasu na dane, testy i realną optymalizację.</div></div>
+        <a class="btn btn-primary btn-block mt-s" href="../kontakt/">Zacznijmy współpracę →</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="reveal" style="max-width:640px">
+        <div class="kicker"><span>FAQ</span></div>
+        <h2 class="h-sec">Często zadawane <span class="grad">pytania</span></h2>
+        <p class="sub-sec">Odpowiedzi na pytania, które pojawiają się najczęściej przed rozpoczęciem współpracy.</p>
+      </div>
+      <div class="faq mt-l reveal">
+        <div class="faq-item"><div class="faq-q">Czy muszę mieć gotowe kreacje reklamowe?<span class="faq-icon"></span></div><div class="faq-a"><p>Nie — mogę przygotować brief dla grafika lub pomóc w stworzeniu kreacji. Jeśli masz własny zespół kreatywny, koordynuję współpracę i przygotowuję szczegółowe briefy.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Jak szybko zobaczę wyniki?<span class="faq-icon"></span></div><div class="faq-a"><p>Pierwsze dane pojawiają się w ciągu kilku dni od startu. Stabilne, optymalne wyniki zwykle po 6–8 tygodniach — algorytmy reklamowe potrzebują czasu na uczenie się.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Czy pracujesz z firmami spoza Polski?<span class="faq-icon"></span></div><div class="faq-a"><p>Tak, pracuję w 100% zdalnie i obsługuję klientów z Polski i z zagranicy. Komunikacja może odbywać się po polsku lub angielsku.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Czy podpisujesz umowę NDA?<span class="faq-icon"></span></div><div class="faq-a"><p>Tak, standardowo podpisujemy umowę o zachowaniu poufności. Dane dotyczące Twojego biznesu, budżetów i wyników pozostają całkowicie poufne.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Co się dzieje po zakończeniu umowy?<span class="faq-icon"></span></div><div class="faq-a"><p>Konta reklamowe, dane i historia kampanii zawsze należą do Ciebie. Po zakończeniu przekazuję pełną dokumentację, raporty i dostępy — bez żadnych haczyków.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;margin-top:clamp(48px,7vw,80px)">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <div><div class="kicker"><span>Masz pytania?</span></div><h3>Omówmy Twój <span class="grad">projekt</span></h3><p>Napisz lub zadzwoń — chętnie odpowiem na wszystkie pytania.</p></div>
+        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Skontaktuj się →</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:bartlomiej@ert.pl">bartlomiej@ert.pl</a><a href="../kontakt/">Formularz kontaktowy</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>
+      <span>Freelancer <span class="footer-dot">·</span> Polska <span class="footer-dot">·</span> Remote</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>
