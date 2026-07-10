@@ -279,7 +279,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 0%), var(--azure-22), transparent 60%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
-  opacity: 0; transition: opacity .4s;
+  opacity: 0; transition: opacity .4s; pointer-events: none;
 }
 .card:hover { border-color: var(--line-2); background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)); }
 .card:hover::before { opacity: 1; }
