@@ -13,38 +13,33 @@
   .stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
   .stat { padding: 30px 26px; text-align: center; }
   .stat .metric-val { font-size: clamp(1.9rem,3.4vw,2.6rem); }
+  .stat .metric-lbl { line-height: 1.5; }
 
   .case { margin-bottom: 16px; padding: 0; overflow: hidden; }
   .case-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 34px 40px 28px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
   .case-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 10px; }
-  .case-title { font-family: var(--ff-disp); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: 6px; min-height: 1em; }
+  .case-title { font-family: var(--ff-disp); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: 6px; }
   .case-ind { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
   .case-body { display: grid; grid-template-columns: 1fr 1fr; }
   .case-desc { padding: 32px 40px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 22px; }
-  .case-desc .txt { color: var(--muted); line-height: 1.85; min-height: 70px; font-size: 0.94rem; }
+  .case-desc .txt { color: var(--muted); line-height: 1.85; font-size: 0.94rem; }
+  .case-desc .txt b { color: var(--text-soft); font-weight: 500; }
   .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .cm { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: rgba(255,255,255,0.012); }
-  .cm .v { font-family: var(--ff-disp); font-weight: 700; font-size: 1.7rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; min-height: 1.7rem; }
+  .cm .v { font-family: var(--ff-disp); font-weight: 700; font-size: 1.7rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
   .cm .l { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); margin-top: 6px; }
   .case-media { padding: 32px 36px; background: var(--bg-1); display: flex; flex-direction: column; gap: 14px; }
   .media-lbl { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); }
   .slot { width: 100%; aspect-ratio: 16/9; border-radius: 12px; border: 1px dashed var(--line-2); background: var(--bg-3);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; overflow: hidden; transition: border-color .3s, background .3s; }
   .slot:hover { border-color: var(--cyan); background: var(--card-h); }
-  .slot img, .slot iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: none; display: none; }
+  .slot img, .slot iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; border: none; display: none; }
   .slot.has-image img, .slot.has-iframe iframe { display: block; }
   .slot.has-image .ico, .slot.has-image .st, .slot.has-iframe .ico, .slot.has-iframe .st { display: none; }
   .slot .ico { color: var(--muted-2); } .slot .ico svg { width: 26px; height: 26px; }
-  .slot .st { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-2); text-align: center; line-height: 1.6; }
+  .slot .st { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); text-align: center; line-height: 1.7; padding: 0 10px; }
   .slot.sm { aspect-ratio: 4/3; }
   .slots-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-  .note { display: flex; gap: 14px; align-items: flex-start; padding: 20px 24px; border-radius: 14px; background: var(--azure-06); border: 1px solid var(--line-2); border-left: 3px solid var(--azure); }
-  .note svg { color: var(--cyan); flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px; }
-  .note .t { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 6px; }
-  .note p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
-  .note code { font-family: var(--mono); background: var(--bg-3); padding: 1px 6px; border-radius: 5px; font-size: 0.8rem; color: var(--cyan); }
-  .note b { color: var(--text); }
 
   @media (max-width: 1024px){ .stat-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 900px){ .case-body { grid-template-columns: 1fr; } .case-desc { border-right: none; border-bottom: 1px solid var(--line); } .case-top,.case-desc,.case-media { padding: 24px; } }
@@ -86,15 +81,11 @@
   <section class="section section-alt">
     <div class="wrap">
       <div class="reveal" style="max-width:640px"><div class="kicker"><span>Wyniki zbiorcze</span></div><h2 class="h-sec">Liczby mówią <span class="grad">same za siebie</span></h2></div>
-      <div class="note mt-m reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <div><div class="t">Do uzupełnienia przez właściciela</div><p>Zamień <code>—</code> w kafelkach na realne wartości (Google Ads, Meta, GA4). Po uzupełnieniu usuń bloki <code>.note</code>.</p></div>
-      </div>
-      <div class="stat-grid mt-m">
-        <div class="card stat reveal d1"><div class="metric-val">—</div><div class="metric-lbl">Najlepszy ROAS</div></div>
-        <div class="card stat reveal d2"><div class="metric-val">—</div><div class="metric-lbl">Średnia redukcja CPA</div></div>
-        <div class="card stat reveal d3"><div class="metric-val">—</div><div class="metric-lbl">Budżet w zarządzaniu</div></div>
-        <div class="card stat reveal d4"><div class="metric-val">—</div><div class="metric-lbl">Projektów łącznie</div></div>
+      <div class="stat-grid mt-l">
+        <div class="card stat reveal d1"><div class="metric-val" data-count="26.7" data-suffix="×">0</div><div class="metric-lbl">Najlepszy ROAS<br>(5 konw. za 75 zł, śr. zlecenie 400 zł)</div></div>
+        <div class="card stat reveal d2"><div class="metric-val" data-count="23" data-prefix="−" data-suffix="%">0</div><div class="metric-lbl">Średnia redukcja CPA</div></div>
+        <div class="card stat reveal d3"><div class="metric-val" data-count="4039.09" data-suffix=" zł">0</div><div class="metric-lbl">Budżet w zarządzaniu</div></div>
+        <div class="card stat reveal d4"><div class="metric-val" data-count="10" data-suffix="">0</div><div class="metric-lbl">Projektów łącznie</div></div>
       </div>
     </div>
   </section>
@@ -104,101 +95,87 @@
     <div class="wrap">
       <div class="reveal" style="max-width:640px"><div class="kicker"><span>Case studies</span></div><h2 class="h-sec">Projekty <span class="grad">ze zrzutami ekranu</span></h2><p class="sub-sec">Każdy projekt zawiera screenshoty z Google Ads, Meta Ads Manager lub GA4. Dane wrażliwe zanonimizowane na życzenie klienta.</p></div>
 
-      <!-- CASE 1 -->
+      <!-- CASE 1 · Cleaning services (Google Ads) -->
       <article class="card case reveal mt-l">
         <div class="case-top">
-          <div><div class="case-num">001 / <!-- Branża --></div><div class="case-title"><!-- Tytuł projektu --></div><div class="case-ind"><!-- Branża · Platforma --></div></div>
-          <span class="pill"><span class="dot"></span><!-- Status --></span>
+          <div>
+            <div class="case-num">001 / Usługi sprzątające</div>
+            <div class="case-title">Google Ads dla firmy sprzątającej</div>
+            <div class="case-ind">Pranie tapicerki · Google Search Ads · konto wypraneiposprzatane.pl</div>
+          </div>
+          <span class="pill"><span class="dot"></span>Kampania aktywna</span>
         </div>
         <div class="case-body">
           <div class="case-desc">
-            <div class="txt"><!-- Opis: cel, wyzwanie, działania, efekty. --></div>
+            <div class="txt">Kampania Search dla firmy zajmującej się praniem tapicerki i sprzątaniem. Wyzwanie: <b>ograniczony budżet dzienny (120 zł)</b> przy konkurencyjnym rynku lokalnym. Skupienie na słowach kluczowych o najwyższej intencji i ciągła optymalizacja stawek pozwoliły uzyskać <b>45 konwersji miesięcznie przy koszcie 47,71 zł/konwersję</b>, a w najlepszych dniach koszt spadał do <b>15 zł za konwersję</b>. Przy średniej wartości zlecenia ~400 zł daje to zwrot rzędu 8× w skali miesiąca i do ~27× w szczytowych dniach.</div>
             <div class="case-metrics">
-              <div class="cm"><div class="v"><!-- 3.8× --></div><div class="l"><!-- ROAS --></div></div>
-              <div class="cm"><div class="v"><!-- −41% --></div><div class="l"><!-- CPA --></div></div>
-              <div class="cm"><div class="v"><!-- 12 400 --></div><div class="l"><!-- Kliknięcia --></div></div>
-              <div class="cm"><div class="v"><!-- 8.2% --></div><div class="l"><!-- CTR --></div></div>
+              <div class="cm"><div class="v">8,4×</div><div class="l">ROAS (miesiąc)</div></div>
+              <div class="cm"><div class="v">45</div><div class="l">Konwersje / mies.</div></div>
+              <div class="cm"><div class="v">47,71 zł</div><div class="l">Koszt / konwersję</div></div>
+              <div class="cm"><div class="v">431</div><div class="l">Kliknięcia / mies.</div></div>
             </div>
-            <div class="tags"><span class="tag"><!-- Meta --></span><span class="tag"><!-- Google --></span><span class="tag"><!-- Retargeting --></span></div>
+            <div class="tags"><span class="tag">Google Ads</span><span class="tag">Search</span><span class="tag">Lokalne</span><span class="tag">Konwersje</span></div>
           </div>
           <div class="case-media">
-            <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
-            <div class="slot"><img src="" alt="Wyniki kampanii"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="st">Screenshot z panelu<br>Google Ads / Meta Ads</div></div>
-            <div class="media-lbl">Dodatkowe zrzuty</div>
-            <div class="slots-2">
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="st">Zrzut 2</div></div>
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="st">Zrzut 3</div></div>
+            <div class="media-lbl">Przegląd kampanii — zrzut z Google Ads</div>
+            <div class="slot">
+              <img src="../img/gads-marzec-2026.png" alt="Google Ads — przegląd kampanii, marzec 2026: 431 kliknięć, 45 konwersji, 2,15 tys. zł, 47,71 zł/konw." onload="this.closest('.slot').classList.add('has-image')">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="st">Przegląd miesiąca<br>431 kliknięć · 45 konwersji · 47,71 zł/konw.</div>
             </div>
-            <div class="media-lbl">Live dashboard — Looker / GA4 (opcjonalnie)</div>
-            <div class="slot sm"><iframe src="" title="Dashboard" allowfullscreen></iframe><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div><div class="st">Wklej link do dashboardu</div></div>
+            <div class="media-lbl">Szczegóły skuteczności</div>
+            <div class="slots-2">
+              <div class="slot sm">
+                <img src="../img/gads-czerwiec-2026.png" alt="Google Ads — najlepszy dzień: 5 konwersji, koszt 75,01 zł, 15,00 zł/konwersję" onload="this.closest('.slot').classList.add('has-image')">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <div class="st">Najlepszy dzień<br>15 zł/konw.</div>
+              </div>
+              <div class="slot sm">
+                <img src="../img/gads-przeglad.png" alt="Google Ads — panel przeglądu kampanii" onload="this.closest('.slot').classList.add('has-image')">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <div class="st">Panel kampanii</div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- CASE 2 -->
+      <!--
+        SZABLON NOWEJ REALIZACJI — skopiuj poniższy blok <article> nad ten komentarz,
+        uzupełnij tytuł, opis, 4 metryki (.cm .v / .cm .l) oraz zrzuty ekranu.
+        Zrzuty: wgraj plik do folderu /img/ i podmień src="../img/NAZWA.png".
+        Kafel pokaże obraz automatycznie po jego wczytaniu (onload).
+
       <article class="card case reveal">
         <div class="case-top">
-          <div><div class="case-num">002 / </div><div class="case-title"></div><div class="case-ind"></div></div>
-          <span class="pill"><span class="dot"></span></span>
+          <div>
+            <div class="case-num">002 / Branża</div>
+            <div class="case-title">Tytuł realizacji</div>
+            <div class="case-ind">Branża · Platforma</div>
+          </div>
+          <span class="pill"><span class="dot"></span>Status</span>
         </div>
         <div class="case-body">
           <div class="case-desc">
-            <div class="txt"></div>
+            <div class="txt">Opis: cel, wyzwanie, działania i efekty.</div>
             <div class="case-metrics">
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
+              <div class="cm"><div class="v">0×</div><div class="l">ROAS</div></div>
+              <div class="cm"><div class="v">0</div><div class="l">Konwersje</div></div>
+              <div class="cm"><div class="v">0 zł</div><div class="l">Koszt / konw.</div></div>
+              <div class="cm"><div class="v">0</div><div class="l">Kliknięcia</div></div>
             </div>
-            <div class="tags"><span class="tag"></span><span class="tag"></span></div>
+            <div class="tags"><span class="tag">Kanał</span><span class="tag">Typ</span></div>
           </div>
           <div class="case-media">
-            <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
-            <div class="slot"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="st">Screenshot z panelu</div></div>
-            <div class="media-lbl">Dodatkowe zrzuty</div>
-            <div class="slots-2">
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="st">Zrzut 2</div></div>
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="st">Zrzut 3</div></div>
-            </div>
+            <div class="media-lbl">Zrzut ekranu</div>
+            <div class="slot"><img src="../img/nazwa.png" alt="" onload="this.closest('.slot').classList.add('has-image')"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="st">Screenshot z panelu</div></div>
           </div>
         </div>
       </article>
+      -->
 
-      <!-- CASE 3 -->
-      <article class="card case reveal">
-        <div class="case-top">
-          <div><div class="case-num">003 / </div><div class="case-title"></div><div class="case-ind"></div></div>
-          <span class="pill"><span class="dot"></span></span>
-        </div>
-        <div class="case-body">
-          <div class="case-desc">
-            <div class="txt"></div>
-            <div class="case-metrics">
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-              <div class="cm"><div class="v"></div><div class="l"></div></div>
-            </div>
-            <div class="tags"><span class="tag"></span><span class="tag"></span></div>
-          </div>
-          <div class="case-media">
-            <div class="media-lbl">Wyniki kampanii — zrzut ekranu</div>
-            <div class="slot"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="st">Screenshot z panelu</div></div>
-            <div class="media-lbl">Dodatkowe zrzuty</div>
-            <div class="slots-2">
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="st">Zrzut 2</div></div>
-              <div class="slot sm"><img src="" alt=""><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="st">Zrzut 3</div></div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <div class="note mt-l reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <div>
-          <div class="t">Jak uzupełnić realizacje</div>
-          <p><b>Metryki:</b> wpisz liczby w <code>.cm .v</code>. &nbsp; <b>Screenshot:</b> wstaw <code>src="../img/plik.jpg"</code> do <code>&lt;img&gt;</code> i dodaj klasę <code>has-image</code> do <code>.slot</code>. &nbsp; <b>Dashboard:</b> wstaw <code>src</code> do <code>&lt;iframe&gt;</code> i klasę <code>has-iframe</code> do <code>.slot</code>. &nbsp; <b>Nowy projekt:</b> skopiuj blok <code>.case</code>. Na koniec usuń bloki <code>.note</code>.</p>
-        </div>
+      <div class="center mt-l reveal">
+        <a class="btn btn-ghost" href="../kontakt/">Chcesz zobaczyć więcej? Napisz →</a>
       </div>
     </div>
   </section>
@@ -218,7 +195,7 @@
     <div class="footer-top">
       <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
       <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
-      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:bartlomiej@ert.pl">bartlomiej@ert.pl</a><a href="../kontakt/">Formularz kontaktowy</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a><a href="../kontakt/">Formularz kontaktowy</a></div>
     </div>
     <div class="footer-bottom">
       <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>
