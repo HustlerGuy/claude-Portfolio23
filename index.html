@@ -98,6 +98,21 @@
     .about-wrap { grid-template-columns: 1fr; gap: 32px; }
     .svc-grid, .steps { grid-template-columns: 1fr; }
   }
+  @media (max-width: 560px) {
+    .hero { padding: calc(var(--nav-h) + 26px) 0 20px; }
+    .hero-main { padding: 24px 20px; border-radius: 22px; }
+    .hero-h1 { font-size: clamp(2.1rem, 10vw, 3rem); margin: 16px 0 14px; }
+    .hero-copy { font-size: 1rem; }
+    .hero-trust { gap: 10px 16px; margin-top: 26px; padding-top: 20px; }
+    .hero-live .metric-val { font-size: 2.1rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hstat.feature { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .hstat.feature p { max-width: none; }
+    .svc { padding: 26px 22px 24px; }
+    .svc h3 { font-size: 1.15rem; }
+    .about-card { padding: 30px 24px; }
+    .about-glyph { font-size: 5rem; }
+  }
 </style>
 </head>
 <body>
