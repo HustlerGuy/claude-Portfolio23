@@ -3,44 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Usługi — Bartłomiej Ert</title>
-<meta name="description" content="Płatne kampanie Google Ads i Meta Ads, GEO/AIO, pozycjonowanie wizytówki Google, strony internetowe i kompleksowe wsparcie marketingowe.">
+<title>Usługi — Google Ads, Meta Ads, Wizytówka Google, GEO/AIO | Bartłomiej Ert</title>
+<meta name="description" content="Cztery sposoby na pozyskanie klientów: kampanie Google i Meta Ads, pozycjonowanie wizytówki Google, widoczność w AI oraz strony sprzedażowe. Zobacz, co dokładnie dostajesz.">
+<link rel="canonical" href="https://hustlerguy.github.io/claude-Portfolio23/uslugi/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Usługi — Google Ads, Meta Ads, Wizytówka Google, GEO/AIO">
+<meta property="og:description" content="Zobacz dokładnie, co dostajesz w każdej usłudze oraz jak wygląda przejrzysty model rozliczenia.">
+<meta property="og:url" content="https://hustlerguy.github.io/claude-Portfolio23/uslugi/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <style>
-  .offer { padding: clamp(30px,4vw,52px); margin-bottom: 16px; }
-  .offer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px,4vw,56px); align-items: start; }
-  .offer-num { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 16px; }
-  .offer h2 { font-family: var(--ff-disp); font-weight: 600; font-size: clamp(1.6rem,3vw,2.2rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 16px; }
-  .offer > .offer-grid > div > p.lead { color: var(--muted); line-height: 1.8; margin-bottom: 26px; }
-  .points { list-style: none; display: grid; gap: 12px; }
-  .points li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--text-soft); line-height: 1.55; }
-  .points li svg { width: 18px; height: 18px; color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
-  .aside-lbl { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; }
-  .aside-block { margin-bottom: 26px; }
-  .aside-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
-  .price-note { border-top: 1px solid var(--line); padding-top: 20px; margin-bottom: 22px; }
-  .price-note b { font-family: var(--ff-disp); font-weight: 600; font-size: 1.3rem; color: var(--cyan); display: block; }
+  .offer { padding: clamp(30px,4vw,50px); margin-bottom: 16px; }
+  .offer-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(28px,4vw,52px); align-items: start; }
+  .offer-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; }
+  .offer h2 { font-family: var(--ff-disp); font-weight: 600; font-size: clamp(1.55rem,3vw,2.1rem); letter-spacing: -0.02em; line-height: 1.12; margin-bottom: 14px; }
+  .offer .lead { color: var(--muted); line-height: 1.8; margin-bottom: 28px; }
+  .offer .lead b { color: var(--text-soft); font-weight: 500; }
+  .deliver-t { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; }
 
-  /* Dual-focus channels inside Paid Ads */
-  .channels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 26px; }
-  .chan { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; background: rgba(255,255,255,0.014); position: relative; }
+  .aside-lbl { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 12px; }
+  .aside-block { margin-bottom: 24px; }
+  .aside-block p { font-size: 0.89rem; color: var(--muted); line-height: 1.7; }
+  .effect { padding: 18px 20px; border-radius: 12px; background: var(--azure-06); border: 1px solid var(--line-2); border-left: 3px solid var(--cyan); }
+  .effect .l { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 6px; }
+  .effect p { font-size: 0.88rem; color: var(--text-soft); line-height: 1.65; }
+  .price-note { border-top: 1px solid var(--line); padding-top: 18px; margin: 22px 0; }
+  .price-note b { font-family: var(--ff-disp); font-weight: 600; font-size: 1.2rem; color: var(--cyan); display: block; }
+  .price-note span { font-size: 0.8rem; color: var(--muted-2); }
+
+  /* Channels inside Paid Ads */
+  .channels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+  .chan { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; position: relative; }
   .chan.main { border-color: var(--line-2); background: linear-gradient(160deg, rgba(77,159,255,0.12), rgba(56,224,240,0.03)); }
-  .chan .badge-main { position: absolute; top: 14px; right: 14px; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--azure-2, var(--cyan)); }
-  .chan h4 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.05rem; margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
-  .chan h4 svg { width: 18px; height: 18px; color: var(--cyan); }
+  .chan .badge-main { position: absolute; top: 13px; right: 14px; font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
+  .chan h4 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.02rem; margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+  .chan h4 svg { width: 17px; height: 17px; color: var(--cyan); flex-shrink: 0; }
   .chan p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-  .chan.opt { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; }
-  .chan.opt .txt h4 { margin-bottom: 3px; }
+  .chan.opt { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.012); }
 
   .mini-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
-  .mini { padding: 30px 28px; }
-  .mini .mini-ic { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 18px; background: var(--azure-06); border: 1px solid var(--line); }
-  .mini .mini-ic svg { width: 22px; height: 22px; color: var(--cyan); }
-  .mini h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.1rem; margin-bottom: 8px; }
-  .mini p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px; }
+  .mini { padding: 28px 26px; }
+  .mini .mini-ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 16px; background: var(--azure-06); border: 1px solid var(--line); }
+  .mini .mini-ic svg { width: 21px; height: 21px; color: var(--cyan); }
+  .mini h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.08rem; margin-bottom: 8px; }
+  .mini p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 14px; }
 
   .excl { display: flex; gap: 16px; align-items: flex-start; padding: 24px 28px; border-radius: 16px;
     background: rgba(255,90,90,0.04); border: 1px solid rgba(255,90,90,0.2); border-left: 3px solid rgba(255,110,110,0.6); }
@@ -53,23 +63,25 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
-    <nav><ul class="nav-links">
-      <li><a href="../uslugi/" class="active">Usługi</a></li>
+    <nav aria-label="Nawigacja główna"><ul class="nav-links">
+      <li><a href="../uslugi/" class="active" aria-current="page">Usługi</a></li>
       <li><a href="../proces/">Proces</a></li>
       <li><a href="../realizacje/">Realizacje</a></li>
       <li><a href="../o-mnie/">O mnie</a></li>
     </ul></nav>
     <div class="nav-actions">
       <a class="btn btn-primary btn-sm" href="../kontakt/" data-magnetic>Darmowa wycena
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
   <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
 </div>
@@ -77,171 +89,228 @@
 <div class="page-hero">
   <div class="wrap">
     <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">Usługi</span></div>
-    <h1 class="page-title reveal d1">Nasze <span class="grad">specjalizacje</span></h1>
-    <p class="page-sub reveal d2">Obszary, w których dostarczam mierzalne wyniki. Płatne kampanie Google i Meta to główne skupienie — uzupełnione o widoczność w AI i lokalne pozycjonowanie.</p>
+    <h1 class="page-title reveal d1">Cztery sposoby, żeby <span class="grad">klienci Cię znaleźli</span></h1>
+    <p class="page-sub reveal d2">Przy każdej usłudze piszę wprost: dla kogo jest, co dokładnie dostajesz i czego możesz się realnie spodziewać. Bez ogólników.</p>
   </div>
 </div>
 
-<main>
+<main id="main">
   <section class="section" style="padding-top:clamp(48px,7vw,80px)">
     <div class="wrap">
 
-      <!-- 001 · PAID ADS (Google + Meta main, LinkedIn optional) -->
+      <!-- 001 · PAID ADS -->
       <article class="card offer reveal">
         <div class="offer-grid">
           <div>
-            <div class="offer-num">001 / Płatne kampanie</div>
-            <h2>Płatne kampanie <span class="grad">reklamowe</span></h2>
-            <p class="lead">Google Ads i Meta Ads w jednym miejscu — to główne kanały, na których buduję sprzedaż i leady. Od strategii i struktury kont, przez kreacje i targetowanie, po codzienną optymalizację i raportowanie.</p>
+            <div class="offer-num">001 / Kampanie płatne</div>
+            <h2>Stały strumień zapytań z <span class="grad">Google i Meta</span></h2>
+            <p class="lead">Google pokazuje Cię ludziom, którzy <b>szukają Twojej usługi właśnie teraz</b>. Meta dotrze do tych, którzy jeszcze o Tobie nie wiedzą, ale pasują do profilu Twojego klienta. Razem tworzą przewidywalne źródło zapytań, rozliczane z kosztu pozyskania klienta.</p>
+
             <div class="channels">
               <div class="chan main">
                 <span class="badge-main">Główny fokus</span>
-                <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Google Ads</h4>
-                <p>Search, Performance Max i Shopping dla użytkowników z najwyższą intencją zakupową.</p>
+                <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Google Ads</h4>
+                <p>Search, Performance Max i Shopping — najwyższa intencja zakupowa.</p>
               </div>
               <div class="chan main">
                 <span class="badge-main">Główny fokus</span>
-                <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M8 12h8M12 8v8"/></svg>Meta Ads</h4>
-                <p>Facebook i Instagram — budowanie zasięgu, sprzedaży i skuteczny retargeting.</p>
+                <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M8 12h8M12 8v8"/></svg>Meta Ads</h4>
+                <p>Facebook i Instagram — budowanie popytu i skuteczny retargeting.</p>
               </div>
               <div class="chan opt">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:20px;height:20px;color:var(--muted);flex-shrink:0"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M9 9h4v2a3 3 0 0 1 3-2c3 0 5 2 5 6v6h-4v-6a2 2 0 0 0-4 0v6H9V9z"/></svg>
-                <div class="txt"><h4 style="font-size:0.98rem">LinkedIn Ads — opcjonalnie</h4><p style="font-size:0.82rem;color:var(--muted)">Kampanie B2B, gdy Twoi klienci to firmy i decydenci.</p></div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:19px;height:19px;color:var(--muted);flex-shrink:0" aria-hidden="true"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M9 9h4v2a3 3 0 0 1 3-2c3 0 5 2 5 6v6h-4v-6a2 2 0 0 0-4 0v6H9V9z"/></svg>
+                <div><h4 style="font-size:0.96rem;margin-bottom:3px">LinkedIn Ads — opcjonalnie</h4><p style="font-size:0.82rem">Dodajemy, gdy Twoimi klientami są firmy i decydenci (B2B).</p></div>
               </div>
             </div>
-            <ul class="points">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Audyt i konfiguracja kont Google Ads oraz Meta Business Suite</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Badanie słów kluczowych, grup odbiorców i analiza konkurencji</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Struktura kampanii: świadomość → konwersja → retargeting</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Reklamy tekstowe (RSA) i briefowanie lub tworzenie kreacji</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Konfiguracja konwersji w GA4, Tag Manager i Meta Pixel</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Cotygodniowa optymalizacja i czytelne raporty z wnioskami</li>
+
+            <div class="deliver-t">Co dostajesz</div>
+            <ul class="deliver">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Audyt obecnych kont i poprawne mierzenie konwersji (punkt startowy)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Badanie słów kluczowych, grup odbiorców i analizę konkurencji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Zbudowane kampanie: pozyskanie klienta → retargeting → wykluczenia</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Teksty reklam nastawione na kontakt oraz brief lub wykonanie kreacji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cotygodniową optymalizację stawek, budżetu i fraz</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Comiesięczny raport bez żargonu + plan na kolejny miesiąc</li>
             </ul>
           </div>
           <div>
+            <div class="aside-block">
+              <div class="aside-lbl">Dla kogo</div>
+              <p>Firmy usługowe, lokalne, e-commerce i B2B, które chcą przewidywalnej liczby zapytań i znają wartość swojego klienta.</p>
+            </div>
+            <div class="aside-block">
+              <div class="effect">
+                <div class="l">Czego się spodziewać</div>
+                <p>Pierwsze zapytania w ciągu kilku dni. Wiarygodne wnioski i stabilny koszt pozyskania klienta po 6–8 tygodniach.</p>
+              </div>
+            </div>
             <div class="aside-block">
               <div class="aside-lbl">Narzędzia</div>
-              <div class="tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">Search</span><span class="tag">PMax</span><span class="tag">Retargeting</span><span class="tag">GA4</span><span class="tag">Tag Manager</span><span class="tag">Meta Pixel</span></div>
+              <div class="tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">GA4</span><span class="tag">Tag Manager</span><span class="tag">Meta Pixel</span></div>
             </div>
-            <div class="aside-block">
-              <div class="aside-lbl">Dla kogo</div>
-              <p>E-commerce, usługi lokalne i ogólnopolskie oraz firmy B2B szukające leadów i sprzedaży z mierzalnym zwrotem.</p>
-            </div>
-            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Zależna od zakresu i budżetu</span></div>
+            <div class="price-note"><b>Wycena indywidualna</b><span>Zależna od liczby kanałów i konkurencyjności rynku</span></div>
             <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
           </div>
         </div>
       </article>
 
-      <!-- 002 · GEO / AIO -->
+      <!-- 002 · GOOGLE BUSINESS PROFILE -->
       <article class="card offer reveal">
         <div class="offer-grid">
           <div>
-            <div class="offer-num">002 / GEO · AIO</div>
-            <h2>GEO / AIO — widoczność w <span class="grad">wyszukiwarkach AI</span></h2>
-            <p class="lead">Generative Engine Optimization (GEO) i AI Optimization (AIO) to optymalizacja obecności marki w odpowiedziach AI — ChatGPT, Google AI Overviews, Gemini, Perplexity. Coraz więcej klientów zaczyna zakupy właśnie tam.</p>
-            <ul class="points">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Audyt widoczności marki w silnikach AI i wyszukiwarkach generatywnych</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Optymalizacja treści pod cytowalność przez modele AI</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dane strukturalne (schema), encje i budowanie autorytetu tematycznego</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Monitoring wzmianek i pozycji w odpowiedziach AI</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Strategia treści FAQ / Q&amp;A pod zapytania konwersacyjne</li>
+            <div class="offer-num">002 / Wizytówka Google</div>
+            <h2>Pierwsze miejsce w <span class="grad">Mapach Google</span></h2>
+            <p class="lead">Kiedy ktoś szuka usługi „w okolicy”, decyzja zapada w Mapach — zwykle wśród trzech pierwszych firm. Doprowadzam Twój profil do stanu, w którym Google chce go pokazywać wysoko. To <b>najtańsze źródło lokalnych klientów</b>, bo działa również bez budżetu reklamowego.</p>
+
+            <div class="deliver-t">Co dostajesz</div>
+            <ul class="deliver">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pełną optymalizację profilu: kategorie, usługi, opis, godziny, zdjęcia</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Uporządkowane dane firmy w katalogach (spójność nazwy, adresu, telefonu)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gotowy system zbierania opinii od klientów i szablony odpowiedzi</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Regularne posty i aktualizacje utrzymujące profil aktywnym</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Raport pozycji w Mapach na najważniejsze frazy lokalne</li>
             </ul>
           </div>
           <div>
-            <div class="aside-block">
-              <div class="aside-lbl">Silniki</div>
-              <div class="tags"><span class="tag">ChatGPT</span><span class="tag">AI Overviews</span><span class="tag">Gemini</span><span class="tag">Perplexity</span><span class="tag">Schema</span></div>
-            </div>
             <div class="aside-block">
               <div class="aside-lbl">Dla kogo</div>
-              <p>Marki, które chcą wyprzedzić konkurencję w nowym kanale — zanim stanie się standardem.</p>
+              <p>Firmy obsługujące klientów z konkretnego miasta lub regionu: usługi, warsztaty, gabinety, wykonawcy, handel lokalny.</p>
             </div>
-            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Nowość — pakiety pilotażowe</span></div>
-            <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 003 · Google Business Profile -->
-      <article class="card offer reveal">
-        <div class="offer-grid">
-          <div>
-            <div class="offer-num">003 / Wizytówka Google</div>
-            <h2>Pozycjonowanie <span class="grad">wizytówki Google</span></h2>
-            <p class="lead">Optymalizacja i pozycjonowanie profilu firmy w Mapach Google i lokalnych wynikach wyszukiwania. Dla firm usługowych to najczęściej najtańsze źródło realnych, lokalnych klientów.</p>
-            <ul class="points">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Pełna optymalizacja profilu firmy (Google Business Profile)</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Kategorie, usługi, opis, zdjęcia i posty aktualizacyjne</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Lokalne SEO i budowanie spójności NAP w katalogach</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Strategia pozyskiwania i zarządzania opiniami</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Monitoring pozycji w Mapach Google i pakiecie lokalnym</li>
-            </ul>
-          </div>
-          <div>
+            <div class="aside-block">
+              <div class="effect">
+                <div class="l">Czego się spodziewać</div>
+                <p>Efekty w Mapach budują się wolniej niż w reklamach — pierwsze zmiany pozycji zwykle po 4–8 tygodniach, ale utrzymują się długo.</p>
+              </div>
+            </div>
             <div class="aside-block">
               <div class="aside-lbl">Zakres</div>
-              <div class="tags"><span class="tag">Google Maps</span><span class="tag">Business Profile</span><span class="tag">Lokalne SEO</span><span class="tag">Opinie</span><span class="tag">NAP</span></div>
+              <div class="tags"><span class="tag">Google Maps</span><span class="tag">Business Profile</span><span class="tag">Lokalne SEO</span><span class="tag">Opinie</span></div>
             </div>
-            <div class="aside-block">
-              <div class="aside-lbl">Dla kogo</div>
-              <p>Firmy lokalne i usługowe, które chcą być pierwszym wyborem klientów w swojej okolicy.</p>
-            </div>
-            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Dopasowana do lokalizacji i konkurencji</span></div>
+            <div class="price-note"><b>Wycena indywidualna</b><span>Zależna od lokalizacji i konkurencji w okolicy</span></div>
             <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
           </div>
         </div>
       </article>
 
-      <!-- 004 · Websites -->
+      <!-- 003 · GEO / AIO -->
+      <article class="card offer reveal">
+        <div class="offer-grid">
+          <div>
+            <div class="offer-num">003 / GEO · AIO</div>
+            <h2>Żeby AI polecało <span class="grad">właśnie Twoją firmę</span></h2>
+            <p class="lead">Coraz więcej osób nie przegląda już wyników wyszukiwania — pyta ChatGPT albo czyta podsumowanie od Google AI i wybiera z 2–3 poleconych firm. GEO/AIO to <b>układanie treści i danych tak, aby modele AI rozumiały Twoją ofertę</b> i wskazywały ją jako odpowiedź.</p>
+
+            <div class="deliver-t">Co dostajesz</div>
+            <ul class="deliver">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Audyt: sprawdzenie, co dziś AI odpowiada o Tobie i o konkurencji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Treści napisane pod pytania, które klienci naprawdę zadają</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Dane strukturalne (schema) i uporządkowane informacje o firmie</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sekcje FAQ i porównania, które modele chętnie cytują</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cykliczny monitoring wzmianek marki w odpowiedziach AI</li>
+            </ul>
+          </div>
+          <div>
+            <div class="aside-block">
+              <div class="aside-lbl">Dla kogo</div>
+              <p>Marki, które chcą zająć nowy kanał, zanim zrobi to konkurencja — szczególnie w branżach, gdzie klienci długo porównują oferty.</p>
+            </div>
+            <div class="aside-block">
+              <div class="effect">
+                <div class="l">Uczciwie o ryzyku</div>
+                <p>To młody kanał — nie ma tu gwarantowanych pozycji ani pełnych statystyk jak w Google Ads. Traktuj to jako inwestycję w przewagę na kolejne lata.</p>
+              </div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-lbl">Silniki</div>
+              <div class="tags"><span class="tag">ChatGPT</span><span class="tag">AI Overviews</span><span class="tag">Gemini</span><span class="tag">Perplexity</span></div>
+            </div>
+            <div class="price-note"><b>Wycena indywidualna</b><span>Dostępne pakiety pilotażowe o mniejszym zakresie</span></div>
+            <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 004 · WEBSITES -->
       <article class="card offer reveal">
         <div class="offer-grid">
           <div>
             <div class="offer-num">004 / Strony internetowe</div>
-            <h2>Tworzenie <span class="grad">Stron Internetowych</span></h2>
-            <p class="lead">Projektuję i buduję strony, które nie tylko wyglądają nowocześnie — są zoptymalizowane pod konwersję, szybkość i SEO. Strona to fundament każdej skutecznej kampanii.</p>
-            <ul class="points">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Projekt i wdrożenie strony firmowej lub landing page'a</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Optymalizacja szybkości i Core Web Vitals</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Integracja z GA4, Meta Pixel i Tag Manager</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Podstawowe SEO on-site: struktura, metatagi, sitemap</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Formularze kontaktowe i połączenie z CRM</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Responsywność — perfekcyjnie na mobile i desktop</li>
+            <h2>Strona, która zamienia wejścia w <span class="grad">zapytania</span></h2>
+            <p class="lead">Najlepsza kampania nie pomoże, jeśli strona nie prowadzi do kontaktu. Buduję szybkie strony i landing page'e nastawione na <b>jeden konkretny cel</b>: żeby klient zadzwonił albo wysłał zapytanie. Bez zbędnych efektów, które tylko spowalniają.</p>
+
+            <div class="deliver-t">Co dostajesz</div>
+            <ul class="deliver">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Projekt i wdrożenie strony firmowej lub landing page'a pod kampanię</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Teksty ułożone pod decyzję klienta, nie pod „opis firmy”</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Szybkie działanie na telefonie (Core Web Vitals) i pełną responsywność</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Podpięty pomiar: GA4, Tag Manager, Meta Pixel i mierzenie konwersji</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Podstawowe SEO on-site: struktura, metatagi, dane strukturalne, sitemap</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formularz kontaktowy działający i podpięty pod Twoją skrzynkę</li>
             </ul>
           </div>
           <div>
             <div class="aside-block">
-              <div class="aside-lbl">Technologie</div>
-              <div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">WordPress</span><span class="tag">Landing</span><span class="tag">Web Vitals</span><span class="tag">SEO</span><span class="tag">GA4/Pixel</span></div>
+              <div class="aside-lbl">Dla kogo</div>
+              <p>Firmy bez strony, z przestarzałą witryną lub takie, które potrzebują dedykowanego landingu pod konkretną kampanię.</p>
             </div>
             <div class="aside-block">
-              <div class="aside-lbl">Dla kogo</div>
-              <p>Firmy bez strony lub z przestarzałą witryną oraz biznesy potrzebujące landing page'y pod kampanie.</p>
+              <div class="effect">
+                <div class="l">Czego się spodziewać</div>
+                <p>Landing page zwykle 1–2 tygodnie, strona firmowa 3–5 tygodni — licząc od momentu otrzymania materiałów i treści.</p>
+              </div>
             </div>
-            <div class="price-note"><b>Wycena indywidualna</b><span class="metric-lbl">Zależna od zakresu projektu</span></div>
+            <div class="aside-block">
+              <div class="aside-lbl">Technologie</div>
+              <div class="tags"><span class="tag">WordPress</span><span class="tag">HTML/CSS/JS</span><span class="tag">Landing</span><span class="tag">Web Vitals</span></div>
+            </div>
+            <div class="price-note"><b>Wycena indywidualna</b><span>Zależna od liczby podstron i zakresu treści</span></div>
             <a class="btn btn-primary btn-block" href="../kontakt/">Zapytaj o wycenę →</a>
           </div>
         </div>
       </article>
 
-      <!-- 005 complex -->
-      <div class="mt-l reveal" style="max-width:640px">
+      <!-- PRICING LOGIC -->
+      <div class="mt-l reveal" style="max-width:660px">
+        <div class="kicker"><span>Rozliczenie</span></div>
+        <h2 class="h-sec">Jak wygląda <span class="grad">wycena</span></h2>
+        <p class="sub-sec">Nie podaję cen z sufitu, bo zakres realnie zależy od Twojej sytuacji. Podaję natomiast zasady, według których liczę — żebyś wiedział, czego się spodziewać przed rozmową.</p>
+      </div>
+      <div class="price-logic mt-m">
+        <div class="pl-card reveal d1">
+          <div class="n">Składnik 1</div>
+          <div class="v">Wynagrodzenie za obsługę</div>
+          <p>Stała miesięczna kwota za moją pracę: prowadzenie kampanii, optymalizację i raportowanie. Znasz ją z góry, nie zależy od wysokości Twojego budżetu.</p>
+        </div>
+        <div class="pl-card reveal d2">
+          <div class="n">Składnik 2</div>
+          <div class="v">Budżet reklamowy</div>
+          <p>Kwota, która w 100% trafia do Google lub Meta — nie pobieram z niej prowizji. Minimum 2 000 zł miesięcznie, rekomendowany start: 3 000–5 000 zł.</p>
+        </div>
+        <div class="pl-card reveal d3">
+          <div class="n">Warunki</div>
+          <div class="v">Minimum 3 miesiące</div>
+          <p>Tyle potrzeba, aby zebrać dane i zoptymalizować kampanie. Potem miesięczny okres wypowiedzenia, a konta i dane zostają u Ciebie.</p>
+        </div>
+      </div>
+
+      <!-- 005 COMPLEX SUPPORT -->
+      <div class="mt-l reveal" style="max-width:660px">
         <div class="kicker"><span>005 / Kompleksowe wsparcie</span></div>
-        <h2 class="h-sec">Zewnętrzny dział <span class="grad">marketingu</span></h2>
-        <p class="sub-sec">Dla firm, które chcą zająć się biznesem — a marketing oddać w sprawdzone ręce.</p>
+        <h2 class="h-sec">Cały marketing <span class="grad">w jednych rękach</span></h2>
+        <p class="sub-sec">Dla firm, które nie chcą koordynować kilku podwykonawców i wolą jedną osobę odpowiedzialną za wynik.</p>
       </div>
       <div class="mini-grid mt-m">
-        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2Zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14"/></svg></div><h3>Strategia &amp; planowanie</h3><p>Analiza rynku, pozycjonowanie, dobór kanałów, budżetowanie i kwartalny roadmap działań.</p><div class="tags"><span class="tag">Strategia</span><span class="tag">KPI</span></div></article>
-        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Prowadzenie kampanii</h3><p>Pełna obsługa kanałów płatnych — Google Ads i Meta Ads — oraz GEO/AIO w ramach jednej umowy.</p><div class="tags"><span class="tag">Multi-channel</span><span class="tag">Optymalizacja</span></div></article>
-        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Raportowanie &amp; analityka</h3><p>Czytelne raporty: co zadziałało, co zoptymalizować i jakie są priorytety na kolejny okres.</p><div class="tags"><span class="tag">Dashboard</span><span class="tag">GA4</span><span class="tag">Looker</span></div></article>
-        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Koordynacja agencji</h3><p>Koordynuję działania agencji kreatywnej lub SEO i dbam o spójność komunikacji.</p><div class="tags"><span class="tag">Nadzór</span><span class="tag">Brief</span></div></article>
+        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2Zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14"/></svg></div><h3>Strategia i budżet</h3><p>Ustalamy, skąd mają przychodzić klienci, ile to może kosztować i w jakiej kolejności działamy przez najbliższe miesiące.</p><div class="tags"><span class="tag">Plan kwartalny</span><span class="tag">KPI</span></div></article>
+        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Prowadzenie kanałów</h3><p>Google Ads, Meta Ads, wizytówka Google i GEO/AIO prowadzone razem, w ramach jednej umowy i jednego raportu.</p><div class="tags"><span class="tag">Wiele kanałów</span><span class="tag">Optymalizacja</span></div></article>
+        <article class="card mini reveal d1"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Raporty i wnioski</h3><p>Jedno podsumowanie miesięcznie: ile wydaliśmy, ilu klientów przyszło, co zadziałało i co robimy dalej.</p><div class="tags"><span class="tag">GA4</span><span class="tag">Looker Studio</span></div></article>
+        <article class="card mini reveal d2"><div class="mini-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Koordynacja wykonawców</h3><p>Jeśli masz grafika, agencję SEO lub firmę od strony — przygotowuję briefy i pilnuję spójności komunikacji.</p><div class="tags"><span class="tag">Nadzór</span><span class="tag">Briefy</span></div></article>
       </div>
 
       <div class="excl mt-l reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <div>
-          <div class="t">Wykluczenie branżowe</div>
-          <p>Nie obsługuję branży gastronomicznej — restauracji, kawiarni, barów i podobnych lokali. Skupiam się na sektorach, w których mogę zagwarantować najwyższą jakość i realnie mierzalne wyniki.</p>
+          <div class="t">Czego nie robię</div>
+          <p>Nie obsługuję branży gastronomicznej — restauracji, kawiarni i barów. Nie sprzedaję też gwarancji konkretnej liczby klientów: na wynik wpływa również Twoja oferta, ceny i szybkość obsługi zapytań. Jeśli po audycie uznam, że reklama Ci się nie opłaci, powiem to przed podpisaniem umowy.</p>
         </div>
       </div>
     </div>
@@ -252,10 +321,13 @@
       <div class="cta-banner reveal">
         <div>
           <div class="kicker"><span>Nie wiesz, co wybrać?</span></div>
-          <h3>Dobierzmy usługę <span class="grad">do Twoich celów</span></h3>
-          <p>Napisz — bezpłatnie omówimy Twoje potrzeby i wskażę optymalne rozwiązanie.</p>
+          <h3>Dobierzmy usługę <span class="grad">do Twojej sytuacji</span></h3>
+          <p>Napisz w dwóch zdaniach, czym się zajmujesz i skąd dziś przychodzą klienci. Wskażę, co da najszybszy efekt przy Twoim budżecie.</p>
         </div>
-        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Bezpłatna konsultacja →</a></div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="../kontakt/" data-magnetic>Darmowa wycena →</a>
+          <a class="btn btn-ghost" href="../realizacje/">Zobacz wyniki</a>
+        </div>
       </div>
     </div>
   </section>
@@ -264,9 +336,10 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
-      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
-      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a><a href="../kontakt/">Formularz kontaktowy</a></div>
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Kampanie Google Ads i Meta Ads rozliczane z kosztu pozyskania klienta. Dla firm, które chcą znać liczby.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a><a href="../kontakt/">Kontakt</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a>
+        <p style="font-size:0.8rem;color:var(--muted-2);margin-top:10px;line-height:1.6">Pon–Pt, 9:00–17:00<br>Praca zdalna, cała Polska</p></div>
     </div>
     <div class="footer-bottom">
       <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>

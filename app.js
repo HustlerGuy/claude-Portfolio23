@@ -147,19 +147,32 @@
     const toggle = (open) => {
       burger.classList.toggle('open', open);
       menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
       document.body.style.overflow = open ? 'hidden' : '';
     };
     burger.addEventListener('click', () => toggle(!menu.classList.contains('open')));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+    // Close on Escape
+    addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { toggle(false); burger.focus(); } });
   }
 
-  /* ── FAQ accordion ── */
-  $$('.faq-q').forEach(q => q.addEventListener('click', () => {
+  /* ── FAQ accordion (mouse + keyboard) ── */
+  const toggleFaq = (q) => {
     const item = q.closest('.faq-item');
     const open = item.classList.contains('open');
-    $$('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!open) item.classList.add('open');
-  }));
+    $$('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false'); });
+    if (!open) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); }
+  };
+  $$('.faq-q').forEach(q => {
+    q.setAttribute('aria-expanded', 'false');
+    if (!q.hasAttribute('tabindex')) q.setAttribute('tabindex', '0');
+    if (!q.hasAttribute('role')) q.setAttribute('role', 'button');
+    q.addEventListener('click', () => toggleFaq(q));
+    q.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
+    });
+  });
 
   /* ── Hero grid parallax glow following cursor ── */
   const spot = $('[data-spotlight]');
@@ -171,15 +184,77 @@
     });
   }
 
-  /* ── Contact form (demo submit) ── */
+  /* ── Contact form ──
+     Static hosting has no backend, so the form composes a pre-filled e-mail
+     and hands it to the user's mail client. The success screen always shows a
+     copy-paste fallback plus direct e-mail/phone, so a request is never lost. */
+  const RECIPIENT = 'scaleert@gmail.com';
   const form = $('#contactForm');
-  if (form) form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    $('#formWrap').style.display = 'none';
-    $('#formSuccess').style.display = 'block';
-    $('#formSuccess').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-  });
+  if (form) {
+    const val = (n) => (form.elements[n]?.value || '').trim();
+
+    // Inline validation feedback
+    const markField = (el, ok) => el.closest('.field, .check')?.classList.toggle('invalid', !ok);
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      el.addEventListener('blur', () => { if (el.required) markField(el, el.checkValidity()); });
+      el.addEventListener('input', () => { if (el.closest('.field, .check')?.classList.contains('invalid')) markField(el, el.checkValidity()); });
+    });
+
+    const buildMessage = () => {
+      const lines = [
+        'Nowe zapytanie ze strony',
+        '',
+        'Imię i nazwisko: ' + val('name'),
+        'Firma: ' + (val('company') || '—'),
+        'E-mail: ' + val('email'),
+        'Telefon: ' + (val('phone') || '—'),
+        'Usługa: ' + val('service'),
+        'Budżet reklamowy: ' + (val('budget') || 'nie określono'),
+        '',
+        'Opis sytuacji:',
+        val('message')
+      ];
+      return lines.join('\n');
+    };
+
+    const buildMailto = () => {
+      const subject = 'Zapytanie ze strony — ' + (val('company') || val('name') || 'nowy kontakt');
+      return 'mailto:' + RECIPIENT +
+             '?subject=' + encodeURIComponent(subject) +
+             '&body=' + encodeURIComponent(buildMessage());
+    };
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // Validate every required field, show all errors at once
+      let firstInvalid = null;
+      form.querySelectorAll('[required]').forEach(el => {
+        const ok = el.checkValidity();
+        markField(el, ok);
+        if (!ok && !firstInvalid) firstInvalid = el;
+      });
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        return;
+      }
+
+      const href = buildMailto();
+      const fallback = $('#mailFallback');
+      if (fallback) fallback.value = buildMessage();
+      const retry = $('#mailRetry');
+      if (retry) retry.href = href;
+
+      $('#formWrap').style.display = 'none';
+      const ok = $('#formSuccess');
+      ok.style.display = 'block';
+      ok.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+
+      // Hand off to the mail client
+      window.location.href = href;
+    });
+  }
 
   /* ── Year stamp ── */
   $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());

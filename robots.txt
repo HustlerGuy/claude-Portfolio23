@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Wyszukiwarki i silniki AI mają pełny dostęp do treści.
+# GEO/AIO: brak blokad dla crawlerów modeli językowych.
+
+Sitemap: https://hustlerguy.github.io/claude-Portfolio23/sitemap.xml
