@@ -3,67 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Realizacje — Bartłomiej Ert</title>
-<meta name="description" content="Realne kampanie, realne liczby — poparte zrzutami ekranu z paneli reklamowych Google Ads, Meta i GA4.">
+<title>Realizacje i wyniki — dane z paneli reklamowych | Bartłomiej Ert</title>
+<meta name="description" content="Konkretne wyniki kampanii Google Ads: 45 konwersji miesięcznie po 47,71 zł, rekordowo 15 zł za klienta. Każda liczba poparta zrzutem ekranu z panelu.">
+<link rel="canonical" href="https://hustlerguy.github.io/claude-Portfolio23/realizacje/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Realizacje i wyniki — dane z paneli reklamowych">
+<meta property="og:description" content="45 konwersji miesięcznie po 47,71 zł, rekordowo 15 zł za klienta. Liczby poparte zrzutami ekranu.">
+<meta property="og:url" content="https://hustlerguy.github.io/claude-Portfolio23/realizacje/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <style>
-  .stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-  .stat { padding: 30px 26px; text-align: center; }
-  .stat .metric-val { font-size: clamp(1.9rem,3.4vw,2.6rem); }
-  .stat .metric-lbl { line-height: 1.5; }
-
   .case { margin-bottom: 16px; padding: 0; overflow: hidden; }
-  .case-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 34px 40px 28px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .case-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 32px 38px 26px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
   .case-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 10px; }
-  .case-title { font-family: var(--ff-disp); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: 6px; }
-  .case-ind { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
+  .case-title { font-family: var(--ff-disp); font-weight: 600; font-size: 1.45rem; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .case-ind { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); }
   .case-body { display: grid; grid-template-columns: 1fr 1fr; }
-  .case-desc { padding: 32px 40px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 22px; }
-  .case-desc .txt { color: var(--muted); line-height: 1.85; font-size: 0.94rem; }
-  .case-desc .txt b { color: var(--text-soft); font-weight: 500; }
+  .case-desc { padding: 30px 38px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 20px; }
+  .case-block .t { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+  .case-block p { color: var(--muted); line-height: 1.8; font-size: 0.93rem; }
+  .case-block p b { color: var(--text-soft); font-weight: 500; }
   .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .cm { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: rgba(255,255,255,0.012); }
-  .cm .v { font-family: var(--ff-disp); font-weight: 700; font-size: 1.7rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
-  .cm .l { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); margin-top: 6px; }
-  .case-media { padding: 32px 36px; background: var(--bg-1); display: flex; flex-direction: column; gap: 14px; }
-  .media-lbl { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); }
+  .cm .v { font-family: var(--ff-disp); font-weight: 700; font-size: 1.6rem; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+  .cm .l { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); margin-top: 6px; }
+  .case-media { padding: 30px 34px; background: var(--bg-1); display: flex; flex-direction: column; gap: 13px; }
+  .media-lbl { font-family: var(--mono); font-size: 0.57rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); }
   .slot { width: 100%; aspect-ratio: 16/9; border-radius: 12px; border: 1px dashed var(--line-2); background: var(--bg-3);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; overflow: hidden; transition: border-color .3s, background .3s; }
-  .slot:hover { border-color: var(--cyan); background: var(--card-h); }
-  .slot img, .slot iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; border: none; display: none; }
-  .slot.has-image img, .slot.has-iframe iframe { display: block; }
-  .slot.has-image .ico, .slot.has-image .st, .slot.has-iframe .ico, .slot.has-iframe .st { display: none; }
-  .slot .ico { color: var(--muted-2); } .slot .ico svg { width: 26px; height: 26px; }
-  .slot .st { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); text-align: center; line-height: 1.7; padding: 0 10px; }
+  .slot:hover { border-color: var(--cyan); }
+  .slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; display: none; }
+  .slot.has-image img { display: block; }
+  .slot.has-image .ico, .slot.has-image .st { display: none; }
+  .slot .ico { color: var(--muted-2); } .slot .ico svg { width: 24px; height: 24px; }
+  .slot .st { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); text-align: center; line-height: 1.7; padding: 0 12px; }
   .slot.sm { aspect-ratio: 4/3; }
   .slots-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-  @media (max-width: 1024px){ .stat-grid { grid-template-columns: 1fr 1fr; } }
+  .method { padding: 22px 26px; border-radius: 14px; background: rgba(255,255,255,0.014); border: 1px solid var(--line); margin-top: 18px; }
+  .method .t { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 10px; }
+  .method p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+  .method code { font-family: var(--mono); font-size: 0.8rem; color: var(--cyan); background: var(--bg-3); padding: 1px 6px; border-radius: 5px; }
+
   @media (max-width: 900px){ .case-body { grid-template-columns: 1fr; } .case-desc { border-right: none; border-bottom: 1px solid var(--line); } .case-top,.case-desc,.case-media { padding: 24px; } }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
-    <nav><ul class="nav-links">
+    <nav aria-label="Nawigacja główna"><ul class="nav-links">
       <li><a href="../uslugi/">Usługi</a></li>
       <li><a href="../proces/">Proces</a></li>
-      <li><a href="../realizacje/" class="active">Realizacje</a></li>
+      <li><a href="../realizacje/" class="active" aria-current="page">Realizacje</a></li>
       <li><a href="../o-mnie/">O mnie</a></li>
     </ul></nav>
     <div class="nav-actions">
       <a class="btn btn-primary btn-sm" href="../kontakt/" data-magnetic>Darmowa wycena
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
   <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
 </div>
@@ -71,21 +80,45 @@
 <div class="page-hero">
   <div class="wrap">
     <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">Realizacje</span></div>
-    <h1 class="page-title reveal d1">Realizacje <span class="grad">&amp; wyniki</span></h1>
-    <p class="page-sub reveal d2">Realne kampanie, realne liczby — poparte zrzutami ekranu z paneli reklamowych. Zero zmyślonych danych.</p>
+    <h1 class="page-title reveal d1">Liczby, które da się <span class="grad">sprawdzić</span></h1>
+    <p class="page-sub reveal d2">Każdy wynik pochodzi z panelu reklamowego klienta i jest poparty zrzutem ekranu. Pokazuję też, jak liczę wskaźniki — żebyś mógł je ocenić sam.</p>
   </div>
 </div>
 
-<main>
-  <!-- SUMMARY STATS -->
+<main id="main">
+  <!-- SUMMARY -->
   <section class="section section-alt">
     <div class="wrap">
-      <div class="reveal" style="max-width:640px"><div class="kicker"><span>Wyniki zbiorcze</span></div><h2 class="h-sec">Liczby mówią <span class="grad">same za siebie</span></h2></div>
-      <div class="stat-grid mt-l">
-        <div class="card stat reveal d1"><div class="metric-val" data-count="26.7" data-suffix="×">0</div><div class="metric-lbl">Najlepszy ROAS<br>(5 konw. za 75 zł, śr. zlecenie 400 zł)</div></div>
-        <div class="card stat reveal d2"><div class="metric-val" data-count="23" data-prefix="−" data-suffix="%">0</div><div class="metric-lbl">Średnia redukcja CPA</div></div>
-        <div class="card stat reveal d3"><div class="metric-val" data-count="4039.09" data-suffix=" zł">0</div><div class="metric-lbl">Budżet w zarządzaniu</div></div>
-        <div class="card stat reveal d4"><div class="metric-val" data-count="10" data-suffix="">0</div><div class="metric-lbl">Projektów łącznie</div></div>
+      <div class="reveal" style="max-width:660px"><div class="kicker"><span>Podsumowanie</span></div><h2 class="h-sec">Wyniki <span class="grad">w skrócie</span></h2></div>
+      <div class="proof-bar mt-l reveal">
+        <div class="proof-item">
+          <div class="v" data-count="26.7" data-suffix="×">0×</div>
+          <div class="l">Najlepszy ROAS</div>
+          <div class="s">Rekordowy okres kampanii</div>
+        </div>
+        <div class="proof-item">
+          <div class="v" data-count="23" data-prefix="−" data-suffix="%">0%</div>
+          <div class="l">Średnia redukcja kosztu</div>
+          <div class="s">Koszt pozyskania klienta (CPA)</div>
+        </div>
+        <div class="proof-item">
+          <div class="v" data-count="4039.09" data-suffix=" zł">0 zł</div>
+          <div class="l">Budżet w zarządzaniu</div>
+          <div class="s">Wydatki reklamowe klientów</div>
+        </div>
+        <div class="proof-item">
+          <div class="v" data-count="10" data-suffix="">0</div>
+          <div class="l">Projektów łącznie</div>
+          <div class="s">Kampanie i wdrożenia</div>
+        </div>
+      </div>
+      <div class="proof-src reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Źródło: panele Google Ads i Meta Ads klientów
+      </div>
+      <div class="method reveal" style="max-width:900px;margin-left:auto;margin-right:auto">
+        <div class="t">Jak liczę ROAS</div>
+        <p>ROAS to przychód podzielony przez wydatek na reklamę. W rekordowym okresie kampanii: <code>5 konwersji × 400 zł średniej wartości zlecenia ÷ 75,01 zł wydatku = 26,7×</code>. W ujęciu całego miesiąca ten sam projekt osiągnął <b>8,4×</b> (45 konwersji × 400 zł ÷ 2 150 zł). Podaję obie liczby, bo pojedynczy rekordowy dzień nie jest tym samym co stabilny wynik miesięczny.</p>
       </div>
     </div>
   </section>
@@ -93,89 +126,81 @@
   <!-- CASE STUDIES -->
   <section class="section">
     <div class="wrap">
-      <div class="reveal" style="max-width:640px"><div class="kicker"><span>Case studies</span></div><h2 class="h-sec">Projekty <span class="grad">ze zrzutami ekranu</span></h2><p class="sub-sec">Każdy projekt zawiera screenshoty z Google Ads, Meta Ads Manager lub GA4. Dane wrażliwe zanonimizowane na życzenie klienta.</p></div>
+      <div class="reveal" style="max-width:660px"><div class="kicker"><span>Case study</span></div><h2 class="h-sec">Projekt <span class="grad">krok po kroku</span></h2><p class="sub-sec">Sytuacja wyjściowa, konkretne działania i efekt — plus zrzuty ekranu z panelu. Dane wrażliwe anonimizuję na życzenie klienta.</p></div>
 
-      <!-- CASE 1 · Cleaning services (Google Ads) -->
+      <!-- CASE 001 -->
       <article class="card case reveal mt-l">
         <div class="case-top">
           <div>
             <div class="case-num">001 / Usługi sprzątające</div>
-            <div class="case-title">Google Ads dla firmy sprzątającej</div>
-            <div class="case-ind">Pranie tapicerki · Google Search Ads · konto wypraneiposprzatane.pl</div>
+            <div class="case-title">45 klientów miesięcznie przy budżecie 120 zł dziennie</div>
+            <div class="case-ind">Google Search Ads · pranie tapicerki · rynek lokalny</div>
           </div>
           <span class="pill"><span class="dot"></span>Kampania aktywna</span>
         </div>
         <div class="case-body">
           <div class="case-desc">
-            <div class="txt">Kampania Search dla firmy zajmującej się praniem tapicerki i sprzątaniem. Wyzwanie: <b>ograniczony budżet dzienny (120 zł)</b> przy konkurencyjnym rynku lokalnym. Skupienie na słowach kluczowych o najwyższej intencji i ciągła optymalizacja stawek pozwoliły uzyskać <b>45 konwersji miesięcznie przy koszcie 47,71 zł/konwersję</b>, a w najlepszych dniach koszt spadał do <b>15 zł za konwersję</b>. Przy średniej wartości zlecenia ~400 zł daje to zwrot rzędu 8× w skali miesiąca i do ~27× w szczytowych dniach.</div>
+            <div class="case-block">
+              <div class="t">Punkt wyjścia</div>
+              <p>Firma działała na konkurencyjnym rynku lokalnym z <b>ograniczonym budżetem 120 zł dziennie</b>. Budżet rozchodził się na szerokie, ogólne frazy, a konwersje nie były mierzone w sposób, który pozwalałby cokolwiek optymalizować.</p>
+            </div>
+            <div class="case-block">
+              <div class="t">Co zrobiłem</div>
+              <p>Najpierw poprawne mierzenie konwersji. Następnie zawężenie słów kluczowych do zapytań z realną intencją zakupu, dodanie wykluczeń fraz generujących puste kliknięcia, nowe teksty reklam nastawione na kontakt oraz <b>cotygodniowa korekta stawek i budżetu</b> pod najlepiej konwertujące godziny.</p>
+            </div>
+            <div class="case-block">
+              <div class="t">Efekt</div>
+              <p>Stabilny strumień zapytań przy koszcie mieszczącym się w marży klienta: <b>45 konwersji miesięcznie po 47,71 zł</b>, a w rekordowym okresie 15 zł za klienta. Kampania działa do dziś.</p>
+            </div>
             <div class="case-metrics">
-              <div class="cm"><div class="v">8,4×</div><div class="l">ROAS (miesiąc)</div></div>
+              <div class="cm"><div class="v">47,71 zł</div><div class="l">Koszt / klienta</div></div>
               <div class="cm"><div class="v">45</div><div class="l">Konwersje / mies.</div></div>
-              <div class="cm"><div class="v">47,71 zł</div><div class="l">Koszt / konwersję</div></div>
+              <div class="cm"><div class="v">8,4×</div><div class="l">ROAS w miesiącu</div></div>
               <div class="cm"><div class="v">431</div><div class="l">Kliknięcia / mies.</div></div>
             </div>
-            <div class="tags"><span class="tag">Google Ads</span><span class="tag">Search</span><span class="tag">Lokalne</span><span class="tag">Konwersje</span></div>
+            <div class="tags"><span class="tag">Google Ads</span><span class="tag">Search</span><span class="tag">Lokalne</span><span class="tag">Pomiar konwersji</span></div>
           </div>
           <div class="case-media">
-            <div class="media-lbl">Przegląd kampanii — zrzut z Google Ads</div>
+            <div class="media-lbl">Przegląd miesiąca — panel Google Ads</div>
             <div class="slot">
-              <img src="../img/gads-marzec-2026.png" alt="Google Ads — przegląd kampanii, marzec 2026: 431 kliknięć, 45 konwersji, 2,15 tys. zł, 47,71 zł/konw." onload="this.closest('.slot').classList.add('has-image')">
-              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-              <div class="st">Przegląd miesiąca<br>431 kliknięć · 45 konwersji · 47,71 zł/konw.</div>
+              <img src="../img/gads-marzec-2026.png" alt="Panel Google Ads: 431 kliknięć, 45 konwersji, 2,15 tys. zł kosztu, 47,71 zł za konwersję" loading="lazy" onload="this.closest('.slot').classList.add('has-image')">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="st">431 kliknięć · 45 konwersji<br>2,15 tys. zł · 47,71 zł/konw.</div>
             </div>
             <div class="media-lbl">Szczegóły skuteczności</div>
             <div class="slots-2">
               <div class="slot sm">
-                <img src="../img/gads-czerwiec-2026.png" alt="Google Ads — najlepszy dzień: 5 konwersji, koszt 75,01 zł, 15,00 zł/konwersję" onload="this.closest('.slot').classList.add('has-image')">
-                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                <div class="st">Najlepszy dzień<br>15 zł/konw.</div>
+                <img src="../img/gads-czerwiec-2026.png" alt="Panel Google Ads: rekordowy okres — 5 konwersji, 75,01 zł kosztu, 15,00 zł za konwersję" loading="lazy" onload="this.closest('.slot').classList.add('has-image')">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <div class="st">Rekord<br>15 zł/konw.</div>
               </div>
               <div class="slot sm">
-                <img src="../img/gads-przeglad.png" alt="Google Ads — panel przeglądu kampanii" onload="this.closest('.slot').classList.add('has-image')">
-                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <div class="st">Panel kampanii</div>
+                <img src="../img/gads-przeglad.png" alt="Panel Google Ads: widok przeglądu kampanii wyszukiwania" loading="lazy" onload="this.closest('.slot').classList.add('has-image')">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <div class="st">Widok kampanii</div>
               </div>
+            </div>
+            <div class="method" style="margin-top:6px">
+              <div class="t">Uwaga o danych</div>
+              <p>ROAS liczony przy średniej wartości zlecenia 400 zł podanej przez klienta. Kampania była okresowo ograniczona budżetem — przy wyższym budżecie liczba konwersji rośnie, ale koszt jednostkowy zwykle również.</p>
             </div>
           </div>
         </div>
       </article>
 
       <!--
-        SZABLON NOWEJ REALIZACJI — skopiuj poniższy blok <article> nad ten komentarz,
-        uzupełnij tytuł, opis, 4 metryki (.cm .v / .cm .l) oraz zrzuty ekranu.
-        Zrzuty: wgraj plik do folderu /img/ i podmień src="../img/NAZWA.png".
-        Kafel pokaże obraz automatycznie po jego wczytaniu (onload).
-
-      <article class="card case reveal">
-        <div class="case-top">
-          <div>
-            <div class="case-num">002 / Branża</div>
-            <div class="case-title">Tytuł realizacji</div>
-            <div class="case-ind">Branża · Platforma</div>
-          </div>
-          <span class="pill"><span class="dot"></span>Status</span>
-        </div>
-        <div class="case-body">
-          <div class="case-desc">
-            <div class="txt">Opis: cel, wyzwanie, działania i efekty.</div>
-            <div class="case-metrics">
-              <div class="cm"><div class="v">0×</div><div class="l">ROAS</div></div>
-              <div class="cm"><div class="v">0</div><div class="l">Konwersje</div></div>
-              <div class="cm"><div class="v">0 zł</div><div class="l">Koszt / konw.</div></div>
-              <div class="cm"><div class="v">0</div><div class="l">Kliknięcia</div></div>
-            </div>
-            <div class="tags"><span class="tag">Kanał</span><span class="tag">Typ</span></div>
-          </div>
-          <div class="case-media">
-            <div class="media-lbl">Zrzut ekranu</div>
-            <div class="slot"><img src="../img/nazwa.png" alt="" onload="this.closest('.slot').classList.add('has-image')"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="st">Screenshot z panelu</div></div>
-          </div>
-        </div>
-      </article>
+        SZABLON NOWEJ REALIZACJI
+        Skopiuj blok <article class="card case reveal"> powyżej i podmień:
+        1. .case-num / .case-title / .case-ind
+        2. Trzy bloki .case-block (Punkt wyjścia / Co zrobiłem / Efekt)
+        3. Cztery metryki .cm (.v = liczba, .l = opis)
+        4. Zrzuty: wgraj plik do folderu /img/ i ustaw src="../img/NAZWA.png"
+           Kafel pokaże obraz automatycznie po wczytaniu (atrybut onload).
       -->
 
       <div class="center mt-l reveal">
-        <a class="btn btn-ghost" href="../kontakt/">Chcesz zobaczyć więcej? Napisz →</a>
+        <p class="sub-sec mx-auto" style="margin-bottom:22px">Chcesz zobaczyć wyniki z branży podobnej do Twojej? Napisz — pokażę, co jest realne przy Twoim budżecie.</p>
+        <a class="btn btn-primary" href="../kontakt/" data-magnetic>Zapytaj o wyniki z Twojej branży →</a>
       </div>
     </div>
   </section>
@@ -183,8 +208,8 @@
   <section class="section section-alt">
     <div class="wrap">
       <div class="cta-banner reveal">
-        <div><div class="kicker"><span>Twój wynik</span></div><h3>Chcesz być kolejnym <span class="grad">case study?</span></h3><p>Napisz — bezpłatnie omówimy, jak osiągnąć podobne wyniki dla Twojej firmy.</p></div>
-        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Darmowa wycena →</a></div>
+        <div><div class="kicker"><span>Twój wynik</span></div><h3>Policzmy, ile klientów <span class="grad">możesz pozyskać</span></h3><p>Po krótkiej rozmowie i audycie powiem wprost, jakiego kosztu pozyskania klienta możesz się spodziewać — albo że reklama Ci się nie opłaci.</p></div>
+        <div class="cta-actions"><a class="btn btn-primary" href="../kontakt/" data-magnetic>Darmowa wycena →</a><a class="btn btn-ghost" href="../proces/">Jak pracuję</a></div>
       </div>
     </div>
   </section>
@@ -193,9 +218,10 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
-      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
-      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a><a href="../kontakt/">Formularz kontaktowy</a></div>
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Kampanie Google Ads i Meta Ads rozliczane z kosztu pozyskania klienta. Dla firm, które chcą znać liczby.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a><a href="../kontakt/">Kontakt</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a>
+        <p style="font-size:0.8rem;color:var(--muted-2);margin-top:10px;line-height:1.6">Pon–Pt, 9:00–17:00<br>Praca zdalna, cała Polska</p></div>
     </div>
     <div class="footer-bottom">
       <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>

@@ -3,68 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt — Bartłomiej Ert</title>
-<meta name="description" content="Zacznijmy współpracę. Pierwsza konsultacja i wycena są bezpłatne — odpowiadam w ciągu 24 godzin.">
+<title>Kontakt — Bartłomiej Ert | Darmowa wycena w 24h</title>
+<meta name="description" content="Napisz w dwóch zdaniach, czym się zajmujesz. Odpowiadam w ciągu 24 godzin z konkretną oceną sytuacji — bezpłatnie i bez zobowiązań.">
+<link rel="canonical" href="https://hustlerguy.github.io/claude-Portfolio23/kontakt/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kontakt — Bartłomiej Ert | Darmowa wycena w 24h">
+<meta property="og:description" content="Bezpłatna konsultacja i wycena. Odpowiadam w ciągu 24 godzin.">
+<meta property="og:url" content="https://hustlerguy.github.io/claude-Portfolio23/kontakt/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <style>
-  .contact-grid { display: grid; grid-template-columns: 1fr 400px; gap: clamp(24px,4vw,48px); align-items: start; }
-  .form-card { padding: clamp(28px,4vw,48px); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 380px; gap: clamp(24px,4vw,48px); align-items: start; }
+  .form-card { padding: clamp(28px,4vw,46px); }
   .form-card h2 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.01em; margin-bottom: 8px; }
-  .form-card .sub { color: var(--muted); margin-bottom: 32px; font-size: 0.92rem; }
+  .form-card .sub { color: var(--muted); margin-bottom: 30px; font-size: 0.92rem; line-height: 1.7; }
   .form-card .sub a { color: var(--cyan); }
+  .req-note { font-size: 0.78rem; color: var(--muted-2); margin-bottom: 24px; font-family: var(--mono); letter-spacing: 0.06em; }
   .check { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 24px; cursor: pointer; }
   .check input { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--azure); flex-shrink: 0; }
   .check span { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-  .form-note { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted-2); text-align: center; margin-top: 16px; }
+  .form-note { font-size: 0.78rem; color: var(--muted-2); text-align: center; margin-top: 16px; line-height: 1.6; }
+  .field .hint { font-size: 0.76rem; color: var(--muted-2); margin-top: 7px; }
+  .err { color: #ff8a8a; font-size: 0.78rem; margin-top: 7px; display: none; }
+  .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: rgba(255,110,110,0.6); }
+  .field.invalid .err { display: block; }
 
-  .form-success { display: none; text-align: center; padding: 40px 10px; }
-  .success-ic { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 22px;
+  .form-success { display: none; text-align: center; padding: 34px 10px; }
+  .success-ic { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 20px;
     background: var(--azure-10); border: 1px solid var(--line-2); }
-  .success-ic svg { width: 30px; height: 30px; color: var(--cyan); }
+  .success-ic svg { width: 28px; height: 28px; color: var(--cyan); }
   .form-success h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.4rem; margin-bottom: 10px; }
-  .form-success p { color: var(--muted); line-height: 1.7; }
+  .form-success p { color: var(--muted); line-height: 1.75; max-width: 46ch; margin: 0 auto; }
+  .success-fallback { margin-top: 26px; padding: 22px 24px; border-radius: 14px; background: var(--azure-06); border: 1px solid var(--line-2); text-align: left; }
+  .success-fallback .t { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+  .success-fallback p { font-size: 0.86rem; margin: 0 0 12px; max-width: none; }
+  .success-fallback a { color: var(--cyan); font-weight: 500; }
 
-  .side-card { padding: 26px 28px; margin-bottom: 12px; display: block; }
-  .side-card .ci-ic { width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center; margin-bottom: 16px; background: var(--azure-06); border: 1px solid var(--line); }
+  .side-card { padding: 24px 26px; margin-bottom: 12px; display: block; }
+  .side-card .ci-ic { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; margin-bottom: 14px; background: var(--azure-06); border: 1px solid var(--line); }
   .side-card .ci-ic svg { width: 18px; height: 18px; color: var(--cyan); }
   .side-card .lbl { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 6px; }
   .side-card .val { font-size: 1rem; font-weight: 600; color: var(--text); }
   .side-card .note { font-size: 0.8rem; color: var(--muted-2); margin-top: 4px; }
   a.side-card:hover .val { color: var(--cyan); }
 
-  .avail { padding: 24px 28px; background: var(--azure-06); border: 1px solid var(--line-2); border-left: 3px solid var(--azure); border-radius: 16px; margin-bottom: 12px; }
+  .avail { padding: 22px 26px; background: var(--azure-06); border: 1px solid var(--line-2); border-left: 3px solid var(--azure); border-radius: 16px; margin-bottom: 12px; }
   .avail .top { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
   .avail p { font-size: 0.86rem; color: var(--muted); line-height: 1.65; }
-  .expect { padding: 24px 28px; }
-  .expect .lbl { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; }
-  .expect .row { display: flex; align-items: center; gap: 12px; font-size: 0.86rem; color: var(--muted); padding: 6px 0; }
-  .expect .row b { font-family: var(--mono); color: var(--cyan); font-weight: 500; }
+  .expect { padding: 24px 26px; }
+  .expect .lbl { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 16px; }
+  .expect .row { display: flex; align-items: flex-start; gap: 12px; font-size: 0.87rem; color: var(--muted); padding: 7px 0; line-height: 1.6; }
+  .expect .row b { font-family: var(--mono); color: var(--cyan); font-weight: 500; flex-shrink: 0; }
 
   @media (max-width: 900px){ .contact-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="../"><div class="brand-mark"><span>BE</span></div><div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div></a>
-    <nav><ul class="nav-links">
+    <nav aria-label="Nawigacja główna"><ul class="nav-links">
       <li><a href="../uslugi/">Usługi</a></li>
       <li><a href="../proces/">Proces</a></li>
       <li><a href="../realizacje/">Realizacje</a></li>
       <li><a href="../o-mnie/">O mnie</a></li>
     </ul></nav>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-sm active" href="../kontakt/" data-magnetic>Darmowa wycena
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a class="btn btn-primary btn-sm" href="../kontakt/" aria-current="page" data-magnetic>Darmowa wycena
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a>
   <a class="btn btn-primary btn-block" href="../kontakt/">Darmowa wycena →</a>
 </div>
@@ -72,81 +90,98 @@
 <div class="page-hero">
   <div class="wrap">
     <div class="breadcrumb reveal"><a href="../">Start</a><span class="sep">/</span><span class="cur">Kontakt</span></div>
-    <h1 class="page-title reveal d1">Zacznijmy <span class="grad">współpracę</span></h1>
-    <p class="page-sub reveal d2">Pierwsza konsultacja i wycena są bezpłatne. Opisz swój projekt — odpiszę w ciągu 24 godzin.</p>
+    <h1 class="page-title reveal d1">Sprawdźmy, ile klientów <span class="grad">możesz pozyskać</span></h1>
+    <p class="page-sub reveal d2">Wystarczą dwa zdania o Twojej firmie. Odpowiadam w ciągu 24 godzin z konkretną oceną sytuacji — bezpłatnie i bez zobowiązań.</p>
   </div>
 </div>
 
-<main>
+<main id="main">
   <section class="section" style="padding-top:clamp(48px,7vw,80px)">
     <div class="wrap contact-grid">
       <!-- FORM -->
       <div class="card form-card reveal">
         <div id="formWrap">
-          <h2>Napisz do mnie</h2>
-          <p class="sub">Wypełnij formularz lub napisz bezpośrednio na <a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a></p>
+          <h2>Formularz kontaktowy</h2>
+          <p class="sub">Im więcej napiszesz, tym trafniejszą odpowiedź przygotuję. Wolisz krócej? Napisz bezpośrednio na <a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a> albo zadzwoń: <a href="tel:+48600555867">+48 600 555 867</a>.</p>
           <form id="contactForm" novalidate>
             <div class="field-row">
-              <div class="field"><label>Imię i nazwisko *</label><input type="text" placeholder="Jan Kowalski" required></div>
-              <div class="field"><label>Firma</label><input type="text" placeholder="Nazwa firmy"></div>
+              <div class="field"><label for="f-name">Imię i nazwisko *</label><input id="f-name" name="name" type="text" placeholder="Jan Kowalski" autocomplete="name" required><span class="err">Podaj imię, żebym wiedział, jak się do Ciebie zwracać.</span></div>
+              <div class="field"><label for="f-company">Firma</label><input id="f-company" name="company" type="text" placeholder="Nazwa firmy" autocomplete="organization"></div>
             </div>
             <div class="field-row">
-              <div class="field"><label>E-mail *</label><input type="email" placeholder="jan@firma.pl" required></div>
-              <div class="field"><label>Telefon</label><input type="tel" placeholder="+48 600 000 000"></div>
+              <div class="field"><label for="f-email">E-mail *</label><input id="f-email" name="email" type="email" placeholder="jan@firma.pl" autocomplete="email" required><span class="err">Podaj poprawny adres e-mail — na niego wyślę odpowiedź.</span></div>
+              <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" name="phone" type="tel" placeholder="+48 600 000 000" autocomplete="tel"><span class="hint">Opcjonalnie — jeśli wolisz rozmowę.</span></div>
             </div>
-            <div class="field"><label>Interesująca usługa *</label>
-              <select required>
-                <option value="" disabled selected>Wybierz usługę...</option>
-                <option>Płatne kampanie (Google Ads + Meta Ads)</option>
+            <div class="field"><label for="f-service">Co Cię interesuje? *</label>
+              <select id="f-service" name="service" required>
+                <option value="" disabled selected>Wybierz z listy...</option>
+                <option>Kampanie Google Ads i Meta Ads</option>
+                <option>Pozycjonowanie wizytówki Google (Mapy)</option>
                 <option>GEO / AIO — widoczność w AI</option>
-                <option>Pozycjonowanie wizytówki Google</option>
-                <option>Tworzenie strony internetowej</option>
+                <option>Strona internetowa lub landing page</option>
                 <option>Kompleksowe wsparcie marketingowe</option>
-                <option>Kilka usług naraz</option>
-                <option>Nie wiem — potrzebuję konsultacji</option>
+                <option>Nie wiem — potrzebuję doradztwa</option>
               </select>
+              <span class="err">Wybierz jedną z opcji.</span>
             </div>
-            <div class="field"><label>Miesięczny budżet reklamowy</label>
-              <select>
+            <div class="field"><label for="f-budget">Miesięczny budżet reklamowy</label>
+              <select id="f-budget" name="budget">
                 <option value="" disabled selected>Wybierz przedział...</option>
-                <option>Do 2 000 zł</option><option>2 000 – 5 000 zł</option><option>5 000 – 15 000 zł</option><option>15 000 – 50 000 zł</option><option>Powyżej 50 000 zł</option>
+                <option>Poniżej 2 000 zł</option>
+                <option>2 000 – 5 000 zł</option>
+                <option>5 000 – 15 000 zł</option>
+                <option>15 000 – 50 000 zł</option>
+                <option>Powyżej 50 000 zł</option>
+                <option>Jeszcze nie wiem</option>
               </select>
+              <span class="hint">To kwota trafiająca do Google/Meta — osobno od wynagrodzenia za obsługę. Rekomendowany start: 3 000–5 000 zł.</span>
             </div>
-            <div class="field"><label>Opisz swój projekt *</label><textarea placeholder="Czym zajmuje się Twoja firma? Jaki jest cel kampanii? Co już próbowałeś/aś? Im więcej napiszesz, tym trafniejszą propozycję przygotuję." required></textarea></div>
-            <label class="check"><input type="checkbox" required><span>Wyrażam zgodę na przetwarzanie danych osobowych w celu odpowiedzi na zapytanie. *</span></label>
-            <button type="submit" class="btn btn-primary btn-block">Wyślij wiadomość
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <div class="field"><label for="f-message">Opisz krótko swoją sytuację *</label>
+              <textarea id="f-message" name="message" placeholder="Czym zajmuje się Twoja firma? Skąd dziś przychodzą klienci? Co już próbowałeś/aś i co nie zadziałało?" required></textarea>
+              <span class="err">Napisz choć kilka słów o swojej firmie.</span>
+            </div>
+            <label class="check" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na zapytanie. *</span></label>
+            <button type="submit" class="btn btn-primary btn-block">Wyślij zapytanie
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <p class="form-note">* Pola wymagane · Odpowiadam w ciągu 24 godzin</p>
+            <p class="form-note">* Pola wymagane · Odpowiadam w ciągu 24 godzin w dni robocze</p>
           </form>
         </div>
-        <div class="form-success" id="formSuccess">
-          <div class="success-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <h3>Wiadomość wysłana!</h3>
-          <p>Dziękuję za kontakt. Odezwę się w ciągu 24 godzin na podany adres e-mail.<br>Do zobaczenia wkrótce.</p>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <div class="success-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Prawie gotowe — sprawdź program pocztowy</h3>
+          <p>Przygotowałem dla Ciebie gotową wiadomość z wypełnionymi danymi. Otworzyła się w Twoim programie pocztowym — wystarczy, że klikniesz „Wyślij”.</p>
+          <div class="success-fallback">
+            <div class="t">Nic się nie otworzyło?</div>
+            <p>Skopiuj treść poniżej i wyślij ręcznie na <a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a>, albo po prostu zadzwoń: <a href="tel:+48600555867">+48 600 555 867</a>.</p>
+            <div class="field" style="margin:0"><textarea id="mailFallback" readonly style="min-height:150px;font-size:0.82rem"></textarea></div>
+            <div class="mt-s"><a class="btn btn-ghost btn-sm" id="mailRetry" href="#">Otwórz ponownie w programie pocztowym</a></div>
+          </div>
         </div>
       </div>
 
       <!-- SIDEBAR -->
       <aside class="reveal d2">
         <a href="mailto:scaleert@gmail.com" class="card side-card">
-          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           <div class="lbl">E-mail</div><div class="val">scaleert@gmail.com</div><div class="note">Najszybszy sposób kontaktu</div>
         </a>
         <a href="tel:+48600555867" class="card side-card">
-          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.27-.85a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 17z"/></svg></div>
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.27-.85a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 17z"/></svg></div>
           <div class="lbl">Telefon</div><div class="val">+48 600 555 867</div><div class="note">Pon–Pt, 9:00 – 17:00</div>
         </a>
         <div class="avail">
-          <div class="top"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)"></span>Dostępny do projektów</div>
-          <p>Aktualnie przyjmuję nowych klientów. Wolne miejsca są ograniczone — nie odkładaj kontaktu na później.</p>
+          <div class="top"><span style="width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)"></span>Przyjmuję nowych klientów</div>
+          <p>Pracuję z ograniczoną liczbą projektów jednocześnie, żeby każdy dostawał realną uwagę. Aktualnie mam wolne miejsce.</p>
         </div>
         <div class="card expect">
-          <div class="lbl">Czego możesz się spodziewać</div>
-          <div class="row"><b>01</b> Odpowiedź w ciągu 24h</div>
-          <div class="row"><b>02</b> Bezpłatna konsultacja 30–60 min</div>
-          <div class="row"><b>03</b> Indywidualna propozycja i wycena</div>
-          <div class="row"><b>04</b> Brak zobowiązań — decyzja należy do Ciebie</div>
+          <div class="lbl">Co się stanie po wysłaniu</div>
+          <div class="row"><b>01</b><span>Odpowiadam w ciągu 24 godzin w dni robocze</span></div>
+          <div class="row"><b>02</b><span>Krótka rozmowa: 30–60 min, zdalnie lub telefonicznie</span></div>
+          <div class="row"><b>03</b><span>Audyt kont i szczera ocena, czy reklama Ci się opłaci</span></div>
+          <div class="row"><b>04</b><span>Propozycja z zakresem, ceną i mierzonymi wskaźnikami</span></div>
+          <div class="row"><b>05</b><span>Decyzja należy do Ciebie — bez zobowiązań i nacisków</span></div>
         </div>
       </aside>
     </div>
@@ -156,9 +191,10 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
-      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a></div>
-      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a><a href="../kontakt/">Formularz kontaktowy</a></div>
+      <div class="footer-brand"><b>Bartłomiej Ert</b><p>Kampanie Google Ads i Meta Ads rozliczane z kosztu pozyskania klienta. Dla firm, które chcą znać liczby.</p><div class="mt-s"><a class="btn btn-primary btn-sm" href="../kontakt/">Darmowa wycena →</a></div></div>
+      <div class="footer-col"><h4>Nawigacja</h4><a href="../uslugi/">Usługi</a><a href="../proces/">Proces</a><a href="../realizacje/">Realizacje</a><a href="../o-mnie/">O mnie</a><a href="../kontakt/">Kontakt</a></div>
+      <div class="footer-col"><h4>Kontakt</h4><a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a>
+        <p style="font-size:0.8rem;color:var(--muted-2);margin-top:10px;line-height:1.6">Pon–Pt, 9:00–17:00<br>Praca zdalna, cała Polska</p></div>
     </div>
     <div class="footer-bottom">
       <span>© <span data-year>2025</span> Bartłomiej Ert <span class="footer-dot">//</span> Marketing Strategiczny</span>

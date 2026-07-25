@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nie znaleziono strony (404) — Bartłomiej Ert</title>
+<meta name="description" content="Ta strona nie istnieje lub została przeniesiona. Wróć na stronę główną albo napisz bezpośrednio.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/claude-Portfolio23/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/claude-Portfolio23/style.css" id="cssLink">
+<style>
+  .nf { min-height: 100vh; display: grid; place-items: center; padding: 60px 0; text-align: center; }
+  .nf-code { font-family: var(--ff-disp); font-weight: 700; font-size: clamp(5rem, 18vw, 11rem); line-height: 1; letter-spacing: -0.05em;
+    background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .nf h1 { font-family: var(--ff-disp); font-weight: 600; font-size: clamp(1.5rem, 4vw, 2.3rem); letter-spacing: -0.02em; margin: 10px 0 16px; }
+  .nf p { color: var(--muted); max-width: 46ch; margin: 0 auto 32px; line-height: 1.75; }
+  .nf-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .nf-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .nf-nav a { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; transition: color .25s, border-color .25s; }
+  .nf-nav a:hover { color: var(--cyan); border-color: var(--cyan); }
+</style>
+</head>
+<body>
+<main class="nf">
+  <div class="wrap">
+    <div class="nf-code">404</div>
+    <h1>Tej strony tu nie ma</h1>
+    <p>Adres jest nieprawidłowy albo strona została przeniesiona. Poniżej znajdziesz najważniejsze sekcje — albo napisz do mnie bezpośrednio.</p>
+    <div class="nf-links">
+      <a class="btn btn-primary" id="lHome" href="/claude-Portfolio23/">Wróć na stronę główną</a>
+      <a class="btn btn-ghost" href="mailto:scaleert@gmail.com">scaleert@gmail.com</a>
+    </div>
+    <div class="nf-nav">
+      <a id="lUslugi" href="/claude-Portfolio23/uslugi/">Usługi</a>
+      <a id="lProces" href="/claude-Portfolio23/proces/">Proces</a>
+      <a id="lReal" href="/claude-Portfolio23/realizacje/">Realizacje</a>
+      <a id="lAbout" href="/claude-Portfolio23/o-mnie/">O mnie</a>
+      <a id="lKontakt" href="/claude-Portfolio23/kontakt/">Kontakt</a>
+    </div>
+  </div>
+</main>
+
+<script>
+/* Ustala poprawną ścieżkę bazową: działa zarówno na GitHub Pages
+   (/claude-Portfolio23/) jak i po podpięciu własnej domeny (/). */
+(function () {
+  var seg = location.pathname.split('/').filter(Boolean)[0];
+  var base = (seg && seg !== 'uslugi' && seg !== 'proces' && seg !== 'realizacje' && seg !== 'o-mnie' && seg !== 'kontakt')
+    ? '/' + seg + '/' : '/';
+  var map = { lHome: '', lUslugi: 'uslugi/', lProces: 'proces/', lReal: 'realizacje/', lAbout: 'o-mnie/', lKontakt: 'kontakt/' };
+  Object.keys(map).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.href = base + map[id];
+  });
+  var css = document.getElementById('cssLink');
+  if (css) css.href = base + 'style.css';
+})();
+</script>
+</body>
+</html>

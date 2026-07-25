@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bartłomiej Ert — Marketing, który generuje wyniki</title>
-<meta name="description" content="Freelancer marketingu strategicznego: Google Ads, Meta Ads, GEO/AIO i pozycjonowanie wizytówki Google. Kampanie nastawione na wynik — bez przepalania budżetu.">
+<title>Bartłomiej Ert — Więcej klientów z Google i Meta Ads</title>
+<meta name="description" content="Prowadzę kampanie Google Ads i Meta Ads rozliczane z kosztu pozyskania klienta. Ostatni wynik: 45 konwersji miesięcznie po 47,71 zł. Darmowa wycena w 24h.">
+<link rel="canonical" href="https://hustlerguy.github.io/claude-Portfolio23/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Bartłomiej Ert">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Bartłomiej Ert — Marketing Strategiczny">
+<meta property="og:title" content="Bartłomiej Ert — Więcej klientów z Google i Meta Ads">
+<meta property="og:description" content="Kampanie reklamowe rozliczane z kosztu pozyskania klienta. Ostatni wynik: 45 konwersji miesięcznie po 47,71 zł. Darmowa wycena w 24h.">
+<meta property="og:url" content="https://hustlerguy.github.io/claude-Portfolio23/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bartłomiej Ert — Więcej klientów z Google i Meta Ads">
+<meta name="twitter:description" content="Kampanie reklamowe rozliczane z kosztu pozyskania klienta. Darmowa wycena w 24h.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,10 +34,7 @@
     background: radial-gradient(420px circle at var(--sx,70%) var(--sy,30%), var(--azure-10), transparent 60%);
     opacity: .9; transition: background .2s;
   }
-  .hero-bento {
-    display: grid; grid-template-columns: 1.55fr 1fr; grid-auto-rows: minmax(0, auto);
-    gap: 16px; align-items: stretch;
-  }
+  .hero-bento { display: grid; grid-template-columns: 1.55fr 1fr; gap: 16px; align-items: stretch; }
   .hero-main {
     position: relative; overflow: hidden; border-radius: 28px; padding: clamp(30px, 4vw, 52px);
     background: linear-gradient(160deg, rgba(16,35,60,0.7), rgba(6,11,22,0.6));
@@ -31,91 +44,75 @@
     background: var(--grad-brand); opacity: .35;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
   .hero-h1 {
-    font-family: var(--ff-disp); font-weight: 600; letter-spacing: -0.04em; line-height: 0.98;
-    font-size: clamp(2.6rem, 6.4vw, 5.2rem); margin: 26px 0 22px; color: var(--text);
+    font-family: var(--ff-disp); font-weight: 600; letter-spacing: -0.04em; line-height: 1.0;
+    font-size: clamp(2.4rem, 5.6vw, 4.4rem); margin: 24px 0 20px; color: var(--text);
   }
-  .hero-h1 .grad { display: inline-block; }
-  .hero-copy { font-size: 1.08rem; color: var(--text-soft); max-width: 46ch; line-height: 1.7; font-weight: 300; }
+  .hero-copy { font-size: 1.08rem; color: var(--text-soft); max-width: 50ch; line-height: 1.7; font-weight: 300; }
   .hero-copy b { color: var(--text); font-weight: 600; }
-  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
-  .hero-trust { display: flex; align-items: center; gap: 18px; margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-  .hero-trust .chip { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
-  .hero-trust .chip svg { width: 15px; height: 15px; color: var(--cyan); }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .hero-trust { display: flex; align-items: center; gap: 18px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+  .hero-trust .chip { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+  .hero-trust .chip svg { width: 15px; height: 15px; color: var(--cyan); flex-shrink: 0; }
 
   .hero-side { display: grid; grid-template-rows: auto 1fr; gap: 16px; }
-  .hero-panel { position: relative; overflow: hidden; border-radius: 24px; padding: 26px; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.006)); border: 1px solid var(--line); }
-  .hero-live { display: flex; align-items: center; justify-content: space-between; }
-  .hero-live .metric-val { font-size: 2.6rem; }
-  .ring { width: 62px; height: 62px; }
-  .ring circle { fill: none; stroke-width: 6; }
-  .ring .bg { stroke: var(--line-2); }
-  .ring .fg { stroke: url(#rg); stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; stroke-dasharray: 163; stroke-dashoffset: 40; }
+  .hero-result {
+    position: relative; overflow: hidden; border-radius: 24px; padding: 28px;
+    background: linear-gradient(150deg, rgba(77,159,255,0.16), rgba(6,11,22,0.5)); border: 1px solid var(--line-2);
+  }
+  .hero-result .cap { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); }
+  .hero-result .big { font-family: var(--ff-disp); font-weight: 700; font-size: clamp(2.4rem,4.5vw,3.2rem); line-height: 1; margin: 14px 0 6px;
+    background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-result .desc { font-size: 0.92rem; color: var(--text-soft); font-weight: 500; }
+  .hero-result .note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; line-height: 1.6; }
 
   .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: start; }
   .hstat { border-radius: 20px; padding: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.006)); border: 1px solid var(--line); }
-  .hstat .metric-val { font-size: clamp(1.7rem, 3vw, 2.3rem); }
-  .hstat.feature { grid-column: span 2; display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    background: linear-gradient(135deg, rgba(77,159,255,0.14), rgba(56,224,240,0.05)); border-color: var(--line-2); }
-  .hstat.feature p { font-size: 0.86rem; color: var(--text-soft); max-width: 22ch; }
-
-  /* ── LOGO ROW ── */
-  .marq-cap { text-align: center; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 22px; }
+  .hstat .metric-val { font-size: clamp(1.6rem, 2.8vw, 2.1rem); }
+  .hstat.feature { grid-column: span 2; background: rgba(255,255,255,0.02); }
+  .hstat.feature .metric-lbl { margin-top: 6px; }
 
   /* ── SERVICES ── */
   .svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .svc { padding: 34px 32px 30px; position: relative; }
+  .svc { padding: 34px 32px 30px; position: relative; display: flex; flex-direction: column; }
   .svc-num { position: absolute; top: 26px; right: 30px; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; color: var(--muted-2); }
-  .svc-ic { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 22px;
+  .svc-ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 20px;
     background: var(--azure-06); border: 1px solid var(--line); transition: background .35s, border-color .35s, transform .35s var(--ease); }
-  .svc-ic svg { width: 25px; height: 25px; color: var(--cyan); }
+  .svc-ic svg { width: 24px; height: 24px; color: var(--cyan); }
   .svc:hover .svc-ic { background: var(--azure-14); border-color: var(--line-2); transform: translateY(-3px); }
-  .svc h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.25rem; margin-bottom: 10px; letter-spacing: -0.01em; }
-  .svc p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 22px; }
+  .svc h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.22rem; margin-bottom: 10px; letter-spacing: -0.01em; }
+  .svc p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px; }
+  .svc .forwho { font-size: 0.85rem; color: var(--text-soft); padding: 12px 14px; border-radius: 10px;
+    background: rgba(255,255,255,0.02); border-left: 2px solid var(--azure); margin-bottom: 18px; }
+  .svc .forwho b { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); display: block; margin-bottom: 4px; }
+  .svc .tags { margin-top: auto; }
 
-  /* ── ABOUT PREVIEW ── */
-  .about-wrap { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: center; }
-  .about-card { position: relative; border-radius: 24px; overflow: hidden; padding: 44px; background: linear-gradient(160deg, rgba(16,35,60,0.6), rgba(6,11,22,0.6)); border: 1px solid var(--line-2); }
-  .about-glyph { font-family: var(--ff-disp); font-weight: 700; font-size: 7rem; line-height: 1; letter-spacing: -0.05em; opacity: 0.14; }
-  .about-card h3 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.7rem; margin-top: -14px; }
-  .about-card .role { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
-  .about-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-  .about-float { position: absolute; right: 20px; bottom: 20px; }
-  .about-body p { color: var(--muted); line-height: 1.85; margin-bottom: 16px; font-size: 0.98rem; }
-  .about-body b { color: var(--text); font-weight: 500; }
-  .about-mini { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 30px; }
-  .about-mini .box { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; background: rgba(255,255,255,0.012); }
-
-  /* ── PROCESS PREVIEW ── */
+  /* ── PROCESS ── */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .step { padding: 30px 28px; position: relative; }
+  .step { padding: 30px 28px; }
   .step .n { font-family: var(--ff-disp); font-weight: 700; font-size: 1.5rem;
     background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
   .step h4 { font-family: var(--ff-disp); font-weight: 600; font-size: 1.12rem; margin: 14px 0 8px; }
   .step p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+  .step .when { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-top: 14px; }
 
   @media (max-width: 960px) {
     .hero-bento { grid-template-columns: 1fr; }
-    .about-wrap { grid-template-columns: 1fr; gap: 32px; }
     .svc-grid, .steps { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
     .hero { padding: calc(var(--nav-h) + 26px) 0 20px; }
     .hero-main { padding: 24px 20px; border-radius: 22px; }
-    .hero-h1 { font-size: clamp(2.1rem, 10vw, 3rem); margin: 16px 0 14px; }
+    .hero-h1 { font-size: clamp(2rem, 9.5vw, 2.8rem); margin: 16px 0 14px; }
     .hero-copy { font-size: 1rem; }
-    .hero-trust { gap: 10px 16px; margin-top: 26px; padding-top: 20px; }
-    .hero-live .metric-val { font-size: 2.1rem; }
+    .hero-trust { gap: 10px 16px; margin-top: 24px; padding-top: 20px; }
     .hero-stats { grid-template-columns: 1fr 1fr; }
-    .hstat.feature { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .hstat.feature p { max-width: none; }
     .svc { padding: 26px 22px 24px; }
-    .svc h3 { font-size: 1.15rem; }
-    .about-card { padding: 30px 24px; }
-    .about-glyph { font-size: 5rem; }
   }
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Przejdź do treści</a>
 
 <!-- NAV -->
 <header class="nav">
@@ -124,7 +121,7 @@
       <div class="brand-mark"><span>BE</span></div>
       <div class="brand-text"><b>Bartłomiej Ert</b><small>Marketing Strategiczny</small></div>
     </a>
-    <nav>
+    <nav aria-label="Nawigacja główna">
       <ul class="nav-links">
         <li><a href="uslugi/">Usługi</a></li>
         <li><a href="proces/">Proces</a></li>
@@ -134,13 +131,13 @@
     </nav>
     <div class="nav-actions">
       <a class="btn btn-primary btn-sm" href="kontakt/" data-magnetic>Darmowa wycena
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav-burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="uslugi/">Usługi</a>
   <a href="proces/">Proces</a>
   <a href="realizacje/">Realizacje</a>
@@ -148,60 +145,49 @@
   <a class="btn btn-primary btn-block" href="kontakt/">Darmowa wycena →</a>
 </div>
 
-<main>
+<main id="main">
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-spot" data-spotlight>
       <div class="hero-bento">
         <div class="hero-main reveal">
           <div>
-            <span class="pill"><span class="dot"></span>Dostępny do nowych projektów</span>
-            <h1 class="hero-h1">Marketing, który<br><span class="grad">generuje wyniki</span></h1>
-            <p class="hero-copy">Płatne kampanie w social mediach, Google Search Ads i kompleksowe wsparcie strategiczne. Pomagam firmom rosnąć — <b>bez przepalania budżetu</b>.</p>
+            <span class="pill"><span class="dot"></span>Przyjmuję nowych klientów</span>
+            <h1 class="hero-h1">Więcej klientów<br>z Google i Meta.<br><span class="grad">Bez przepalania budżetu.</span></h1>
+            <p class="hero-copy">Prowadzę kampanie reklamowe rozliczane z jednej liczby, która ma znaczenie: <b>kosztu pozyskania klienta</b>. Dostajesz jasny plan, cotygodniową optymalizację i raport, który zrozumiesz bez tłumacza.</p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="kontakt/" data-magnetic>Darmowa wycena
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <a class="btn btn-primary" href="kontakt/" data-magnetic>Darmowa wycena w 24h
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-              <a class="btn btn-ghost" href="realizacje/">Zobacz realizacje</a>
+              <a class="btn btn-ghost" href="realizacje/">Zobacz wyniki klienta</a>
             </div>
           </div>
           <div class="hero-trust">
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Odpowiedź w 24h</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>Meta &amp; Google Cert.</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-5"/></svg>Rozliczenie z wyników</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Odpowiedź w 24h</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>Konta zawsze Twoje</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></svg>Raport co miesiąc</span>
           </div>
         </div>
 
         <aside class="hero-side">
-          <div class="hero-panel reveal d2">
-            <span class="metric-lbl" style="margin-top:0">Fokus współpracy</span>
-            <div class="hero-live" style="margin-top:14px">
-              <div>
-                <div class="metric-val" data-count="100" data-suffix="%">0%</div>
-                <div class="metric-lbl">Zaangażowania w projekt</div>
-              </div>
-              <svg class="ring" viewBox="0 0 60 60" aria-hidden="true">
-                <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4d9fff"/><stop offset="1" stop-color="#38e0f0"/></linearGradient></defs>
-                <circle class="bg" cx="30" cy="30" r="26"/>
-                <circle class="fg" cx="30" cy="30" r="26"/>
-              </svg>
-            </div>
+          <div class="hero-result reveal d2">
+            <div class="cap">Realny wynik klienta · Google Ads</div>
+            <div class="big" data-count="47.71" data-suffix=" zł">0 zł</div>
+            <div class="desc">Koszt pozyskania jednego klienta</div>
+            <p class="note">45 konwersji w miesiącu przy budżecie 120 zł/dzień. Branża: usługi sprzątające.</p>
           </div>
           <div class="hero-stats reveal d3">
             <div class="hstat">
-              <div class="metric-val" data-count="5" data-suffix="">0</div>
-              <div class="metric-lbl">Kluczowe usługi</div>
+              <div class="metric-val" data-count="8.4" data-suffix="×">0×</div>
+              <div class="metric-lbl">Zwrot z wydatków (ROAS)</div>
             </div>
             <div class="hstat">
-              <div class="metric-val" data-count="24" data-suffix="h">0</div>
-              <div class="metric-lbl">Czas odpowiedzi</div>
+              <div class="metric-val" data-count="431" data-suffix="">0</div>
+              <div class="metric-lbl">Kliknięć w miesiącu</div>
             </div>
             <div class="hstat feature">
-              <div>
-                <div class="metric-val" style="font-size:2rem">Data-driven</div>
-                <div class="metric-lbl">Decyzje na liczbach, nie opiniach</div>
-              </div>
-              <p>Każda kampania projektowana od zera pod konkretne KPI.</p>
+              <div class="metric-val" style="font-size:1.5rem">Rekord: 15 zł / klient</div>
+              <div class="metric-lbl">Najlepszy okres kampanii — dane z panelu Google Ads</div>
             </div>
           </div>
         </aside>
@@ -212,101 +198,236 @@
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span class="ticker-item">Meta Ads</span><span class="ticker-item">Google Search Ads</span><span class="ticker-item">GEO / AIO</span><span class="ticker-item">Performance Marketing</span><span class="ticker-item">Retargeting</span><span class="ticker-item">Wizytówka Google</span><span class="ticker-item">GA4</span><span class="ticker-item">Landing Pages</span>
-      <span class="ticker-item">Meta Ads</span><span class="ticker-item">Google Search Ads</span><span class="ticker-item">GEO / AIO</span><span class="ticker-item">Performance Marketing</span><span class="ticker-item">Retargeting</span><span class="ticker-item">Wizytówka Google</span><span class="ticker-item">GA4</span><span class="ticker-item">Landing Pages</span>
+      <span class="ticker-item">Google Ads</span><span class="ticker-item">Meta Ads</span><span class="ticker-item">GEO / AIO</span><span class="ticker-item">Wizytówka Google</span><span class="ticker-item">Retargeting</span><span class="ticker-item">GA4</span><span class="ticker-item">Landing Pages</span><span class="ticker-item">Lokalne SEO</span>
+      <span class="ticker-item">Google Ads</span><span class="ticker-item">Meta Ads</span><span class="ticker-item">GEO / AIO</span><span class="ticker-item">Wizytówka Google</span><span class="ticker-item">Retargeting</span><span class="ticker-item">GA4</span><span class="ticker-item">Landing Pages</span><span class="ticker-item">Lokalne SEO</span>
     </div>
   </div>
 
-  <!-- SERVICES -->
+  <!-- PROBLEM -->
   <section class="section">
     <div class="wrap">
-      <div class="reveal" style="max-width:640px">
+      <div class="reveal" style="max-width:660px">
+        <div class="kicker"><span>Punkt wyjścia</span></div>
+        <h2 class="h-sec">Jeśli któreś z tych zdań brzmi <span class="grad">znajomo</span></h2>
+        <p class="sub-sec">To najczęstsze powody, dla których firmy zgłaszają się do mnie po pierwszej, nieudanej przygodzie z reklamą.</p>
+      </div>
+      <div class="pain-grid mt-l">
+        <div class="pain reveal d1"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p>„Wydaję pieniądze na reklamy, ale <strong>nie wiem, co z tego mam</strong>.”</p></div>
+        <div class="pain reveal d2"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p>„Agencja przysyła raporty, których <strong>nie rozumiem</strong> — i nikt mi ich nie tłumaczy.”</p></div>
+        <div class="pain reveal d1"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p>„Mam telefony i zapytania, ale <strong>od osób poza moim rynkiem</strong>.”</p></div>
+        <div class="pain reveal d2"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p>„Konkurencja jest wyżej w Google, a ja <strong>nie wiem, gdzie zacząć</strong>.”</p></div>
+      </div>
+      <div class="pain-answer reveal">
+        <p>Każdy z tych problemów sprowadza się do jednego: <b>brak mierzenia i brak jasnej komunikacji</b>. Zaczynam od ustawienia poprawnego pomiaru konwersji, a potem podejmuję decyzje wyłącznie na liczbach — i tłumaczę je zwykłym językiem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="reveal" style="max-width:660px">
         <div class="kicker"><span>Usługi</span></div>
-        <h2 class="h-sec">Specjalizacje, które <span class="grad">realnie sprzedają</span></h2>
-        <p class="sub-sec">Skupiam się na kanałach, które przynoszą klientów — a nie na wszystkim naraz. Głęboka ekspertyza tam, gdzie to ma znaczenie.</p>
+        <h2 class="h-sec">Cztery sposoby, żeby <span class="grad">klienci Cię znaleźli</span></h2>
+        <p class="sub-sec">Nie robię wszystkiego. Skupiam się na kanałach, w których potrafię pokazać konkretny zwrot z wydanych pieniędzy.</p>
       </div>
 
       <div class="svc-grid mt-l">
-        <article class="card svc reveal d1" data-tilt="5">
+        <article class="card svc reveal d1" data-tilt="4">
           <span class="svc-num">001</span>
-          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
-          <h3>Płatne kampanie reklamowe</h3>
-          <p>Google Ads i Meta Ads w jednym miejscu — główne kanały, na których buduję sprzedaż i leady z mierzalnym zwrotem.</p>
+          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+          <h3>Płatne kampanie: Google + Meta</h3>
+          <p>Docieram do ludzi, którzy szukają Twojej usługi teraz (Google) oraz do tych, którzy jeszcze o Tobie nie wiedzą (Meta). Rozliczenie z kosztu pozyskania klienta.</p>
+          <div class="forwho"><b>Dla kogo</b>Firmy usługowe, e-commerce i B2B, które chcą przewidywalnego strumienia zapytań.</div>
           <div class="tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">Retargeting</span></div>
         </article>
-        <article class="card svc reveal d2" data-tilt="5">
+
+        <article class="card svc reveal d2" data-tilt="4">
           <span class="svc-num">002</span>
-          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.6 1.6L21 17l-1.4.4L19 19l-.6-1.6L17 17l1.4-.4L19 15z"/></svg></div>
-          <h3>GEO / AIO</h3>
-          <p>Widoczność Twojej marki w wyszukiwarkach AI — ChatGPT, Google AI Overviews, Gemini. Nowy kanał pozyskiwania klientów.</p>
-          <div class="tags"><span class="tag">ChatGPT</span><span class="tag">AI Overviews</span><span class="tag">Schema</span></div>
-        </article>
-        <article class="card svc reveal d1" data-tilt="5">
-          <span class="svc-num">003</span>
-          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>Pozycjonowanie wizytówki Google</h3>
-          <p>Optymalizacja profilu firmy w Mapach Google i lokalnych wynikach — najtańsze źródło realnych, lokalnych klientów.</p>
+          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Wizytówka Google (Mapy)</h3>
+          <p>Wyprowadzam profil firmy na czołowe pozycje w Mapach i lokalnych wynikach. Zwykle najtańsze źródło klientów z okolicy — działa też bez budżetu reklamowego.</p>
+          <div class="forwho"><b>Dla kogo</b>Firmy lokalne i usługowe obsługujące klientów z konkretnego miasta lub regionu.</div>
           <div class="tags"><span class="tag">Google Maps</span><span class="tag">Lokalne SEO</span><span class="tag">Opinie</span></div>
         </article>
-        <article class="card svc reveal d2" data-tilt="5">
+
+        <article class="card svc reveal d1" data-tilt="4">
+          <span class="svc-num">003</span>
+          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.6 1.6L21 17l-1.4.4L19 19l-.6-1.6L17 17l1.4-.4L19 15z"/></svg></div>
+          <h3>GEO / AIO — widoczność w AI</h3>
+          <p>Coraz więcej osób pyta o polecenia ChatGPT czy Google AI, zamiast przeglądać wyniki. Układam treści i dane tak, aby modele AI polecały właśnie Twoją firmę.</p>
+          <div class="forwho"><b>Dla kogo</b>Marki, które chcą zająć nowy kanał, zanim zrobi to konkurencja.</div>
+          <div class="tags"><span class="tag">ChatGPT</span><span class="tag">AI Overviews</span><span class="tag">Schema</span></div>
+        </article>
+
+        <article class="card svc reveal d2" data-tilt="4">
           <span class="svc-num">004</span>
-          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <h3>Tworzenie stron internetowych</h3>
-          <p>Nowoczesne strony i landing page'e zoptymalizowane pod konwersję, szybkość i SEO — fundament każdej kampanii.</p>
+          <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Strony i landing page'e</h3>
+          <p>Najlepsza kampania nie pomoże, jeśli strona nie zamienia wejść w zapytania. Buduję szybkie strony nastawione na jeden cel: kontakt od klienta.</p>
+          <div class="forwho"><b>Dla kogo</b>Firmy bez strony, z przestarzałą witryną lub potrzebujące landingu pod kampanię.</div>
           <div class="tags"><span class="tag">Landing</span><span class="tag">WordPress</span><span class="tag">SEO on-site</span></div>
         </article>
       </div>
 
       <div class="center mt-l reveal">
-        <a class="btn btn-ghost" href="uslugi/">Wszystkie usługi
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <a class="btn btn-ghost" href="uslugi/">Zobacz pełny zakres i co dostajesz
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="section section-alt">
-    <div class="wrap about-wrap">
-      <div class="about-card reveal" data-tilt="6">
-        <div class="about-glyph grad">BE</div>
-        <h3>Bartłomiej Ert</h3>
-        <div class="role">Marketing Strategist &amp; Paid Ads</div>
-        <div class="about-badges">
-          <span class="tag">Meta Blueprint</span><span class="tag">Google Ads Cert.</span><span class="tag">Freelancer</span><span class="tag">Remote / PL</span>
-        </div>
-        <span class="pill about-float"><span class="dot"></span>Wolne miejsca</span>
+  <!-- CASE HIGHLIGHT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal" style="max-width:660px">
+        <div class="kicker"><span>Dowód</span></div>
+        <h2 class="h-sec">Liczby z prawdziwego <span class="grad">panelu reklamowego</span></h2>
+        <p class="sub-sec">Nie pokazuję wykresów „poglądowych”. Każdy wynik da się zweryfikować na zrzucie ekranu z konta klienta.</p>
       </div>
-      <div>
-        <div class="kicker reveal"><span>Kim jestem</span></div>
-        <h2 class="h-sec reveal">Partner do wzrostu, <span class="grad">nie kolejna agencja</span></h2>
-        <div class="about-body reveal d1">
-          <p>Jestem freelancerem specjalizującym się w <b>płatnych kampaniach reklamowych i marketingu strategicznym</b>. Pomagam firmom e-commerce, B2B i usługowym przyciągać klientów przez Google Ads, Meta Ads oraz działania GEO/AIO.</p>
-          <p>Nie wierzę w szablony. Każda firma ma inne cele, rynek i budżet — dlatego <b>każda kampania jest projektowana od zera</b>, z myślą o konkretnych liczbach do osiągnięcia.</p>
+      <div class="case-hl mt-l reveal">
+        <div>
+          <span class="pill"><span class="dot"></span>Kampania aktywna</span>
+          <h3 style="margin-top:18px">Firma sprzątająca:<br><span class="grad">45 klientów miesięcznie</span></h3>
+          <p class="lead">Wyzwanie: konkurencyjny rynek lokalny i <b>ograniczony budżet 120 zł dziennie</b>. Zamiast szerokiego zasięgu postawiłem na wąskie słowa kluczowe o wysokiej intencji zakupowej i konsekwentną optymalizację stawek. Efekt: stabilny strumień zapytań przy koszcie, który mieści się w marży klienta.</p>
+          <div class="hl-metrics">
+            <div class="hl-m"><div class="v">47,71 zł</div><div class="l">Koszt / klienta</div></div>
+            <div class="hl-m"><div class="v">45</div><div class="l">Konwersje / mies.</div></div>
+            <div class="hl-m"><div class="v">8,4×</div><div class="l">ROAS w miesiącu</div></div>
+            <div class="hl-m"><div class="v">15 zł</div><div class="l">Rekordowy koszt</div></div>
+          </div>
+          <div class="mt-m"><a class="btn btn-primary" href="realizacje/" data-magnetic>Zobacz zrzuty ekranu →</a></div>
         </div>
-        <div class="about-mini reveal d2">
-          <div class="box"><div class="metric-val" style="font-size:1.7rem">Transparentność</div><div class="metric-lbl">Zawsze wiesz, co dzieje się z budżetem</div></div>
-          <div class="box"><div class="metric-val" style="font-size:1.7rem">Szybkość</div><div class="metric-lbl">Odpowiedź w ciągu dnia roboczego</div></div>
+        <div>
+          <div class="deliver-box">
+            <div class="t">Co zrobiłem krok po kroku</div>
+            <ul class="deliver">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Poprawne mierzenie konwersji (wcześniej brak wiarygodnych danych)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Zawężenie słów kluczowych do zapytań z realną intencją zakupu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Wykluczenia fraz, które generowały kliknięcia bez zapytań</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Nowe teksty reklam nastawione na kontakt, nie na „wizerunek”</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cotygodniowa korekta stawek i budżetu pod najlepsze godziny</li>
+            </ul>
+          </div>
         </div>
-        <div class="mt-m reveal d3"><a class="btn btn-ghost" href="o-mnie/">Poznaj mnie lepiej →</a></div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS PREVIEW -->
+  <!-- COMMITMENTS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="reveal" style="max-width:660px">
+        <div class="kicker"><span>Zasady współpracy</span></div>
+        <h2 class="h-sec">Sześć rzeczy, których <span class="grad">możesz być pewien</span></h2>
+        <p class="sub-sec">To nie marketingowe obietnice, a warunki, które zapisujemy w umowie.</p>
+      </div>
+      <div class="commit-grid mt-l">
+        <div class="commit reveal d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h4>Odpowiedź w 24 godziny</h4>
+          <p>W dni robocze odpisuję w ciągu jednego dnia. Nie znikam na tygodnie bez kontaktu.</p>
+        </div>
+        <div class="commit reveal d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h4>Konta zawsze należą do Ciebie</h4>
+          <p>Kampanie tworzę na Twoich kontach. Po zakończeniu współpracy zostają u Ciebie wraz z całą historią danych.</p>
+        </div>
+        <div class="commit reveal d3">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h4>Raport, który zrozumiesz</h4>
+          <p>Co miesiąc dostajesz podsumowanie bez żargonu: ile wydaliśmy, ile klientów przyszło, co robimy dalej.</p>
+        </div>
+        <div class="commit reveal d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-5"/></svg></div>
+          <h4>Optymalizacja co tydzień</h4>
+          <p>Kampanie nie stoją „na autopilocie”. Co tydzień wchodzę na konto i wprowadzam korekty.</p>
+        </div>
+        <div class="commit reveal d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <h4>Brak ukrytych kosztów</h4>
+          <p>Jedna stawka za obsługę i osobno Twój budżet reklamowy, który idzie w całości do Google lub Meta.</p>
+        </div>
+        <div class="commit reveal d3">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h4>Uczciwa ocena na starcie</h4>
+          <p>Jeśli uznam, że reklama Ci się nie opłaci, powiem to od razu — zamiast brać zlecenie na siłę.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATION -->
   <section class="section">
     <div class="wrap">
-      <div class="reveal" style="max-width:640px">
+      <div class="reveal" style="max-width:660px">
+        <div class="kicker"><span>Dopasowanie</span></div>
+        <h2 class="h-sec">Sprawdź, czy <span class="grad">do siebie pasujemy</span></h2>
+        <p class="sub-sec">Wolę powiedzieć „nie” na początku niż rozczarować po trzech miesiącach. Poniżej szczerze: kiedy warto się odezwać, a kiedy nie.</p>
+      </div>
+      <div class="fit-grid mt-l">
+        <div class="fit yes reveal d1">
+          <div class="head">
+            <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Będzie nam się dobrze pracowało, jeśli…</h3>
+          </div>
+          <ul>
+            <li>Masz działającą usługę lub produkt i klientów, którzy już Ci płacą</li>
+            <li>Możesz przeznaczyć minimum 2 000 zł miesięcznie na sam budżet reklamowy</li>
+            <li>Traktujesz marketing jako inwestycję na miesiące, nie test na dwa tygodnie</li>
+            <li>Chcesz znać liczby i podejmować decyzje na podstawie danych</li>
+            <li>Odpowiadasz na zapytania klientów w rozsądnym czasie</li>
+          </ul>
+        </div>
+        <div class="fit no reveal d2">
+          <div class="head">
+            <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+            <h3>Lepiej odpuśćmy, jeśli…</h3>
+          </div>
+          <ul>
+            <li>Szukasz gwarancji konkretnej liczby klientów — nikt uczciwy jej nie da</li>
+            <li>Budżet reklamowy to poniżej 2 000 zł miesięcznie (za mało danych do optymalizacji)</li>
+            <li>Oczekujesz zwrotu w pierwszym tygodniu kampanii</li>
+            <li>Prowadzisz restaurację, kawiarnię lub bar — nie obsługuję gastronomii</li>
+            <li>Nie chcesz udostępnić dostępu do kont i danych o sprzedaży</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="reveal" style="max-width:660px">
         <div class="kicker"><span>Proces</span></div>
-        <h2 class="h-sec">Od rozmowy do <span class="grad">mierzalnych wyników</span></h2>
-        <p class="sub-sec">Przejrzysty, powtarzalny proces bez niespodzianek. Na każdym etapie wiesz, co się dzieje i dlaczego.</p>
+        <h2 class="h-sec">Jak zaczynamy — <span class="grad">trzy kroki</span></h2>
+        <p class="sub-sec">Bez wielotygodniowych ofert i niepotrzebnych spotkań. Od pierwszej wiadomości do działającej kampanii.</p>
       </div>
       <div class="steps mt-l">
-        <article class="card step reveal d1"><div class="n">01</div><h4>Konsultacja &amp; audyt</h4><p>Poznaję Twój biznes, cele i budżet. Analizuję konta, analitykę i konkurencję.</p></article>
-        <article class="card step reveal d2"><div class="n">02</div><h4>Strategia &amp; launch</h4><p>Projektuję strukturę kampanii i uruchamiam ją z fazą testową kreacji i grup docelowych.</p></article>
-        <article class="card step reveal d3"><div class="n">03</div><h4>Optymalizacja</h4><p>Cotygodniowa optymalizacja i czytelne raporty z wnioskami oraz planem na kolejny okres.</p></article>
+        <article class="card step reveal d1"><div class="n">01</div><h4>Rozmowa i audyt</h4><p>Opowiadasz o firmie i celach. Ja sprawdzam konta, analitykę i konkurencję, a potem mówię wprost, czego się realnie spodziewać.</p><div class="when">Bezpłatnie · 2–5 dni</div></article>
+        <article class="card step reveal d2"><div class="n">02</div><h4>Plan i wycena</h4><p>Dostajesz konkretną propozycję: co robimy, ile to kosztuje i jakie liczby będziemy mierzyć. Bez zobowiązań.</p><div class="when">Propozycja + KPI</div></article>
+        <article class="card step reveal d3"><div class="n">03</div><h4>Start i optymalizacja</h4><p>Uruchamiam kampanie, pierwsze dwa tygodnie to faza testowa. Potem cotygodniowe korekty i miesięczny raport.</p><div class="when">Pierwsze dane w 2–4 tyg.</div></article>
       </div>
-      <div class="center mt-l reveal"><a class="btn btn-ghost" href="proces/">Zobacz cały proces →</a></div>
+      <div class="center mt-l reveal"><a class="btn btn-ghost" href="proces/">Poznaj cały proces krok po kroku →</a></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal" style="max-width:660px">
+        <div class="kicker"><span>Pytania</span></div>
+        <h2 class="h-sec">Zanim <span class="grad">napiszesz</span></h2>
+      </div>
+      <div class="faq mt-m reveal">
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0">Ile to kosztuje?<span class="faq-icon"></span></div><div class="faq-a"><p>Wycenę przygotowuję indywidualnie, bo zakres zależy od kanałów, konkurencyjności rynku i tego, co już masz zbudowane. Zawsze rozdzielam dwie kwoty: moje wynagrodzenie za obsługę oraz Twój budżet reklamowy, który w całości trafia do Google lub Meta. Rekomendowany start budżetu reklamowego to 3 000–5 000 zł miesięcznie, minimum 2 000 zł.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0">Kiedy zobaczę pierwsze efekty?<span class="faq-icon"></span></div><div class="faq-a"><p>Pierwsze zapytania zwykle pojawiają się w ciągu kilku dni od startu. Wiarygodne wnioski i stabilne wyniki mamy po 6–8 tygodniach — systemy reklamowe potrzebują danych, żeby nauczyć się, kogo Ci pokazywać. Dlatego minimalny okres współpracy to 3 miesiące.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0">Czy gwarantujesz konkretne wyniki?<span class="faq-icon"></span></div><div class="faq-a"><p>Nie i żaden uczciwy specjalista tego nie zrobi — na wynik wpływa też Twoja oferta, ceny i szybkość obsługi zapytań. Gwarantuję natomiast konkretną pracę: poprawne mierzenie, cotygodniową optymalizację, comiesięczny raport i pełną przejrzystość wydatków. Jeśli po audycie uznam, że reklama Ci się nie opłaci, powiem to przed podpisaniem umowy.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0">Czym różnisz się od agencji?<span class="faq-icon"></span></div><div class="faq-a"><p>Pracujesz bezpośrednio z osobą, która realnie prowadzi Twoje kampanie — bez opiekuna klienta w środku i bez przekazywania konta juniorowi. Biorę mniej projektów, więc każdy dostaje uwagę. Minusem jest ograniczona liczba miejsc.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0">Co, jeśli chcę zakończyć współpracę?<span class="faq-icon"></span></div><div class="faq-a"><p>Po minimalnym okresie 3 miesięcy możesz zrezygnować z zachowaniem miesięcznego okresu wypowiedzenia. Konta reklamowe, dane i historia kampanii zostają u Ciebie — przekazuję dokumentację i dostępy bez żadnych warunków.</p></div></div>
+      </div>
     </div>
   </section>
 
@@ -315,15 +436,15 @@
     <div class="wrap">
       <div class="cta-banner reveal">
         <div>
-          <div class="kicker"><span>Zacznijmy</span></div>
-          <h3>Gotowy na <span class="grad">wzrost?</span></h3>
-          <p>Pierwsza konsultacja i wycena są bezpłatne. Odpowiadam w ciągu 24 godzin.</p>
+          <div class="kicker"><span>Następny krok</span></div>
+          <h3>Sprawdźmy, ile klientów <span class="grad">możesz pozyskać</span></h3>
+          <p>Napisz w dwóch zdaniach, czym się zajmujesz. Odpowiem w ciągu 24 godzin z konkretną oceną sytuacji — bezpłatnie i bez zobowiązań.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="kontakt/" data-magnetic>Napisz do mnie
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <a class="btn btn-primary" href="kontakt/" data-magnetic>Darmowa wycena
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-ghost" href="o-mnie/">Dowiedz się więcej</a>
+          <a class="btn btn-ghost" href="tel:+48600555867">+48 600 555 867</a>
         </div>
       </div>
     </div>
@@ -336,16 +457,17 @@
     <div class="footer-top">
       <div class="footer-brand">
         <b>Bartłomiej Ert</b>
-        <p>Marketing strategiczny i płatne kampanie reklamowe dla firm, które chcą realnie rosnąć.</p>
+        <p>Kampanie Google Ads i Meta Ads rozliczane z kosztu pozyskania klienta. Dla firm, które chcą znać liczby.</p>
         <div class="mt-s"><a class="btn btn-primary btn-sm" href="kontakt/">Darmowa wycena →</a></div>
       </div>
       <div class="footer-col">
         <h4>Nawigacja</h4>
-        <a href="uslugi/">Usługi</a><a href="proces/">Proces</a><a href="realizacje/">Realizacje</a><a href="o-mnie/">O mnie</a>
+        <a href="uslugi/">Usługi</a><a href="proces/">Proces</a><a href="realizacje/">Realizacje</a><a href="o-mnie/">O mnie</a><a href="kontakt/">Kontakt</a>
       </div>
       <div class="footer-col">
         <h4>Kontakt</h4>
-        <a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a><a href="kontakt/">Formularz kontaktowy</a>
+        <a href="mailto:scaleert@gmail.com">scaleert@gmail.com</a><a href="tel:+48600555867">+48 600 555 867</a>
+        <p style="font-size:0.8rem;color:var(--muted-2);margin-top:10px;line-height:1.6">Pon–Pt, 9:00–17:00<br>Praca zdalna, cała Polska</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -354,6 +476,47 @@
     </div>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://hustlerguy.github.io/claude-Portfolio23/#business",
+      "name": "Bartłomiej Ert — Marketing Strategiczny",
+      "description": "Freelancer prowadzący kampanie Google Ads i Meta Ads, pozycjonowanie wizytówki Google oraz działania GEO/AIO dla firm w Polsce.",
+      "url": "https://hustlerguy.github.io/claude-Portfolio23/",
+      "email": "scaleert@gmail.com",
+      "telephone": "+48600555867",
+      "priceRange": "Wycena indywidualna",
+      "areaServed": { "@type": "Country", "name": "Polska" },
+      "availableLanguage": ["pl", "en"],
+      "founder": { "@type": "Person", "name": "Bartłomiej Ert", "jobTitle": "Marketing Strategist & Paid Ads Specialist" },
+      "knowsAbout": ["Google Ads", "Meta Ads", "Performance marketing", "Google Business Profile", "Lokalne SEO", "GEO", "AIO", "Google Analytics 4"],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00", "closes": "17:00"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hustlerguy.github.io/claude-Portfolio23/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Ile kosztuje prowadzenie kampanii reklamowych?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Wycena jest indywidualna i zależy od kanałów, konkurencyjności rynku oraz obecnego stanu kont. Wynagrodzenie za obsługę jest zawsze rozdzielone od budżetu reklamowego, który w całości trafia do Google lub Meta. Rekomendowany start budżetu reklamowego to 3 000–5 000 zł miesięcznie, minimum 2 000 zł." } },
+        { "@type": "Question", "name": "Kiedy zobaczę pierwsze efekty kampanii?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pierwsze zapytania pojawiają się zwykle w ciągu kilku dni od startu. Stabilne wyniki i wiarygodne wnioski są dostępne po 6–8 tygodniach, dlatego minimalny okres współpracy to 3 miesiące." } },
+        { "@type": "Question", "name": "Czy gwarantujesz konkretne wyniki?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nie, ponieważ na wynik wpływa również oferta, ceny i szybkość obsługi zapytań po stronie klienta. Gwarantowana jest konkretna praca: poprawne mierzenie konwersji, cotygodniowa optymalizacja, comiesięczny raport i pełna przejrzystość wydatków." } },
+        { "@type": "Question", "name": "Co dzieje się po zakończeniu współpracy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Konta reklamowe, dane i historia kampanii pozostają własnością klienta. Po zakończeniu przekazywana jest pełna dokumentacja, raporty i dostępy." } }
+      ]
+    }
+  ]
+}
+</script>
 
 <script src="app.js"></script>
 </body>
