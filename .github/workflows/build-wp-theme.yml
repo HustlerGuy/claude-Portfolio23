@@ -1,0 +1,33 @@
+name: Build WordPress theme
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - build_wp_theme.py
+      - .github/workflows/build-wp-theme.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Buduj motyw WordPress
+        run: python3 build_wp_theme.py
+
+      - name: Pakuj do ZIP
+        run: zip -r bartlomiej-ert.zip bartlomiej-ert
+
+      - name: Publikuj release z motywem
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: wp-theme-v1.0.0
+          name: "Motyw WordPress — bartlomiej-ert v1.0.0"
+          body: "Gotowy motyw WordPress wygenerowany ze statycznej strony. Pobierz bartlomiej-ert.zip i wgraj: Kokpit → Wygląd → Motywy → Dodaj nowy → Wyślij motyw. Instrukcja w pliku readme.txt w paczce."
+          files: bartlomiej-ert.zip
