@@ -18,6 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Pillow do screenshotu
+        run: python3 -m pip install --quiet pillow
+
       - name: Buduj motyw WordPress
         run: python3 build_wp_theme.py
 
@@ -28,6 +31,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: wp-theme-v1.0.0
-          name: "Motyw WordPress — bartlomiej-ert v1.0.0"
-          body: "Gotowy motyw WordPress wygenerowany ze statycznej strony. Pobierz bartlomiej-ert.zip i wgraj: Kokpit → Wygląd → Motywy → Dodaj nowy → Wyślij motyw. Instrukcja w pliku readme.txt w paczce."
+          name: "Motyw WordPress — bartlomiej-ert v1.0.1"
+          body: "Gotowy motyw WordPress wygenerowany ze statycznej strony. Pobierz wyłącznie plik bartlomiej-ert.zip (NIE 'Source code') i wgraj: Kokpit → Wygląd → Motywy → Dodaj nowy → Wyślij motyw. Instrukcja w readme.txt w paczce."
           files: bartlomiej-ert.zip

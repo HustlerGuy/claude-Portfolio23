@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Konwerter: statyczna strona HTML -> motyw WordPress (katalog bartlomiej-ert/).
-# Uruchamiac w katalogu glownym repozytorium. Tylko biblioteka standardowa.
+# Uruchamiac w katalogu glownym repozytorium. Biblioteka standardowa + opcjonalnie Pillow (screenshot).
 import os, re, shutil
 
 PAGES = ['uslugi', 'proces', 'realizacje', 'o-mnie', 'kontakt']
@@ -80,8 +80,8 @@ $be_canonical = home_url( $be_meta['path'] );
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 __EXTRA__
-<?php if ( ! empty( $be_inline_css ) ) { echo $be_inline_css . "\\n"; } ?>
 <?php wp_head(); ?>
+<?php if ( ! empty( $be_inline_css ) ) { echo $be_inline_css . "\\n"; } ?>
 </head>
 <body <?php body_class(); ?>>
 '''
@@ -135,13 +135,31 @@ def make_404(t):
     t = t.replace('</body>', "<?php wp_footer(); ?>\n</body>")
     return '<?php status_header( 404 ); ?>\n' + t
 
+def make_screenshot(path):
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        img = Image.new('RGB', (1200, 900), (4, 7, 15))
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 840, 1200, 900], fill=(77, 159, 255))
+        fp = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+        try:
+            f1, f2, f3 = ImageFont.truetype(fp, 300), ImageFont.truetype(fp, 64), ImageFont.truetype(fp, 40)
+        except Exception:
+            f1 = f2 = f3 = ImageFont.load_default()
+        d.text((80, 180), 'BE', font=f1, fill=(56, 224, 240))
+        d.text((80, 520), 'Bartlomiej Ert', font=f2, fill=(220, 233, 251))
+        d.text((80, 620), 'Marketing Strategiczny - motyw WordPress', font=f3, fill=(100, 125, 160))
+        img.save(path)
+    except Exception as e:
+        print('screenshot pominiety:', e)
+
 STYLE_HEADER = '''/*
 Theme Name: Bartłomiej Ert — Portfolio
 Theme URI: https://github.com/HustlerGuy/claude-Portfolio23
 Author: Bartłomiej Ert
 Author URI: https://github.com/HustlerGuy
 Description: Motyw portfolio dla specjalisty ds. marketingu (Google Ads / Meta Ads). Podstrony: Usługi, Proces, Realizacje, O mnie, Kontakt. Skonwertowany ze statycznego HTML.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -198,6 +216,7 @@ README_TXT = '''=== Bartłomiej Ert — Portfolio (motyw WordPress) ===
 
 INSTALACJA
 1. Kokpit -> Wygląd -> Motywy -> Dodaj nowy -> Wyślij motyw -> wybierz ZIP -> Zainstaluj -> Włącz.
+   UWAGA: pobierz plik bartlomiej-ert.zip z release\'u, NIE "Source code"!
 
 KONFIGURACJA STRON
 2. Utwórz strony ze slugami i szablonami (treść wpisu może być pusta — renderuje ją szablon):
@@ -225,6 +244,8 @@ gads-marzec-2026.png, gads-czerwiec-2026.png, gads-przeglad.png
 UWAGI
 - Tytuły, meta-opisy, canonical i OG są wpisane w szablony (zgodnie z oryginałem SEO).
 - Motyw nie wymaga obrazków poza opcjonalnymi zrzutami w img/.
+- To motyw-wizytówka: aktywacja zmienia wygląd CAŁEJ witryny. Nie instaluj go na
+  istniejącej stronie firmowej — postaw osobną instalację WordPress (np. subdomena).
 '''
 
 IMG_README = '''Wgraj tutaj zrzuty ekranu z paneli reklamowych (PNG/JPG):
@@ -259,7 +280,8 @@ def build(root='.'):
     for rel, content in files.items():
         with open(os.path.join(THEME, rel), 'w', encoding='utf-8') as f:
             f.write(content)
-    print('OK — wygenerowano motyw:', THEME, '(%d plików)' % len(files))
+    make_screenshot(os.path.join(THEME, 'screenshot.png'))
+    print('OK — wygenerowano motyw:', THEME)
 
 if __name__ == '__main__':
     build()
